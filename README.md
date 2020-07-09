@@ -1,1 +1,2 @@
-# MasterThesis
+# Jan Stevens' MasterThesis
+
