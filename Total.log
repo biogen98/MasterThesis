@@ -1,0 +1,716 @@
+This is LuaHBTeX, Version 1.12.0 (TeX Live 2020/Arch Linux)  (format=lualatex 2020.7.20)  5 AUG 2020 23:57
+ system commands enabled.
+ file:line:error style messages enabled.
+**Total.tex -pdf -dvi- -ps-
+(./Total.tex
+LaTeX2e <2020-02-02> patch level 5
+Lua module: luaotfload-main 2020-05-06 3.14 luaotfload entry point
+Lua module: luaotfload-init 2020-05-06 3.14 luaotfload submodule / initialization
+Lua module: lualibs 2020-05-01 2.71 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2020-05-01 2.71 ConTeXt Lua libraries -- extended collection.
+Lua module: luaotfload-log 2020-05-06 3.14 luaotfload submodule / logging
+Lua module: luaotfload-parsers 2020-05-06 3.14 luaotfload submodule / filelist
+Lua module: luaotfload-configuration 2020-05-06 3.14 luaotfload submodule / config file reader
+luaotfload | conf : Root cache directory is "/home/jan/.texlive/texmf-var/luatex-cache/generic-dev/names".
+luaotfload | init : Loading fontloader "fontloader-2020-05-06.lua" from kpse-resolved path "/usr/share/texmf-dist/tex/luatex/luaotfload/fontloader-2020-05-06.lua".
+Lua-only attribute luaotfload@noligature = 1
+Lua-only attribute luaotfload@syllabe = 2
+luaotfload | init : Context OpenType loader version 0x1.8e353f7ced917p+1
+Lua module: luaotfload-fallback 2020-05-06 3.14 luaotfload submodule / fallback
+Lua module: luaotfload-multiscript 2020-05-06 3.14 luaotfload submodule / multiscript
+Lua module: luaotfload-script 2020-05-06 3.14 luaotfload submodule / Script helpers
+Inserting `luaotfload.node_processor' at position 1 in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' at position 1 in `hpack_filter'.
+Lua module: luaotfload-loaders 2020-05-06 3.14 luaotfload submodule / callback handling
+Inserting `luaotfload.define_font' at position 1 in `define_font'.
+Lua module: luaotfload-database 2020-05-06 3.14 luaotfload submodule / database
+Lua module: luaotfload-unicode 2020-05-06 3.14 luaotfload submodule / Unicode helpers
+Lua module: luaotfload-colors 2020-05-06 3.14 luaotfload submodule / color
+Lua-only attribute luaotfload_color_attribute = 3
+Lua module: luaotfload-resolvers 2020-05-06 3.14 luaotfload submodule / resolvers
+luaotfload | conf : Root cache directory is "/home/jan/.texlive/texmf-var/luatex-cache/generic-dev/names".
+Lua module: luaotfload-features 2020-05-06 3.14 luaotfload submodule / features
+Lua module: luaotfload-harf-define 2020-05-06 3.14 luaotfload submodule / database
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' at position 1 in `find_truetype_file'.
+Lua module: luaotfload-harf-plug 2020-05-06 3.14 luaotfload submodule / database
+Inserting `Harf pre_output_filter callback' at position 1 in `pre_output_filter'.
+Inserting `Harf wrapup_run callback' at position 1 in `wrapup_run'.
+Inserting `Harf finish_pdffile callback' at position 1 in `finish_pdffile'.
+Inserting `Harf glyph_info callback' at position 1 in `glyph_info'.
+Lua module: luaotfload-letterspace 2020-05-06 3.14 luaotfload submodule / color
+Lua module: luaotfload-embolden 2020-05-06 3.14 luaotfload submodule / color
+Lua module: luaotfload-notdef 2020-05-06 3.14 luaotfload submodule / color
+Lua module: luaotfload-suppress 2020-05-06 3.14 luaotfload submodule / suppress
+Lua module: luaotfload-szss 2020-05-06 3.14 luaotfload submodule / color
+Lua module: luaotfload-auxiliary 2020-05-06 3.14 luaotfload submodule / auxiliary functions
+Inserting `luaotfload.aux.set_sscale_dimens' at position 1 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' at position 2 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' at position 3 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' at position 1 in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' at position 4 in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' at position 5 in `luaotfload.patch_font'.
+Lua module: luaotfload-tounicode 2020-05-06 3.14 luaotfload submodule / tounicode
+Inserting `luaotfload.rewrite_fontname' at position 6 in `luaotfload.patch_font'. L3 programming layer <2020-06-03> (/usr/share/texmf-dist/tex/latex/base/fix-cm.sty
+Package: fix-cm 2015/01/14 v1.1t fixes to LaTeX
+ (/usr/share/texmf-dist/tex/latex/base/ts1enc.def
+File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding TS1 on input line 47.
+)) (/usr/share/texmf-dist/tex/latex/base/book.cls
+Document Class: book 2019/12/20 v1.4l Standard LaTeX document class
+(/usr/share/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from /home/jan/.texlive/texmf-var/luatex-cache/generic-dev/names/luaotfload-names.luc)
+\c@part=\count163
+\c@chapter=\count164
+\c@section=\count165
+\c@subsection=\count166
+\c@subsubsection=\count167
+\c@paragraph=\count168
+\c@subparagraph=\count169
+\c@figure=\count170
+\c@table=\count171
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (/usr/share/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2019/11/30 v1.2a Enhanced LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks15
+) (/usr/share/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2019/11/30 v1.4a Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+) (/usr/share/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 105.
+ (/usr/share/texmf-dist/tex/latex/graphics-def/luatex.def
+File: luatex.def 2018/01/08 v1.0l Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen135
+\Gin@req@width=\dimen136
+) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
+ (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 225.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1348.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1352.
+Package xcolor Info: Model `RGB' extended on input line 1364.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1366.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1367.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1370.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1371.
+) (/usr/share/texmf-dist/tex/latex/textpos/textpos.sty
+Package: textpos 2019/04/15 v1.9.1
+
+Package: textpos 2019/04/15 1.9.1, absolute positioning of text on the page
+\TP@textbox=\box45
+\TPHorizModule=\dimen137
+\TPVertModule=\dimen138
+\TP@margin=\dimen139
+\TP@absmargin=\dimen140
+Grid set 16 x 16 = 37.34424pt x 52.81541pt
+\TPboxrulesize=\dimen141
+\TP@tbargs=\toks16
+\TP@prevdepth=\dimen142
+) (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.sty (/usr/share/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-06-03 L3 programming layer (loader) 
+ (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-06-03 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count172
+\l__pdf_internal_box=\box46
+)) (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-05-15 L3 Experimental document command parser
+ (/usr/share/texmf-dist/tex/latex/l3packages/xparse/xparse-generic.tex
+\l__xparse_current_arg_int=\count173
+\g__xparse_grabber_int=\count174
+\l__xparse_m_args_int=\count175
+\l__xparse_v_nesting_int=\count176
+))
+Package: lipsum 2019/01/02 v2.2 150 paragraphs of Lorem Ipsum dummy text
+ (/usr/share/texmf-dist/tex/latex/lipsum/lipsum.ltd.tex
+File: lipsum.ltd.tex 2019/01/02 v2.2 The Lorem ipsum dummy text
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2020/01/20 v2.17e AMS math features
+\@mathmargin=\skip49
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (/usr/share/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks17
+\ex@=\dimen143
+)) (/usr/share/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen144
+) (/usr/share/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count177
+LaTeX Info: Redefining \frac on input line 227.
+\uproot@=\count178
+\leftroot@=\count179
+LaTeX Info: Redefining \overline on input line 389.
+\classnum@=\count180
+\DOTSCASE@=\count181
+LaTeX Info: Redefining \ldots on input line 486.
+LaTeX Info: Redefining \dots on input line 489.
+LaTeX Info: Redefining \cdots on input line 610.
+\Mathstrutbox@=\box47
+\strutbox@=\box48
+\big@size=\dimen145
+LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
+\macc@depth=\count182
+\c@MaxMatrixCols=\count183
+\dotsspace@=\muskip16
+\c@parentequation=\count184
+\dspbrk@lvl=\count185
+\tag@help=\toks18
+\row@=\count186
+\column@=\count187
+\maxfields@=\count188
+\andhelp@=\toks19
+\eqnshift@=\dimen146
+\alignsep@=\dimen147
+\tagshift@=\dimen148
+\tagwidth@=\dimen149
+\totwidth@=\dimen150
+\lineht@=\dimen151
+\@envbody=\toks20
+\multlinegap=\skip50
+\multlinetaggap=\skip51
+\mathdisplay@stack=\toks21
+LaTeX Info: Redefining \[ on input line 2859.
+LaTeX Info: Redefining \] on input line 2860.
+) (/usr/share/texmf-dist/tex/latex/natbib/natbib.sty
+Package: natbib 2010/09/13 8.31b (PWD, AO)
+\bibhang=\skip52
+\bibsep=\skip53
+LaTeX Info: Redefining \cite on input line 694.
+\c@NAT@ctr=\count189
+) (/usr/share/texmf-dist/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty pages
+) (/usr/share/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2020-05-15 v7.00e Hypertext links for LaTeX
+ (/usr/share/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2019/12/15 v1.24 LaTeX kernel commands for general use (HO)
+) (/usr/share/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2020/03/06 v1.0d TeX engine tests
+) (/usr/share/texmf-dist/tex/latex/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-04 v0.32 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks22
+) (/usr/share/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2019/11/29 v3.13 Key value format for package options (HO)
+)
+\@linkdim=\dimen152
+\Hy@linkcounter=\count190
+\Hy@pagecounter=\count191
+ (/usr/share/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
+) (/usr/share/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count192
+Package hyperref Info: Hyper figures OFF on input line 4464.
+Package hyperref Info: Link nesting OFF on input line 4469.
+Package hyperref Info: Hyper index ON on input line 4472.
+Package hyperref Info: Plain pages OFF on input line 4479.
+Package hyperref Info: Backreferencing OFF on input line 4484.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4717.
+\c@Hy@tempcnt=\count193
+ (/usr/share/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5076.
+\XeTeXLinkMargin=\dimen153
+ (/usr/share/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count194
+\Field@Width=\dimen154
+\Fld@charsize=\dimen155
+Package hyperref Info: Hyper figures OFF on input line 6347.
+Package hyperref Info: Link nesting OFF on input line 6352.
+Package hyperref Info: Hyper index ON on input line 6355.
+Package hyperref Info: backreferencing OFF on input line 6362.
+Package hyperref Info: Link coloring OFF on input line 6367.
+Package hyperref Info: Link coloring with OCG OFF on input line 6372.
+Package hyperref Info: PDF/A mode OFF on input line 6377.
+LaTeX Info: Redefining \ref on input line 6417.
+LaTeX Info: Redefining \pageref on input line 6421.
+ (/usr/share/texmf-dist/tex/generic/atbegshi/atbegshi.sty
+Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
+)
+\Hy@abspage=\count195
+\c@Item=\count196
+\c@Hfootnote=\count197
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+ (/usr/share/texmf-dist/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2020-05-15 v7.00e Hyperref driver for luaTeX
+ (/usr/share/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2020-05-15 v7.00e Hyperref: PDF Unicode definition (HO)
+) (/usr/share/texmf-dist/tex/generic/stringenc/stringenc.sty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO)
+) (/usr/share/texmf-dist/tex/latex/atveryend/atveryend.sty
+Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+)
+\Fld@listcount=\count198
+\c@bookmark@seq@number=\count199
+ (/usr/share/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+ (/usr/share/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 286.
+)
+\Hy@SectionHShift=\skip54
+) (/usr/share/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count266
+\c@@ppsavesec=\count267
+\c@@ppsaveapp=\count268
+) (/usr/share/texmf-dist/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2020/03/19 v4.46 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
+) (/usr/share/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/share/texmf-dist/tex/generic/xkeyval/xkeyval.tex (/usr/share/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks23
+\XKV@tempa@toks=\toks24
+)
+\XKV@depth=\count269
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (/usr/share/texmf-dist/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2017/11/14 v2.06 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2019/09/21 v2.5h e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count270
+)
+\@glsmfirst=\toks25
+\@glsmrest=\toks26
+) (/usr/share/texmf-dist/tex/latex/textcase/textcase.sty
+Package: textcase 2019/09/14 v1.00 Text only upper/lower case changing (DPC)
+) (/usr/share/texmf-dist/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+) (/usr/share/texmf-dist/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count271
+) (/usr/share/texmf-dist/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+ `Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich (/usr/share/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count272
+) (/usr/share/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count273
+\FP@xia=\count274
+\FP@xib=\count275
+\FP@xfa=\count276
+\FP@xfb=\count277
+\FP@rega=\count278
+\FP@regb=\count279
+\FP@regs=\count280
+\FP@times=\count281
+) (/usr/share/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+) (/usr/share/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+) (/usr/share/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+) (/usr/share/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+) (/usr/share/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+) (/usr/share/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count282
+) (/usr/share/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+) (/usr/share/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+) (/usr/share/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks27
+\@dtl@tmpcount=\count283
+\dtl@tmplength=\skip55
+\dtl@sortresult=\count284
+\@dtl@numgrpsepcount=\count285
+\@dtl@datatype=\count286
+\dtl@codeA=\count287
+\dtl@codeB=\count288
+\@dtl@foreach@level=\count289
+) (/usr/share/texmf-dist/tex/latex/glossaries/base/glossaries-compatible-307.sty
+Package: glossaries-compatible-307 2020/03/19 v4.46 (NLCT)
+)
+\gls@level=\count290
+\@gls@tmpb=\toks28
+\gls@tmplen=\skip56
+\glskeylisttok=\toks29
+\glslabeltok=\toks30
+\glsshorttok=\toks31
+\glslongtok=\toks32
+ (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-hypernav.sty
+Package: glossary-hypernav 2020/03/19 v4.46 (NLCT)
+) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-list.sty
+Package: glossary-list 2020/03/19 v4.46 (NLCT)
+\glslistdottedwidth=\skip57
+) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-long.sty
+Package: glossary-long 2020/03/19 v4.46 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/tools/longtable.sty
+Package: longtable 2020/01/07 v4.13 Multi-page Table package (DPC)
+\LTleft=\skip58
+\LTright=\skip59
+\LTpre=\skip60
+\LTpost=\skip61
+\LTchunksize=\count291
+\LTcapwidth=\dimen156
+\LT@head=\box49
+\LT@firsthead=\box50
+\LT@foot=\box51
+\LT@lastfoot=\box52
+\LT@cols=\count292
+\LT@rows=\count293
+\c@LT@tables=\count294
+\c@LT@chunks=\count295
+\LT@p@ftn=\toks33
+)
+\glsdescwidth=\skip62
+\glspagelistwidth=\skip63
+) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-super.sty
+Package: glossary-super 2020/03/19 v4.46 (NLCT)
+ (/usr/share/texmf-dist/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count296
+\ST@wd=\dimen157
+\ST@rightskip=\skip64
+\ST@leftskip=\skip65
+\ST@parfillskip=\skip66
+\ST@pageleft=\dimen158
+\ST@headht=\dimen159
+\ST@tailht=\dimen160
+\ST@pagesofar=\dimen161
+\ST@pboxht=\dimen162
+\ST@lineht=\dimen163
+\ST@prevht=\dimen164
+\ST@toadd=\dimen165
+\ST@dimen=\dimen166
+\ST@pbox=\box53
+)) (/usr/share/texmf-dist/tex/latex/glossaries/styles/glossary-tree.sty
+Package: glossary-tree 2020/03/19 v4.46 (NLCT)
+\glstreeindent=\skip67
+))
+\glswrite=\write3
+\glo@main@file=\write4
+
+\openout4 = Total.glo
+Package glossaries Info: Writing glossary file Total.glo on input line 18.
+\glo@acronym@file=\write5
+
+\openout5 = Total.acn
+Package glossaries Info: Writing glossary file Total.acn on input line 18.
+ (./Preamble/Symbols.tex) (./Preamble/Acronyms.tex) (./Total.aux)
+\openout1 = Total.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 52.
+LaTeX Font Info:    ... okay on input line 52.
+ (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count297
+\scratchdimen=\dimen167
+\scratchbox=\box54
+\nofMPsegments=\count298
+\nofMParguments=\count299
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count300
+\MPscratchDim=\dimen168
+\MPnumerator=\count301
+\makeMPintoPDFobject=\count302
+\everyMPtoPDFconversion=\toks35
+) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\AtBeginShipoutBox=\box55
+Package hyperref Info: Link coloring OFF on input line 52.
+ (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
+ (/usr/share/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count303
+)
+LaTeX Info: Redefining \ref on input line 52.
+LaTeX Info: Redefining \pageref on input line 52.
+LaTeX Info: Redefining \nameref on input line 52.
+ (./Total.out) (./Total.out)
+\@outlinefile=\write6
+
+\openout6 = Total.out
+ (./Preamble/Titlepage.tex
+Overfull \hbox (27.91484pt too wide) in paragraph at lines 6--7
+[][][][][][][] 
+ []
+
+<Figures/LogoKULeuven.png, id=87, 401.5pt x 143.53625pt>
+File: Figures/LogoKULeuven.png Graphic file (type png)
+<use Figures/LogoKULeuven.png>
+Package luatex.def Info: Figures/LogoKULeuven.png  used on input line 11.
+(luatex.def)             Requested size: 157.58296pt x 56.33646pt.
+LaTeX Font Info:    Calculating math sizes for size <40> on input line 18.
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <40> not available
+(Font)              size <24.88> substituted on input line 18.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <27.99988> not available
+(Font)              size <24.88> substituted on input line 18.
+
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 18.
+
+LaTeX Font Info:    Calculating math sizes for size <20> on input line 19.
+
+LaTeX Font Warning: Font shape `OMX/cmex/m/n' in size <13.99994> not available
+(Font)              size <14.4> substituted on input line 19.
+
+
+Overfull \hbox (24.55522pt too wide) in paragraph at lines 65--66
+[][][] 
+ []
+
+) [1
+
+
+\openout3 = Total.ist
+
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}<./Figures/LogoKULeuven.png>] [2
+
+] (./Preamble/Copyright.tex) [3] [4
+
+] (./Preamble/Preface.tex)
+warning  (pdf backend): ignoring duplicate destination with the name 'page.i'
+[1
+
+]
+warning  (pdf backend): ignoring duplicate destination with the name 'page.ii'
+[2
+
+] (./Preamble/Summary.tex
+warning  (pdf backend): ignoring duplicate destination with the name 'page.iii'
+[3
+
+]
+warning  (pdf backend): ignoring duplicate destination with the name 'page.iv'
+[4
+
+]) [5
+
+] [6
+
+] (./Total.gls) (./Total.acr [7
+
+
+] [8
+
+]) [9
+
+] [10
+
+] (./Total.lof)
+\tf@lof=\write7
+
+\openout7 = Total.lof
+ [11
+
+] [12
+
+] (./Total.lot)
+\tf@lot=\write8
+
+\openout8 = Total.lot
+ [13
+
+] [14
+
+] (./Total.toc)
+\tf@toc=\write9
+
+\openout9 = Total.toc
+ [15
+
+] [16
+
+] (./Chapters/Introduction.tex
+Chapter 1.
+
+Package natbib Warning: Citation `Oth2017' on page 1 undefined on input line 2.
+
+) [1
+
+
+] [2
+
+] (./Chapters/Methods.tex
+Chapter 2.
+<Figures/landslide3.jpg, id=223, 1606.0pt x 1071.00125pt>
+File: Figures/landslide3.jpg Graphic file (type jpg)
+<use Figures/landslide3.jpg>
+Package luatex.def Info: Figures/landslide3.jpg  used on input line 7.
+(luatex.def)             Requested size: 364.19664pt x 242.8769pt.
+[3
+
+<./Figures/landslide3.jpg>] [4]
+LaTeX Font Info:    Font shape `TU/lmss/m/it' in size <12> not available
+(Font)              Font shape `TU/lmss/m/sl' tried instead on input line 31.
+) [5] [6
+
+] (./Chapters/Results.tex
+Chapter 3.
+
+Package natbib Warning: Citation `Vapnik1995' on page 7 undefined on input line 4.
+
+
+Package natbib Warning: Citation `Stanley2017' undefined on input line 4.
+
+
+Package natbib Warning: Citation `Reichenbach2018' on page 7 undefined on input line 4.
+
+) [7
+
+] [8
+
+] (./Chapters/Conclusions.tex
+Chapter 4.
+) [9
+
+] [10
+
+] (./Total.bbl) [11
+
+] [12
+
+] [13
+
+
+] [14] (./Backmatter/Appendix.tex
+Appendix A.
+[15
+
+] [16
+
+]
+Appendix B.
+) [17] [18] [19
+
+] (./Backmatter/Back.tex
+<Figures/sedes.png, id=323, 402.5439pt x 683.6742pt>
+File: Figures/sedes.png Graphic file (type png)
+<use Figures/sedes.png>
+Package luatex.def Info: Figures/sedes.png  used on input line 34.
+(luatex.def)             Requested size: 27.64043pt x 46.94704pt.
+
+Overfull \hbox (14.78159pt too wide) in paragraph at lines 38--39
+[][][] 
+ []
+
+)
+
+Package natbib Warning: There were undefined citations.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 100.
+[20<./Figures/sedes.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 100.
+ (./Total.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 100.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 100.
+Package rerunfilecheck Info: File `Total.out' has not changed.
+(rerunfilecheck)             Checksum: 92EA8EB3EA8D9FC9D72393E30B5EEAFD;2054.
+
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 15.12pt have occurred.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 100.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 15827 strings out of 480885
+ 100000,953878 words of node,token memory allocated
+ 576 words of node memory still in use:
+   7 hlist, 2 vlist, 2 rule, 2 glue, 4 kern, 1 glyph, 13 attribute, 63 glue_spec, 13 attribute_list, 1 write nodes
+   avail lists: 1:5,2:293,3:132,4:34,5:119,6:43,7:3787,8:24,9:155,10:15,11:281
+ 32624 multiletter control sequences out of 65536+600000
+ 90 fonts using 8620947 bytes
+ 51i,9n,40p,1015b,463s stack positions out of 5000i,500n,10000p,200000b,100000s
+</usr/share/texmf-dist/fonts/opentype/public/lm/lmsans8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmromanslant12-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans12-oblique.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans17-oblique.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans17-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmsans12-regular.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb>
+Output written on Total.pdf (40 pages, 597843 bytes).
+
+PDF statistics: 416 PDF objects out of 1000 (max. 8388607)
+ 330 compressed objects within 4 object streams
+ 76 named destinations out of 1000 (max. 131072)
+ 189 words of extra memory for PDF output out of 10000 (max. 100000000)
+
