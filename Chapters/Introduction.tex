@@ -1,12 +1,11 @@
 \chapter{Introduction}
-
+\vspace{-1cm}
 \epigraphfontsize{\small\itshape}
-\todo{add citation}
 \epigraph{“...if we were to name the most powerful assumption of all, which leads one on
 and on in an attempt to understand life, it is that all things are made of atoms, and
 that everything that living things do can be understood in terms of the jigglings and
 wigglings of atoms.”}
-{--- \textup{Richard P. Feynman}, The Feynman Lectures on Physics}
+{--- \textup{Richard P. Feynman}, The Feynman Lectures on Physics\cite{feynmanLectures}}
 
 Here why simulation.
 blik in iets dat we vaak niet zien.
@@ -22,26 +21,26 @@ blik in iets dat we vaak niet zien.
 \begin{center}
 	\begin{tikzpicture}[
 	squarednode/.style={rectangle, draw=blue!60, fill=blue!5, very thick, minimum width=50mm,
-	minimum height=8mm},]
+	minimum height=5mm},]
 	%Nodes
 	\node[squarednode]      (step1)                        {1};
-	\node[squarednode]      (step2)       [below= 5mm of step1] {2};
-	\node[squarednode]      (step3)       [below= 5mm of step2] {3};
-	\node[squarednode]      (step4)       [below= 5mm of step3] {4};
-	\node[squarednode]      (step5)       [below= 5mm of step4] {5};
-	\node[squarednode]      (step6)       [below= 5mm of step5] {6};
-	\node[squarednode]      (step7)       [below= 5mm of step6] {7};
-	\node[squarednode]      (step8)       [below= 5mm of step7] {8};
+	\node[squarednode]      (step2)       [below= 3mm of step1] {2};
+	\node[squarednode]      (step3)       [below= 3mm of step2] {3};
+	\node[squarednode]      (step4)       [below= 3mm of step3] {4};
+	\node[squarednode]      (step5)       [below= 3mm of step4] {5};
+	\node[squarednode]      (step6)       [below= 3mm of step5] {6};
+	\node[squarednode]      (step7)       [below= 3mm of step6] {7};
+	\node[squarednode]      (step8)       [below= 3mm of step7] {8};
 
 	%Lines
-	\draw[thick, ->] (step1.south) -- (step2.north);
-	\draw[thick, ->] (step2.south) -- (step3.north);
-	\draw[thick, ->] (step3.south) -- (step4.north);
-	\draw[thick, ->] (step4.south) -- (step5.north);
-	\draw[thick, ->] (step5.south) -- (step6.north);
-	\draw[thick, ->] (step6.south) -- (step7.north);
-	\draw[thick, ->] (step7.south) -- (step8.north);
-	\draw[thick, ->] (step2.west)  -- +(-0.4,0) |-(step8.west);
+    \draw[very thick, ->] (step1.south) -- (step2.north);
+	\draw[very thick, ->] (step2.south) -- (step3.north);
+	\draw[very thick, ->] (step3.south) -- (step4.north);
+	\draw[very thick, ->] (step4.south) -- (step5.north);
+    \draw[very thick, ->] (step5.south) -- (step6.north);
+	\draw[very thick, ->] (step6.south) -- (step7.north);
+	\draw[very thick, ->] (step7.south) -- (step8.north);
+	\draw[very thick, ->] (step8.west)  -- +(-0.4,0) |-(step2.west);
 	\end{tikzpicture}
 \end{center}
 
