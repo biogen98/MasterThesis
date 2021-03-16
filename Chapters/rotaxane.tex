@@ -1,0 +1,56 @@
+\chapter{Rotaxane}
+\section{Mixed Rotaxane}
+
+\subsection{Diffusion approximation}
+
+Studying the dynamics of the mixed rotaxane highlighted the importance of entropic
+interactions between the nano pore and the DNA strand. Here we observed that a fully
+double stranded DNA polymer represented a special case. The uniformity of the
+$\mathcal{X}$ histogram corresponding to this 0 nt mixed rotaxane suggests a free
+diffusive motion of the rotaxane in a bounded one-dimensional domain. This isotropic
+behaviour was previously also observed in the bead-spring simulations by Bayoumi et
+al. \cite{EntropicPiston}\\
+
+\begin{align*}
+  \langle \Delta x^2 \rangle \simeq 2n Dt.
+\end{align*}
+
+
+\begin{align*}
+  \frac{\partial \psi}{\partial t} =  D \frac{\partial^2 \psi}{\partial x^2}, P(x,t) =
+f(x)g(t)
+\end{align*}
+
+\begin{align*}
+\end{align*}
+
+Reflecting boundary conditions $j = - D \frac{\partial \psi}{\partial x} = 0$. Current
+vanishes at the boundaries
+
+\begin{align*}
+t:\quad \dot{g} = - \alpha g(t) \Rightarrow g(t) = e^{-\alpha t}
+\end{align*}
+
+\begin{align*}
+  x:\quad D \ddot{f} = - \alpha f(x) \Rightarrow f(x) &= A \sin(K x) + B \cos(Kx)\\
+  &= B \cos(\frac{\pi n x}{L})
+\end{align*}
+\begin{align*}
+  \frac{\alpha}{D} = \frac{\pi^2 n^2}{L^2}
+\end{align*}
+
+The general solution is given by the linear combination,
+
+\begin{align*}
+  \psi(x,t) &= \sum_{n=0}^{+\infty} C_n \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2
+  n^2}{L^2}t}\\
+            &=\frac{1}{L} \Bigg\{ 1 + \sum_{n=1}^{+\infty} \cos\Big(\frac{\pi n
+  x_0}{L}\Big) \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2  n^2}{L^2}t}\Bigg\}
+\end{align*}
+\begin{align*}
+  \langle \Delta x^2 \rangle &= \langle(x-x_0)^2\rangle\\&= \frac{L^2}{6}(1 -
+  \frac{96}{\pi^4}
+  \sum_{n=0}^{+\infty} \frac{1}{(2k+1)^4} e^{- \frac{D(2k+1)^2 \pi^2}{L^2}t})\\
+\end{align*}
+As expected, the mean squared distances saturates to $\langle \Delta x^2 \rangle = L^2/6$
+in the long-time limit $t \gg L^2 / D.$

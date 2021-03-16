@@ -1,26 +1,25 @@
-\contentsline {chapter}{Voorwoord/preface}{i}{Doc-Start}%
-\contentsline {chapter}{Samenvatting}{iii}{chapter*.1}%
-\contentsline {chapter}{Summary}{v}{chapter*.2}%
-\contentsline {chapter}{Glossary}{vii}{section*.4}%
-\contentsline {chapter}{Acronyms}{ix}{section*.6}%
-\contentsline {chapter}{List of Figures}{xi}{chapter*.7}%
-\contentsline {chapter}{List of Tables}{xiii}{chapter*.8}%
-\contentsline {chapter}{Contents}{xv}{chapter*.9}%
-\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Methods}{3}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Figures}{3}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Tables}{4}{section.2.2}%
-\contentsline {section}{\numberline {2.3}Equations}{5}{section.2.3}%
-\contentsline {chapter}{\numberline {3}Results}{7}{chapter.3}%
-\contentsline {section}{\numberline {3.1}res 1}{7}{section.3.1}%
-\contentsline {subsection}{subres 1}{7}{section*.11}%
-\contentsline {subsection}{subres 2}{7}{section*.12}%
-\contentsline {section}{\numberline {3.2}res 2}{7}{section.3.2}%
-\contentsline {subsection}{subres 3}{7}{section*.13}%
-\contentsline {subsection}{subres 4}{7}{section*.14}%
-\contentsline {chapter}{\numberline {4}Conclusions}{9}{chapter.4}%
-\contentsline {chapter}{Bibliography}{11}{chapter.4}%
-\contentsline {chapter}{Appendices}{13}{section*.16}%
+\babel@toc {naustrian}{}
+\babel@toc {english}{}
+\contentsline {chapter}{Abstract}{i}{figure.caption.1}%
+\contentsline {chapter}{Vulgariserende Samenvattings}{iii}{chapter*.2}%
+\contentsline {chapter}{Summary in Laymans's Terms}{v}{section*.4}%
+\contentsline {chapter}{List of Figures}{ix}{section*.6}%
+\contentsline {chapter}{List of Tables}{xi}{section*.7}%
+\contentsline {chapter}{Contents}{xiii}{section*.8}%
+\contentsline {chapter}{\chapternumberline {1}Introduction}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Deoxyribonucleic Acid}{2}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Polymer Physics}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Computer Simulations}{2}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Molecular Dynamics}{2}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Coarse Grained modelling}{2}{subsection.1.3.2}%
+\contentsline {chapter}{\chapternumberline {2}nano pore}{3}{chapter.2}%
+\contentsline {chapter}{\chapternumberline {3}Rotaxane}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Mixed Rotaxane}{5}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Diffusion approximation}{5}{subsection.3.1.1}%
+\contentsline {chapter}{\chapternumberline {4}hybrydisation}{7}{chapter.4}%
+\contentsline {chapter}{\chapternumberline {5}Conclusions and Perspectives}{9}{chapter.5}%
+\contentsline {subsection}{\numberline {5.0.1}asdf}{9}{subsection.5.0.1}%
 \setcounter {tocdepth}{1}
-\contentsline {chapter}{\numberline {A}First appendix}{15}{appendix.1.A}%
-\contentsline {chapter}{\numberline {B}Second appendix}{17}{appendix.1.B}%
+\contentsline {appendix}{\chapternumberline {A}First appendix}{11}{chapter.A}%
+\contentsline {chapter}{Bibliography}{13}{chapter*.10}%
+\contentsline {chapter}{Acknowledgements}{15}{chapter*.11}%
