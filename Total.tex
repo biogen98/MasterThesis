@@ -16,6 +16,7 @@
 \usepackage[linktocpage=true]{hyperref}
 \usepackage[toc,acronym,nonumberlist]{glossaries}
 \usepackage{tocloft}
+\usepackage{wrapfig}
 \makeglossaries
 
 
@@ -40,7 +41,8 @@
 \usepackage{multirow}   % Allows table elements to span several rows.
 \usepackage{booktabs}   % Improves the typesettings of tables.
 \usepackage{subcaption} % Allows the use of subfigures and enables their referencing.
-\usepackage[ruled,linesnumbered,algochapter]{algorithm2e} % Enables the writing of pseudo code.
+\usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e} %
+%Enables the writing of pseudo code.
 %\usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition and use o colors.
 %This package has to be included before tikz.
 \usepackage{nag}       % Issues warnings when best practices in writing LaTeX documents are violated.
@@ -122,6 +124,9 @@
 
 \selectlanguage{english}
 
+\newcommand\mycommfont[1]{\small\ttfamily\textcolor{blue}{#1}}
+\SetCommentSty{mycommfont}
+
 % FRONT MATTER
 \frontmatter
 \rmfamily
@@ -151,6 +156,7 @@
 
 \input{Chapters/Introduction.tex} \cleardoublepage
 \input{Chapters/nanopore.tex} \cleardoublepage
+\input{Chapters/Methods.tex} \cleardoublepage
 \input{Chapters/rotaxane.tex} \cleardoublepage
 \input{Chapters/hybridisation.tex} \cleardoublepage
 \input{Chapters/Conclusions.tex} \cleardoublepage
