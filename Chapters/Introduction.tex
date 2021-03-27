@@ -15,33 +15,40 @@ wigglings of atoms.”}
 
 \section{Computer Simulations}
 
-The theory of classical mechanics is regarded as the first major breakthrough in the
-field of physics. For every aspiring physicist this is still the starting point of their
-studies. Unfortunately getting to know these relatively simple laws of nature, leads to
-the inescapable realisation that these theories are expressed in mathematical formalism
-that are only analytically solvable in few idealised scenarios. Already when trying to
-apply these formulas to a problem consisting of just more then two bodies the equations
-become practically unsolvable, this fact has vexed physicists and mathematician for many
-years.\\
+The theory of classical mechanics is often regarded as the first major breakthrough in
+the field of physics. For every aspiring physicist this is still the starting point of
+their studies. Unfortunately getting to know these relatively simple laws of nature,
+leads to the inescapable realisation that these theories are expressed in mathematical
+formalism that are only analytically solvable in few idealised scenarios. Applying these
+formulas to a problem consisting of just more then two particles already leads
+practically unsolvable equations.\\
 
+Although it is often times not possible to find an exact solution to equations
+related to complex physical systems, finding reasonable approximations to their solution
+is. One popular method to analyse the dynamics of complex systems is the use of
+simulations.\\
 
 \begin{wrapfigure}{r}{0.5\textwidth}
   \begin{center}
-    \includegraphics[width=0.48\textwidth]{Figures/WaterModel.png}
+    \includegraphics[width=0.38\textwidth]{Figures/WaterModel.png}
   \end{center}
   \caption{Example of an expanded model of a simple liquid (J L Finney, Ph.D thesis)}
 \end{wrapfigure}
 
+Simulations have a rich history within physics and engineering, starting even before the
+invention of the computer. An example of one of these mechanical simulations is the
+ Waterloopkundig Laboratorium or currently the waterloopbos, a scale model of important
+Dutch waterways where the influence of waves on harbours and docks was studied. This
+simulation played an important part in the design of the famous Delta Works.\\
+Another example is the use of mechanical simulations to study the structure of water. In
+the early 20th century physicist J.D. Bernal and his fellow researches build various ball
+and stick models of water to analyse the possible 3D configurations of water molecules in
+a liquid. Their research eventually explained the peculiar physical properties
+of water from a atomistic perspective. However useful these mechanical simulations turned
+out to be, the biggest drawback of the method was the extreme cost of labour to construct
+them as pointed out by Bernal in his 1962 lecture,
 
-Although it is often times not possible to find an exact solution to many equations
-encountered in physics, finding reasonable approximations to their solution is. Various
-types of
-techniques are used to find these approximations, ranging from taylor expansions to
-simulations.
-Before the invention of computers these simulations where performed mechanical and
-consisted of large amounts of
-
- \begin{quote}
+\begin{quote}
 \dots I took a number of rubber balls and stuck them together with rods of a
 selection of different lengths ranging from 2.75 to 4 inch. I tried to do this in the
 first place as casually as possible, working in my own office being interrupted every
@@ -49,28 +56,24 @@ five minutes or so and not remembering what I had done before the interruption.
 However,\dots
 \end{quote}
 
-mechanical simulations -> bernal
-
-computer simulations -> los alamos, fast adaptation by industry.
-
-Biophysics / consedmatter physics, many body systems, bridge between the micro scopic and
-macro scopic
+After the first computer simulations where performed in the Los Alamos labs, the
+popularity of simulations rapidly increased. The remarkable explanatory power of
+simulations combined with the relative easy construction of computer models lead to a
+fast adoption of computer simulations in the scientific community. Within the context of
+this thesis, computer simulations are used to study the mechanics of
+the DNA Polymer. Due to the high number of atoms in a typical system, it is generally
+not possible to find an analytical solution to their equations of motion. In this
+context, simulations are often used to gain an insight into the complex dynamics of the
+system and guide the developments of more simple approximate theories. The simulations
+act as a bridge between the microscopic constituents of the systems and the macroscopic
+properties we want to understand.
 
 
 \subsection{Molecular Dynamics Simulations}
-Molecular Dynamics Simulations (MD) is a computer simulation techniques used to analyse
-the dynamics of a classical many-body system. In a system with $N$ particles the motion
+Molecular Dynamics Simulations (MD) is a computer simulation technique, used to analyse
+the dynamics of a classical many-body system. In a system with $N$ particles, the
+trajectories of are generated by numerically integrating the equations of motion.
 
-
-
-The central idea is that
-the trajectories of a system of $N$ particles can be generated over time by numerically
-integrating the classical equations of motion.
-
-
-
-
-- Iterating Newton laws of physics
 \[
     m_i \boldsymbol{\ddot{r_i}} = \boldsymbol{f_i}, \quad \boldsymbol{f_i} = -
     \frac{\partial}{\partial \boldsymbol{r_i}} \mathcal{U}
