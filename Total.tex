@@ -154,12 +154,39 @@
 \setcounter{page}{0}
 \pagenumbering{arabic}
 
-\input{Chapters/Introduction.tex} \cleardoublepage
-\input{Chapters/nanopore.tex} \cleardoublepage
-\input{Chapters/Methods.tex} \cleardoublepage
-\input{Chapters/rotaxane.tex} \cleardoublepage
-\input{Chapters/hybridisation.tex} \cleardoublepage
-\input{Chapters/Conclusions.tex} \cleardoublepage
+%% Introduction
+\chapter{Introduction}
+\vspace{-1cm}
+\epigraphfontsize{\small\itshape}
+\epigraph{“...if we were to name the most powerful assumption of all, which leads one on
+and on in an attempt to understand life, it is that all things are made of atoms, and
+that everything that living things do can be understood in terms of the jigglings and
+wigglings of atoms.”}
+{--- \textup{Richard P. Feynman}, The Feynman Lectures on Physics\cite{feynmanLectures}}
+\input{Chapters/Chapter1/ThesisOutline.tex}
+\input{Chapters/Chapter1/BiologicalNanopores.tex}
+\input{Chapters/Chapter1/DNA.tex}
+\input{Chapters/Chapter1/PolymerPhysics.tex}
+\input{Chapters/Chapter1/ComputerSimulations.tex}
+
+\cleardoublepage
+
+\chapter{The DNA Nanopiston}
+\vspace{-1cm}
+\epigraph{Given for one instant an intelligence which could comprehend all
+the forces by which nature is animated and the respective positions
+of the beings which compose it, if moreover this intelligence were vast
+enough to submit these data to analysis, it would embrace in the same
+formula both the movements of the largest bodies in the universe and
+those of the lightest atom; to it nothing would be uncertain, and the
+future as the past would be present to its eyes.}
+{--- \textup{Pierre-Simon Laplace}}
+
+\chapter{Adapting the Model}
+\vspace{-1cm}
+\epigraph{All models are wrong, but some are useful.}
+{--- \textup{George Box}}
+\input{Chapters/Chapter3/OxDNA.tex}
 
 % APPENDIX
 \begin{appendices}
