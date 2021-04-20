@@ -22,11 +22,15 @@ simulations.\\
 \end{wrapfigure}
 
 Simulations have a rich history within physics and engineering, starting even before the
-invention of the computer. An example of one of these mechanical simulations is the
- Waterloopkundig Laboratorium or currently the waterloopbos, a scale model of important
+invention of the computer.
+
+\todo{dit weg laten??? misschien te veel bla bla}
+An example of one of these mechanical simulations is the Waterloopkundig Laboratorium or
+currently the waterloopbos, a scale model of important
 Dutch waterways where the influence of waves on harbours and docks was studied. This
 simulation provided revolutionary insights into the behaviour of water, this knowledge
 played an important part in the design of the famous Delta Works.\\
+
 Another example more topical example is the use of mechanical simulations to study the
 structure of water.  In the early 20th century physicist J.D. Bernal and his fellow
 researches build various ball and stick models of water to analyse the possible 3D
@@ -154,46 +158,45 @@ statistical consequences of the solvent interacting with the system.
 % \end{center}
 
 \subsection{Coarse Grained modelling}
-As most thing do, molecular dynamics simulations have their pitfalls. When simulating
-biophysical systems, a common problem is that the computations quickly become expensive
-when there a lot of particles in the system.
-During these simulations the most costly calculations are determining all the non-bonded
+As most thing do, molecular dynamics simulations have their pitfalls. A commonly
+encountered problem is the rapidly increasing computational cost when the number of
+particles in the system increase. If not addressed, this would limit the scope of MD
+simulations to systems of few particles over short time-scales.\\
+
+During these simulations the most costly calculations involve the non-bonded
 interaction in the system. These interatomic interactions make the computational
 complexity for rudimentary MD simulations scale as $O(N^2t)$, here $N$ is the number of
-particles in the system and t the simulation time. This bad scaling behaviour comes from
-the fact that for each particle all the particles are contributing to its interaction
-potential. To improve this scaling behaviour, the non-bonded interaction in a MD
-simulation are almost always truncated. This has the nice effect that not all atoms are
-contributing to each interaction potential. Efficient algorithm, like the multigrid
-mehod, have been devided to perform these calculations with a scaling complexity of
-$O(Nt)$.\\
+particles in the system and $t$ the simulation time. This bad scaling behaviour comes
+from the fact that for each individual particle, all the other particles are contributing
+to its interaction potential. To improve this scaling behaviour, the non-bonded
+interaction in a MD simulation are almost always truncated. This localization of the
+interatomic interactions has the nice effect that not all atoms are involved in every
+calculation. Efficient algorithms, like the multigrid method, have been derived to
+improve the scaling complexity of MD simulations to $O(Nt)$.\\
 
 Coarse graining is a method to further optimize molecular dynamics simulations.
-Incontrary to all atom simulation, where each atom is explicitly  represented in the
-simulation, Coarse grained simulations reduce the computational cost by rather working
-with pseudo atoms.
+In contrary to all atom simulations, where each atom is explicitly represented in the
+simulation, in coarse grained simulations multiple atoms are grouped together to form
+generalised pseudo atoms with their respective pseudo interaction.
 
-Two distinctly different ways to construct a coarsed grained model. A first method is
-tarting from the all atom model and generalysin nearby atoms into a larger pseudo atom,
-this is called the bottom up aproach. When we are more interested in the thermodynamical
-properties rather than the precise small scale dynamics, constructing larger pseudo atoms
-and tweaking their interactionsa allows for more low resolution models. This method is
-calle the bottom up approach.
+There are two distinctly different ways to construct a coarse grained model. The first
+method tarts from the all atom model of the system and generalises nearby atoms into
+larger pseudo atoms, this is called the bottom up approach. The second method focuses
+more on the precise reproduction of a systems thermodynamical properties, rather than
+the precise small scale dynamics. Here larger pseudo atoms are designed, based upon some
+structure in the system after which the pseudo interactions are tweaked to accurately
+reproduces the system's dynamics.
 
-For DNA simulation all atom simulations, tens of bases over a micor second time scale.
-Coarse graingin allows for much longer strands to be  simulations over longer time,
-studying large scale phenomena like super coiling.
-
-
-% top down or bottom up
-
-
-% DNA good example, tens of bases shoft time arond micro seconds. -> coarsed grained
-% models, 3SPN, Martini, oxDNA. The latter is shown in fig.
+In the case of DNA simulations, coarse graining turned out to be a very important method.
+Previous all atom simulation of DNA polymers where restricted to simulations of tens of
+baisepairs for a few microsecond. Studying large scale systems, often encountered in DNA
+technology, was only possible after the developments of coarse grained models.
+A few examples of commonly used coarse grained models of DNA are Martini, 3SPN and
+oxDNA.
 
 \begin{figure}[htpb]
     \centering
-    \includegraphics[width=0.8\linewidth]{Figures/CoarseGrained.png}
+    \includegraphics[width=0.6\linewidth]{Figures/CoarseGrained.png}
     \caption{zelf nog namaken met blender!!!}%
     \label{fig:Figures/CoarseGrained}
 \end{figure}

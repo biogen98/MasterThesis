@@ -1,0 +1,73 @@
+\section{Polymer Physics}
+
+What is a polymer?\\
+
+\begin{equation}
+    E_{WLC}= -K \sum_{i=1}^{N-1} \hat u_i \cdot \hat u_{i+1} = -K \sum_{i=1}^{N-1} \cos\theta_i,
+\end{equation}
+
+\begin{equation}
+\begin{aligned}
+    \label{210}
+    Z_{\mathrm{WLC}}(N, T)
+    &= \int d \theta_{1} d \theta_{2} \ldots d \theta_{N} \sin \theta_{1} \sin \theta_{2} \ldots \sin \theta_{N} \exp \bigg{[} \beta K \sum_{i=1}^{N} \cos \theta_{i} \bigg{]} \\
+    &= \left[\int_{0}^{\pi} d \theta \sin \theta e^{\beta K \cos \theta}\right]^{N}
+\end{aligned}
+\end{equation}
+
+\begin{equation}
+    Z_{\mathrm{WLC}}(1, T)=\int_{0}^{\pi} d \theta e^{\beta K \theta}=\frac{2 \sinh(\beta
+    K)}{\beta K}
+\end{equation}
+Using the relation:
+\begin{equation}
+    \left\langle\cos \theta_{i+1}\right\rangle
+    =\frac{\partial \log Z_{\mathrm{WLC}}(1, T)}{\beta \partial K},
+\end{equation}
+one can calculate the mean dot product between two consecutive bonds:
+\begin{equation}
+    \left\langle\vec{u}_{i} \cdot \vec{u}_{i+1}\right\rangle
+    = \left\langle\cos \theta_{i+1}\right\rangle
+    = \frac{1}{\tanh(\beta K)} - \frac{1}{\beta K}.
+\end{equation}
+Which in the limit of $\beta K \gg 1$ leads to:
+\begin{equation}
+    \langle\cos \theta\rangle \approx 1-\frac{1}{\beta K}.
+\end{equation}
+This condition is true for low temperatures or large stiffness between neighbouring bonds (large K). In the following equations the persistence length $l_b$ is mathematically introduced:
+\begin{equation}
+\begin{aligned}
+    \left\langle\vec{u}_{1} \cdot \vec{u}_{n+1}\right\rangle
+    &=\left\langle\vec{u}_{1} \cdot \vec{u}_{n}\right\rangle\left\langle\cos
+    \theta_{n}\right\rangle
+    &= a^{2}\langle\cos \theta\rangle^{n}
+    &=a^{2} \exp \bigg{[} -\frac{n a}{l_{b}} \bigg{]},
+\end{aligned}
+\end{equation}
+where $l_b \equiv \frac{a K}{k_{b} T}$ and $a$ is the constant bond length for the discrete WLC model.
+
+The bending persistence length $l_b$ can be related to the end-to-end vector $\vec{R}$ in
+the continuum limit. For example can be rewritten using the arc-length parameter $s$
+where $0 \leq s \leq L$ and $L = Na$ as:
+\begin{equation}
+    \label{hoi}
+    \langle\widehat{u}(q) \cdot \widehat{u}(q+s)\rangle= e^{-s / l_{\mathrm{p}}}.
+\end{equation}
+The continuum version of the end-to-end vector is:
+\begin{equation}
+    \vec{R}=\int_{0}^{L} \widehat{u}(s) d s.
+\end{equation}
+Taking the square of this expression and averaging over it, we obtain the following:
+\begin{equation}
+\begin{aligned}
+    \left\langle\vec{R}^{2}\right\rangle
+    &= \int_{0}^{L} d s d s^{\prime}\left\langle\widehat{u}(s) \cdot
+  \widehat{t}\left(s^{\prime}\right)\right\rangle \\
+    &= 2 l_{\mathrm{b}} L\left\{1-\frac{l_{\mathrm{b}}}{L}\left(1-e^{-L /
+l_{\mathrm{b}}}\right)\right\}.
+\end{aligned}
+\end{equation}
+
+Explain here two limiting cases of above expression. This leads to a interpretation of
+what the persistence length means intuitively. -> length over which the correlations
+between bond vectors are lost.
