@@ -3,11 +3,11 @@
 Biological nanopores are small perforations in a bilipid membrane, created
 by a pore forming protein.  The majority of these proteins are toxins produced by
 pathogenic bacteria, as means of killing targeted cells. They work by perforating the
-cell membrane of a cell, of which the contents is spilled into the environment through
-osmoses. This process often times kills the respective cell and leaks its nutrients into
-the environment.\\
+cell membrane of a cell, causing cell depolarization and inducing osmotic effect. This
+proces often times kills the respective cell by disrupting vital functions or spilling
+its nutrients into the environment.\\
 
-The main reason scientist are intersted in studying nanopores is related to their size.
+The reason scientist are intersted in studying nanopores is related to their size.
 These protein structures are generally only a few nanometers in size, making them
 comparable to the tiny transistors found in modern computers. Working at these small
 scales has the unavoilible complication that it becomes difficult to retrieve information
@@ -15,22 +15,36 @@ from these processes. Developping sensors to probe these exotic lenghtscale is t
 very relevant. Using ingenious methods, this is exact problem nanopores provide an
 solution to, spectroscopy at the smallest scale.\\
 
-Before delving into one of the main application of these nanopore, Ionic current
+Before delving into one of the primary application of these nanopore, Ionic current
 specspectroscopy, first a brief overview will be given of the structural properties of
 two popular biological nanopores.
 
 \subsection{$\alpha$-Hemolysin ($\alpha$ HL)}
 
+The $\alpha$-Hemolysin ($\alpha$ HL) protein is the most commonly used of pore forming
+protein to create biological nanopores. It is produced by the Staphylococcus aureus, a
+bacterium commonly found in the bodies microbiota.\\
 
-- beta nano pore
-- secreted by Staphylococcus aureus in its post-exponential and stationary growth phases
-- sevon subunits of monomers ->  mushroom shape protein complex, h11nm by w10nm.
-- small diamater -> single stranded DNA passes through.
-- neutral charge, important for translocation of charged analytes.
-- monomers bind to cell membrane, collide to form 'prepore'
-- the stem is inserted into the membrane to from the nano pore
--
+The $\alpha$ HL pore(PDBID:...) is an olgimeric complex with multiple naturally occurring
+variations, the most typical configuration
+is a heptameric structure meaning that there are seven protomers found in the complex.
+The secondary structure elements consist principally of beta-sheets, making it a member
+of the Beta-barrel pore-forming toxins. Through both electrostatic and hydrophobic
+interactions the $\alpha$ HL are bounded to the membrane of a target cell. Here the
+monomers assemble to a 'prepore' complex that transitions to the stable pore complex by
+inserting the Beta-barrel into the membrane.\\
 
+Structurally the shape of $\alpha$ HL resembles that of a hollow mushroom. The total
+hight of the complex is 11 nm and the max width is measured to be 10nm. The internal
+chamber of the pore located at the cis side of the membrane membrane is called the lumen.
+The lumen of $\alpha$ HL is quite constricted measuring a diameter of 3 nm. At the
+membrane the lumen transitions into a protein stem refered to as the constriction of the
+pore, further reducing the diameter of the chamber to a min of 1.5nm. Over the inside
+surface of  $\alpha$ HL the charges are relatively uniformly distributed, this will play
+an important role in further applications.\\
+
+\todo{However, due to the slight excess of positive charges at the cis entry and the
+constriction, wild-type αHL pores are found to be somewhat anion selective}
 
 \begin{figure}[h!]
   \centering
@@ -42,22 +56,32 @@ two popular biological nanopores.
 
 \subsection{Cytolysin A (ClyA)}
 
-- alpha nano pore
-- secreted by various S. enterica and E. coli strains
-- 12,13,14 subunits of monomers ->  mushroom shape protein complex, h14nm by w11nm.
-- all have different constriction widths
-The interior shape of ClyA can be described
-as a set of two hollow cylinders placed on top of each other: a large cis chamber
-(‘lumen’) with an inner diameter of ≈5.5 nm and a height of 10 nm and a smaller
-trans chamber (‘constriction’) with a width of ≈3.6 nm and a height of 4 nm
+The Cytolysin A (ClyA) is a larger type of pore forming protein, first found to be
+secreted by E. coli strains. The larger size of its lumen allows for different types of
+applications compared to smaller complexes like $\alpha$ HL. Most relevant for thesis is
+the fact that the larger diameter of the pores stems allows for translocation of double
+stranded DNA.\\
 
-- large diamater -> study large bio molecules, double stranded DNA passes through
-important for futher in thesis.
+The ClyA pore (PDBID:6MRT[cite]) is an olgimeric complex with multiple naturally
+occurring variations, the most typical configuration is a dodecameric meaning that there
+are twelve protomers found in the complex. The secondary structure elements consist
+principally of alpha-helices, making it a member of the alpha-pore-forming toxins. The
+protein formation is induced by the hydrophobic interactions between the $\beta$-hairpin
+and the solvent. The main structural rearangement in this process consists of swinging
+out this $\beta$-tongue and inserting it into the membrane. After this transitions the
+membrane-bounded monomers oligomerize to from the final pore structure.
+\todo{beter maken}
 
-- negaive charge in interior of pore, important for translocation of charged analytes.
-- monomers bind to cell membrane  due to hydrophobic parts of monomers.
-- next alpha helix hairpin hinges and connects to membrane, forming the nano pore.
-similar to that of a spring-loaded lock, which is opened upon membrane binding
+Structurally the shape of ClyA resembles that of two hollow cylinders stacked on top on
+each other. This cylinder approximation will be important later on in the thesis, it will
+be used to create a simplified model of the nanopore. The total hight of the complex is
+14 nm and the max width is measured to be 11nm. The lumen's size of this nanopore
+differentiates it from the previously discussed $\alpha$ HL. The cis entrance of the
+lumen measures 6nm, while the constricted side of the pore still 3.6nm in diameter. In
+contrary to the $\alpha$-HL, the inside surface of ClyA has a net negative charge
+making it cation sensitive. In context of this excess charge will induce an important
+ coulomb interaction between the pore and a DNA double helix, which is also negatively
+ charged.
 
 
 \begin{figure}[h!]
@@ -68,29 +92,28 @@ similar to that of a spring-loaded lock, which is opened upon membrane binding
 \end{figure}
 
 \subsection{Ionic current spectroscopy}
-In recent years the study nanopores became a popular research domain, mainly
-due to the development of the nanopore-based ionic current spectroscopy. for the case of
+In recent years the study of nanopores became a popular research domain, mainly
+due to the development of the nanopore-based ionic current spectroscopy. For the case of
 biological nanopores, this method depicted in figure .., a bilipid membrane is perforated
-using a pore froming protein like $\alpha$- HL. The membrane seperates two chambers of
-basin filled with a saline solution. The created nanopore acts as the sole connection
-between the two sides of this basin. Next a potential diffrence is created over the
-membrane, which induces a ion current through the nanopore.
+using a pore forming protein like $\alpha$- HL. The membrane separates two chambers of
+a basin filled with a saline solution. When a potential difference is created over
+the membrane, the nanopore mediates an ion current between the two sides of the basin.
 
-This field induces several distinct forces that influence
-the movement of analyte molecules towards and within the pore (Fig. 1.10):
-the electrophoretic (EP), electro-osmotic (EO) and dielectrophoretic (DEP)
-forces. The former two are the strongest, and hence also the most well-known.
-Besides attracting analytes and inducing their translocation, external forces may
-also impact the structure of the molecules themselves
+This ion current through the pore can accurately be measured, if the pore is empty the
+measured current is called the open pore current. However the applied ellectric field
+also induces forces upon analytes dissolved in the basin. The net result of these
+interactions is a flux of analytes towards and in some cases through the nanopore.
+Analytes located inside of the nanopore partially block the ion current through te pore,
+reducing the over measured current. Using Machine learning algorithms the timeseries of
+these current fluctuation can be measured and identified with particular analytes in the
+basin. This is so precise that it allows for single cell spectroscopy.
 
-- open pore current
-- characterasing blocked currents -> single cell spectroscopy.
-
-It should be noted that besides these biological nanopores, there are also solid state
-nanopore under development. While they are currently not as accurate as biological
-nanopres, mainly due to their size difference, this method would allow for more
-specialised modelling of these nanopores. often times solid state nanopores are created
-by perforating a semi conductor wafer, changing the diameter and shape of this
-perforation would allow for  case specific nanopore development. While thus currently not
-as widely used as biological nanopores, due to this customisability solid state nanopores
-are the future of nanopore technology.
+It should be noted that besides these biological nanopores, there are also inorganic
+nanopores under development. An example are solid state nanopores, created by making
+perforations in a semi-conductor wafer. While currently not as accessible as biological
+nanopres, mainly due to their high production cost, this method has some major
+advantages. First of all the material properties of provide a chemical robustness not
+present in biological nanopores. The production process also allows for easy scalability
+and customisability. While thus currently not as widely used as biological nanopores, due
+to their customisability and robustness solid state nanopores will prove to be a
+important asset in future nanotechnology.
