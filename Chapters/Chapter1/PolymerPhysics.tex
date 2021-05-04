@@ -1,28 +1,50 @@
 \section{Polymer Physics}
 The theory of polymer physics logically starts with defining the notion of a polymer, for
-simplicity we will limit the discusison to linear polymers. The building blocks of a
-polymer are called monomers, linked together to from a chain. The configuration of this
-chain is determined by the position vectors of each monomers, ${\boldsymbol{r}_0,
-\boldsymbol{r}_1, \dots, \boldsymbol{r}_N}$. Each pair of consecutive monomers is linked
-together, giving rise to the bond vectors u_i = ... During this discussion we will assume
-these bonds to be inextensable, i.e. a fixed segment length $|\boldsymbol{u}_i| = a$.
+simplicity we will limit the discussion to linear polymers. A
+polymer is made up of building blocks called monomers, linked together to from a chain.
+The configuration of this chain is determined by the position vector of each monomer,
+$\{\boldsymbol{r}_0, \boldsymbol{r}_1, \dots, \boldsymbol{r}_N\}$. The link between each
+consecutive pair of monomers is called a bond and defined by bond vectors,
+$\boldsymbol{u}_i = \boldsymbol{r}_i - \boldsymbol{r}_{i-1}$. During this discussion we
+will assume these bonds to be inextensible, i.e. having a fixed
+segment length $|\boldsymbol{u}_i| = a$.
 
-$\boldsymbol{u}_i = \boldsymbol{r}_i - \boldsymbol{r}_{i-1}$
+Many different polymer models have been developed to accurately represent a physical
+polymer using this rather simple definition. The most simple models are called the ideal
+flexible polymer, here a probably distribution is assigned to each bond vector.
+\begin{equation}
+    g(\boldsymbol{u}) = \frac{1}{4 \pi a}
+    \delta(|\boldsymbol{u}| - a)\\
+\end{equation}
 
-The Kratky-porod model is an example of a mathermatically simple
-model that results in a suprisingly realistic description of a polymer.
 
 \begin{equation}
-    E_{WLC}= -\kappa \sum_{i=1}^{N-1} \boldsymbol{\hat{u}_i} \cdot \boldsymbol{\hat{u}}_{i+1}
+    g(\boldsymbol{u}) = (\frac{3}{2 \pi a^2}) e^{\frac{-3
+    \boldsymbol{u}^2}{2 a^2}}
+\end{equation}
+
+The Kratky-Porod, or discrete worm like chain, model is an example of a mathematically
+simple model that results in a surprisingly realistic description of a polymer. This
+model is an ideal semi-flexible polymer, which means that the energetic cost of bending a
+polymer is taken into account. Mathematically this is done introducing a bending
+stiffness between consecutive bonds, each polymer configuration is assigned an energy
+using the equation,
+\begin{equation}
+    E_{WLC}= -\kappa \sum_{i=1}^{N} \boldsymbol{\hat{u}_i} \cdot
+    \boldsymbol{\hat{u}}_{i+1}
     = -\kappa
-    \sum_{i=1}^{N-1} \cos\theta_i,
+    \sum_{i=1}^{N} \cos\theta_i.
 \end{equation}
 
 \begin{equation}
 \begin{aligned}
     \label{210}
     Z_{\mathrm{WLC}}(N, T)
-    &= \left[\int_{0}^{\pi} d \theta \sin \theta e^{\beta \kappa \cos \theta}\right]^{N}
+    &= \int_{0}^{\pi}\dots \int_{0}^{\pi} d \theta_1 \dots d \theta_N \sin \theta_1 \dots
+    \sin \theta_N\ e^{\beta \kappa \sum_{i=1}^{N-1} \cos\theta_i}\\
+    &= \left[\int_{0}^{\pi} d \theta \sin \theta e^{\beta \kappa \cos
+    \theta}\right]^{N}\\
+    &= \left[Z_{\mathrm{WLC}}(1, T)\right]^{N}
 \end{aligned}
 \end{equation}
 
@@ -30,45 +52,56 @@ model that results in a suprisingly realistic description of a polymer.
     Z_{\mathrm{WLC}}(1, T)=\int_{0}^{\pi} d \theta e^{\beta \kappa \theta}=\frac{2 \sinh(\beta
     \kappa)}{\beta \kappa}
 \end{equation}
-Using the relation:
 \begin{equation}
     \left\langle\cos \theta_{i+1}\right\rangle
     =\frac{\partial \log Z_{\mathrm{WLC}}(1, T)}{\beta \partial \kappa},
 \end{equation}
-one can calculate the mean dot product between two consecutive bonds:
+correlation between consecutive bond vectors.
 \begin{equation}
     \left\langle\boldsymbol{u}_{i} \cdot \boldsymbol{u}_{i+1}\right\rangle
     = \left\langle\cos \theta_{i+1}\right\rangle
     = \frac{1}{\tanh(\beta \kappa)} - \frac{1}{\beta \kappa}.
 \end{equation}
-Which in the limit of $\beta \kappa \gg 1$ leads to:
+the limit of $\beta \kappa \gg 1$
 \begin{equation}
     \langle\cos \theta\rangle \approx 1-\frac{1}{\beta \kappa}.
 \end{equation}
-This condition is true for low temperatures or large stiffness between neighbouring bonds (large \kappa). In the following equations the persistence length $l_b$ is mathematically introduced:
+This condition is true for low temperatures or large stiffness between neighbouring bonds
+(large \kappa).
+
+$\boldsymbol{\vec{u}}_{n-1} = \boldsymbol{\vec{u}}_{n} \cos(\theta_{n-1}) +
+\boldsymbol{\vec{u}}_{n}^{\perp} \sin(\theta_{n})$
+
+
 \begin{equation}
 \begin{aligned}
-    \left\langle\boldsymbol{u}_{1} \cdot \boldsymbol{u}_{n+1}\right\rangle
-    &=\left\langle\boldsymbol{u}_{1} \cdot \boldsymbol{u}_{n}\right\rangle\left\langle\cos
-    \theta_{n}\right\rangle
-    &= a^{2}\langle\cos \theta\rangle^{n}
-    &=a^{2} \exp \bigg{[} -\frac{n a}{l_{b}} \bigg{]},
+    \left\langle\boldsymbol{\hat{u}}_{i} \cdot \boldsymbol{\hat{u}}_{i+m}\right\rangle
+    &=\left\langle\boldsymbol{\hat{u}}_{i} \cdot
+        \boldsymbol{\hat{u}}_{i+m-1}\right\rangle\left\langle\cos
+    \theta_{n}\right\rangle = \dots =\langle\cos \theta\rangle^{m}
+    % &=\exp \bigg{[} -\frac{n a}{l_{b}} \bigg{]},
 \end{aligned}
 \end{equation}
-where $l_b \equiv \frac{a \kappa}{k_{b} T}$ and $a$ is the constant bond length for the discrete WLC model.
 
-The bending persistence length $l_b$ can be related to the end-to-end boldsymboltor $\boldsymbol{R}$ in
-the continuum limit. For example can be rewritten using the arc-length parameter $s$
-where $0 \leq s \leq L$ and $L = Na$ as:
+\begin{equation}
+    \left\langle\boldsymbol{\hat{u}}_{i} \cdot \boldsymbol{\hat{u}}_{i+m}\right\rangle =
+    \exp(m\ \log(1 - \frac{1}{\beta \kappa})) \approx \exp(-na/l_p)
+\end{equation}
+
+\begin{equation}
+l_b \equiv \frac{a \kappa}{k_{b} T}
+\end{equation}
+
+The end-to-end vector $\boldsymbol{R}$ in the continuum limit. For example can be
+rewritten using the arc-length parameter $s$ where $0 \leq s \leq L$ and $L = Na$ as:
 \begin{equation}
     \label{hoi}
     \langle\widehat{u}(q) \cdot \widehat{u}(q+s)\rangle= e^{-s / l_{\mathrm{p}}}.
 \end{equation}
-The continuum version of the end-to-end boldsymboltor is:
+The continuum version of the end-to-end vector
 \begin{equation}
     \boldsymbol{R}=\int_{0}^{L} \widehat{u}(s) d s.
 \end{equation}
-Taking the square of this expression and averaging over it, we obtain the following:
 \begin{equation}
 \begin{aligned}
     \left\langle\boldsymbol{R}^{2}\right\rangle
