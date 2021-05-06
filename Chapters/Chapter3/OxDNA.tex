@@ -1,0 +1,53 @@
+\section{OxDNA}
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+  \begin{center}
+    \includegraphics[width=0.42\textwidth]{Figures/oxDNA_model.png}
+  \end{center}
+  \caption{Structure of the OxDNA model with the different interactions.
+          Figure was taken form [].}
+\end{wrapfigure}
+
+OxDNA is a coarse-grained model of DNA developed by Thomas E. Ouldridge et al. at Oxford
+university. The central aim of the project was to develop a coarse-grained model of DNA
+that could be used in the design of DNA technology. For the development of these
+technologies a model was needed that accurately captured the structural, mechanical and
+thermodynamical properties of DNA while keeping the computational cost low.
+
+The OxDNA model represents each nucleotide in the DNA strand as a rigid unit. Each rigid
+nucleotide has three independent interaction sites, each capturing a different aspect of
+the model. The interactions between these pseudo atoms are next compared to experimental
+data to tweak the interactions, characterising the approach as "top down"
+coarse-graining. The interactions defined in the OxDNA model can be summarized as,
+
+\begin{equation}
+  \begin{aligned}
+    V = \sum_{\text{nearest neighbours}} \bigg[ V_{\text{backbone}} + V_{\text{stack}} +
+    V^{'}_{\text{exc}}\bigg]\\
+    + \sum_{\text{other pairs}} \bigg[V_{\text{HB}} + V_{\text{cross stacking}} +
+    V_{\text{exc}} + V_{\text{coax stack}}\bigg].
+  \end{aligned}
+\end{equation}
+
+The first interaction site is the hydrogen-bonding/base excluded volume site,
+incorporating the hybridisation of complementary nucleotides into the model. The
+hydrogen-bonding interactions are not fixed, allowing for OxDNA to simulate dsDNA, ssDNA
+and their thermodynamic transitions.
+
+The second interaction site is an excluded volume interaction located at the backbone.
+These interactions simulate the covalent bonding between consecutive phosphate groups
+using the FENE (finitely extensible nonlinear elastic) bond type.
+
+The last interaction site is again located at base where it provides a base stacking
+interaction between consecutive nucleotides. The nucleotides stacking in DNA is crucial
+for the formation of the characteristic helical structure. Using these stacking
+interactions this structure is implicitly imposed in the model. Contrasting the common
+approach of explicitly imposing the Double helix structure in other coarse grained-models
+like 3SPN and Martini. This implicit structure allows for the unstacking of nucleotides,
+which especially in ssDNA is an important contribution to the flexibility of the strand.
+
+During the simulations of the DNA Nanopiston both the flexibility of the single stranded
+DNA strands and the hybridisation reactions play an important role. Since both of these
+aspect of DNA are accurately captured by the OxDNA model, it provides a logical choice
+for our simulations. The low number of degrees of freedom in the model, allows us to
+simulate computationally intensive simulations like DNA hybridisation.
