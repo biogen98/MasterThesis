@@ -1,30 +1,32 @@
 \section{Polymer Physics}
 A polymer is a biomolecule made up of building blocks called monomers, linked together to
 from a chain. The configuration of this chain is determined by the position vector of
-each monomer,denoted as $\{\boldsymbol{r}_0, \boldsymbol{r}_1, \dots,
+each monomer, denoted as $\{\boldsymbol{r}_0, \boldsymbol{r}_1, \dots,
 \boldsymbol{r}_N\}$.  The link between each consecutive pair of monomers is called the
 bond-vector, defined as
 $\boldsymbol{u}_i = \boldsymbol{r}_i - \boldsymbol{r}_{i-1}$. During this discussion we
 will assume these bonds to be inextensible, i.e. having a fixed
-bond length $|\boldsymbol{u}_i| = a$.\\
+bond length of $|\boldsymbol{u}_i| = a$.\\
 
 
-Various different model can be used to model a polymer, the most simple one is called the
-Freely Jointed Chain (FJC). This model is an example of an ideal flexible polymer, in
-which no excluded volume interactions or polymer bending is taken into account. In this
-model it is assumed that each bond-vector is completely uncorrelated with its adjacent
-bonds. Mathematically this is represented by assigning the bond-vector orientation using
-the uniform distribution
+Various different models can be used to describe a polymer. The most simple version is
+called
+the Freely Jointed Chain (FJC). This model is an example of an ideal flexible polymer, in
+which excluded volume interactions or polymer bending rigidity are not taken into
+account.  In this
+model, it is assumed that each bond-vector is completely uncorrelated with its adjacent
+bonds. Mathematically this is represented by assigning the bond-vector orientation
+an uniform probability distribution
 \begin{equation}
     g(\boldsymbol{u}) = \frac{1}{4 \pi a}
     \delta(|\boldsymbol{u}| - a), \\
 \end{equation}
-where a is the fixed bond length.
+where $a$ is the fixed bond length.
 
 
-The above described model provides a relatively accurate description of long polymers,
-however the assumption that consecutive monomers are uncorrelated becomes
-problematic at small length scales . The Kratky-Porod, or discrete wormlike chain, model
+The above described model provides a relatively accurate description of long polymers.
+However, the assumption that consecutive monomers are uncorrelated becomes
+problematic at small length scales. The Kratky-Porod model, or discrete wormlike chain,
 solves this problem by taking the energetic cost of bending the polymer into
 account. Mathematically this is done introducing a bending rigidity between neighbouring
 bonds in the form of a coupling constant, $\kappa >0$. Each polymer configuration is
@@ -36,15 +38,14 @@ assigned an energy using the equation,
     \sum_{i=1}^{N} \cos\theta_i,
     \label{wlc}
 \end{equation}
-where $\boldsymbol{\hat{u}} = \boldsymbol{u}/a$ is the unit bond-vector and $\theta_i$
-the angle between the  bond-vectors $\boldsymbol{\hat{u}_i}$ and
+where $\boldsymbol{\hat{u}} = \boldsymbol{u}/a$ is the unit bond-vector and $\theta_i$ is
+the angle between neighbouring bond-vectors $\boldsymbol{\hat{u}_i}$ and
 $\boldsymbol{\hat{u}_{i+1}}$. The lowest energy state of this discrete wormlike chain is
 a straight rodlike configuration, where the bond angles $\theta_i$ are minimized.
 
 To calculate the bond-vector correlation function,  we first determine the partition
-function, $Z_{WLC}$, of the system. Identifying the single monomer contributions, the
-partition
-function factorises into a product of single bond-vector partition as,
+function, $Z_{WLC}$, of the system. Identifying the single monomer contributions, this
+quantity factorises into a product of single bond-vector partition functions as
 \begin{equation}
     \begin{aligned}
         \label{210}
@@ -79,23 +80,24 @@ of the angle between consecutive bonds to be,
     \end{aligned}
 \end{equation}
 
-Studying the conformation of polymers is often times done by working in the  at low
-temperatures or with a large bending rigidity, $\kappa$, we find
+Studying the conformation of polymers is often times done assuming a low
+temperature or large bending rigidity, where we find
 that the above expression simplifies. In the limit, $\beta \kappa \gg 1$, the lowest
 order approximation yields,
 \begin{equation}
     \langle\cos \theta\rangle \approx 1-\frac{1}{\beta \kappa}.
 \end{equation}
 
-Decomposing the bond-vector $\boldsymbol{\hat{u}}_{n-1}$ in terms an orthonormal basis
-defined by the normal and tangential directions of the preceding vector
-$\boldsymbol{\hat{u}}_{n-1}$ gives
+Decomposing the bond-vector $\boldsymbol{\hat{u}}_{n+1}$ in terms of an orthonormal
+basis, defined by the normal and tangential directions of the preceding vector
+$\boldsymbol{\hat{u}}_{n+1}$, gives
 \begin{equation}
 \boldsymbol{\hat{u}}_{n+1} = \boldsymbol{\hat{u}}_{n} \cos \theta_{n} +
 \boldsymbol{\hat{u}}_{n}^{\perp} \sin \theta_{n}.
 \end{equation}
 This decomposition allows us to express the correlation between distant bond-vectors in
-terms of the correlation between neighbouring bonds. Performing the factorisation yields
+terms of the correlation between neighbouring bonds-vectors. The factorisation
+yields
 \begin{equation}
 \begin{aligned}
     \left\langle\boldsymbol{\hat{u}}_{i} \cdot \boldsymbol{\hat{u}}_{i+m}\right\rangle
@@ -105,7 +107,7 @@ terms of the correlation between neighbouring bonds. Performing the factorisatio
     % &=\exp \bigg{[} -\frac{n a}{l_{b}} \bigg{]},
 \end{aligned}
 \end{equation}
-here we used the fact that the sinusoidal terms vanish due to symmetry.
+where we used the fact that the sinusoidal terms vanish due to symmetry.
 Exploring this result in the limit, $\beta \kappa \gg 1$, we find the expression
 \begin{equation}
     \left\langle\boldsymbol{\hat{u}}_{i} \cdot \boldsymbol{\hat{u}}_{i+m}\right\rangle =
@@ -118,17 +120,17 @@ introducing a new polymer quantity, the bending persistence length
 \end{equation}
 This general result in polymer physics states that the correlations between bond-vectors
 is exponentially decreasing. The defined quantity represents the characteristic
-length scale of the polymer over which the correlations between
+length scale of the polymer, over which the correlations between
 bond-vectors is lost.
 
-Two limiting cases can be explored, firstly in the
+Two limiting cases can be explored. Firstly, in the
 case where the persistence length is much larger then the polymer's length, $l_p \gg na$,
-all bond-vectors are correlated, i.e. the polymer approximates a straight rod. The
-reverse case where $l_p \gg na$, it can easily be shown that the polymer behaves as a
-stochastic random walk.
+all bond-vectors are correlated, i.e. the polymer approximates a straight rod. For the
+reverse case, where $l_p \ll na$, it can easily be shown that the polymer behaves as a
+stochastic walk.
 
 The persistence length is a central result in the theory of polymer physics, providing a
-measurable quantity related to the bending rigidity of of a polymer. During the
+measurable quantity related to the bending rigidity of a polymer. During the
 simulations performed in this thesis, the notion of bending persistence length is used to
 discuss the flexibility of the DNA polymer.
 
