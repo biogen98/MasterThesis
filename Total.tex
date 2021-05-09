@@ -39,7 +39,11 @@
 \usepackage[inline]{enumitem} % User control over the layout of lists (itemize, enumerate, description).
 \usepackage{multirow}   % Allows table elements to span several rows.
 \usepackage{booktabs}   % Improves the typesettings of tables.
-\usepackage{subcaption} % Allows the use of subfigures and enables their referencing.
+
+\usepackage[export]{adjustbox}
+\usepackage{subcaption}
+\usepackage{graphicx}
+
 \usepackage[ruled, lined, linesnumbered, commentsnumbered, longend]{algorithm2e} %
 %Enables the writing of pseudo code.
 %\usepackage[usenames,dvipsnames,table]{xcolor} % Allows the definition and use o colors.
@@ -189,28 +193,23 @@ future as the past would be present to its eyes.}
 \epigraph{All models are wrong, but some are useful.}
 {--- \textup{George Box}}
 \input{Chapters/Chapter3/OxDNA.tex}
-
-\chapter{Toehold displacement reaction}
-\vspace{-1cm}
-\epigraph{All models are wrong, but some are useful.}
-{--- \textup{George Box}}
-\input{Chapters/Chapter4/FFS.tex}
-\input{Chapters/Chapter4/Simulation.tex}
+\input{Chapters/Chapter3/FFS.tex}
+\input{Chapters/Chapter3/Simulation.tex}
 
 \chapter{Simulations of the Rotaxane}
 \vspace{-1cm}
 \epigraph{All models are wrong, but some are useful.}
 {--- \textup{George Box}}
-\input{Chapters/Chapter5/MixedRotaxane.tex}
-\input{Chapters/Chapter5/ConfFluct.tex}
-\input{Chapters/Chapter5/Toehold.tex}
+\input{Chapters/Chapter4/MixedRotaxane.tex}
+\input{Chapters/Chapter4/ConfFluct.tex}
+\input{Chapters/Chapter4/Toehold.tex}
 
 \chapter{Conclusions and Perspectives}
 \vspace{-1cm}
 \epigraph{All models are wrong, but some are useful.}
 {--- \textup{George Box}}
-\input{Chapters/Chapter6/ResultsAndConclusions.tex}
-\input{Chapters/Chapter6/FuturePerspectives.tex}
+\input{Chapters/Chapter5/ResultsAndConclusions.tex}
+\input{Chapters/Chapter5/FuturePerspectives.tex}
 
 
 % APPENDIX
@@ -221,13 +220,13 @@ future as the past would be present to its eyes.}
 
 % BIBLIOGRAPHY
 %\addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{apalike}
-\begin{multicols}{2}
-\begin{smallfont}
-\bibliography{Bibliography/thesis.bib}
-\end{smallfont}
-\end{multicols}
-\cleardoublepage
+%\bibliographystyle{apalike}
+%\begin{multicols}{2}
+%\begin{smallfont}
+%\bibliography{Bibliography/thesis.bib}
+%\end{smallfont}
+%\end{multicols}
+%\cleardoublepage
 
 \input{Backmatter/Acknowledgements.tex} \cleardoublepage
 

@@ -18,23 +18,22 @@ of simulations.\\
   \begin{center}
     \includegraphics[width=0.38\textwidth]{Figures/WaterModel.png}
   \end{center}
-  \caption{Example of an expanded model of a simple liquid (J L Finney, Ph.D thesis)}
+  \caption{Example of an expanded model of a simple liquid (J L Finney, Ph.D thesis)[.]}
 \end{wrapfigure}
 
 Simulations have a rich history within physics and engineering, starting even before the
 invention of the computer.
 
-An example of one of these mechanical simulations is the Waterloopkundig Laboratorium
-or
-currently the waterloopbos, a scale model of important
-Dutch waterways, where the influence of waves on harbours and docks was studied. This
-simulation provided revolutionary insights into the behaviour of water and played an
-important part in the design of the famous Delta Works.\\
+An example of one of these mechanical simulations is the Waterloopkundig Laboratorium,
+a hydrological laboratory, located in delft[.]. This laboratory houses a scale model of
+important Dutch waterways, where the influence of waves on harbours and docks was
+studied.  The simulation provided revolutionary insights into the behaviour of water and
+played an important part in the design of the famous Delta Works.\\
 
 Another more relevant example is the use of mechanical simulations to study the
 structure of water.  In the early 20th century physicist J.D. Bernal and his fellow
 researchers build various ball and stick models of water to analyse the possible 3D
-configurations of water molecules in a liquid. Their research eventually explained the
+configurations of water molecules in a liquid[.]. Their research eventually explained the
 peculiar physical properties of water from a atomistic perspective. However useful these
 mechanical simulations turned out to be, the biggest drawback of the method was the
 extreme cost of labour involved with their construct. As Bernal alluded to in his
@@ -44,10 +43,10 @@ famous 1962 lecture,
 \dots I took a number of rubber balls and stuck them together with rods of a
 selection of different lengths ranging from 2.75 to 4 inch. I tried to do this in the
 first place as casually as possible, working in my own office being interrupted every
-five minutes or so and not remembering what I had done before the interruption.\dots
+five minutes or so and not remembering what I had done before the interruption.\dots[.]
 \end{quote}
 
-After the first computer simulations where performed in the Los Alamos labs, the
+After the first computer simulations where performed in the Los Alamos labs[.], the
 popularity of simulations rapidly increased. The remarkable explanatory power of
 simulations, combined with the relative easy construction of computer models, lead to a
 fast adoption of computer simulations in the scientific community. Within the context of
@@ -170,7 +169,7 @@ from the fact, that for each individual particle all the other particles are con
 to its interaction potential. To improve this scaling behaviour, the non-bonded
 interactions in a MD simulation are almost always truncated. This localization of the
 interatomic interactions has the nice effect that not all atoms are involved in every
-calculation. Efficient algorithms, like the multigrid method, have been derived to
+calculation. Efficient algorithms, like the multigrid method[.], have been derived to
 improve the scaling complexity of MD simulations up to $O(Nt)$.\\
 
 Coarse graining is a method to further optimize molecular dynamics simulations.
@@ -190,12 +189,53 @@ In the case of DNA simulations, coarse graining turned out to be a very importan
 Previous all atom simulations of DNA polymers were restricted to simulations of less then
 hundred baisepairs over only a few microseconds. Studying large scale systems, often
 encountered in DNA technology, was only possible after the development of coarse grained
-models. A few examples of commonly used coarse grained models of DNA are Martini, 3SPN
-and oxDNA.
+models. A few examples of commonly used coarse grained models of DNA are Martini[.],
+3SPN[.] and oxDNA[.].\\
 
-\begin{figure}[htpb]
-    \centering
-    \includegraphics[width=0.6\linewidth]{Figures/CoarseGrained.png}
-    \caption{zelf nog maken}%
-    \label{fig:Figures/CoarseGrained}
+\begin{figure}[ht]
+  \begin{centering}
+  \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
+  \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
+  \centering
+  \vspace{-0.9cm}
+  \includegraphics[width=.9\linewidth,valign=t]{Figures/ballnstick2.png}
+  \end{subfigure}%
+  \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
+  \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
+  \centering
+  \includegraphics[width=.67\linewidth,valign=t]{Figures/oxDNA.png}
+  \end{subfigure}%
+  \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testb}}%
+  \begin{subfigure}[t]{\dimexpr.3\linewidth-1.3em\relax}
+  \centering
+  \vspace{-0.5cm}
+  \includegraphics[width=.65\linewidth,valign=t]{Figures/beadSpring.png}
+  \end{subfigure}
+  \caption{This is a figure}
+  \label{fig:test}
+  \end{centering}
 \end{figure}
+
+% \begin{figure}[ht]
+%   \begin{centering}
+%   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
+%   \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
+%   \centering
+%   \vspace{-1.7cm}
+%   \includegraphics[width=.65\linewidth,valign=t]{Figures/ballnstick2.png}
+%   \end{subfigure}%
+%   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
+%   \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
+%   \centering
+%   \includegraphics[width=.67\linewidth,valign=t]{Figures/oxDNA.png}
+%   \end{subfigure}%
+%   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testb}}%
+%   \begin{subfigure}[t]{\dimexpr.3\linewidth-1.3em\relax}
+%   \centering
+%   \vspace{-0.5cm}
+%   \includegraphics[width=.65\linewidth,valign=t]{Figures/beadSpring.png}
+%   \end{subfigure}
+%   \caption{This is a figure}
+%   \label{fig:test}
+%   \end{centering}
+% \end{figure}
