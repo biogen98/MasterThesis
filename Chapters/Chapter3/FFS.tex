@@ -1,18 +1,109 @@
 \section{Forward Flux sampling}
 
-
-Simulating out of equilibrium systems, ubiquatous in the field of soft matter physics.
-Lack of detailed balance, key aspect of Monte carlo methods make FFS, MD simulations the
-only choice to simulate rare events. -> no guaranteed Boltzmann-like stationary
-distribution.  (MD or stochastic
-dynamcis)
-
-
-Transition rates between two local minima in energy landscape.
-Local minima, order paramters, measure flux over first order param. Factorise
-probabilties. Choose a FFS variant explain the process.
+Computational methods are used to study a wide variety of phenomena, ranging from
+large meteorological events to chemical reactions at the atomic scale. One class of
+phenomena that is omnipresent in all these fields are the rare events. A rare event is an
+event caused by stochastic fluctuations in the system, characterised by a large
+gap in the time-scales of the duration of the events and their temporal spacing.
+The infrequency of their occurrence in combination with their short duration, makes them
+hard to study with both experimental and computational approaches.
 
 
-enumerate stappen plan.
+Using this definition many natural processes can be classified as rare events, among
+which the hybridisation and toehold displacement reactions studied in this thesis. Due to
+the large temporal spacing of these rare events, brute-force molecular dynamics
+simulations would simulate a lot of wait time between events. To effectively probe the
+kinetics of these rare events, advanced sampling methods are needed.
 
-show image of trajectories.
+
+A large ensemble of advanced sampling methods have been developed and can be largely
+divided into two classes. The first class are the free energy methods, based upon
+applying a biasing potential onto chosen collective variables. These potentials bias the
+Hamiltonian of the system in such a way that rare parts of its configuration space are
+explored. Notable examples of these methods are adaptive biasing force algorithm[.],
+basis function sampling[.] and umbrella sampling[.]. %(SSAGES)
+
+
+The second class of methods, known as path sampling methods, do not influence the
+systems Hamiltonian, but rather interface directly with the simulations trajectories. The
+transition path ensemble is usually sampled by perturbing an initial transition path or
+partitioning the phase space in subregions. Examples of these methods are transition
+path sampling [.] and forward flux sampling[.][.].  The latter will be used in our
+hybridisation simulations, motivated by its relative simplicity.
+
+
+Forward Flux Sampling (FFS) starts with identifying two local minima, $A$ and $B$, in the
+energy landscape of our system, for which we want to sample the transition path ensemble.
+Next an order parameter, $\lambda(x)$, is defined with the aim of partitioning the
+phase space, $\Omega$, using a set of nonintersecting hypersurfaces. By design, we
+choose this order parameter to be a function, $\lambda(.):\ $\Omega$\ \rightarrow
+\mathcal{R}$, monotonically increasing from the initial state $A$ and too the final
+state $B$.
+
+
+Using this function the two local minima can
+now be specified as $A := \{x: \lambda(x) < \lambda_A\} $ and $B := \{x: \lambda(x) \geq
+\lambda_B\} $. The chosen levels of order, $\lambda_A$ and $\lambda_B$, construct the
+interfaces separating the two local energy basins of our rare event from the rest of the
+phase space. Finally this procedure can be done for a $N$-number of interfaces spanning
+between $A$ and  $B$, we find
+\begin{equation}
+\lambda_A = \lambda_0 < \lambda_1< \dots < \lambda_{N-1} < \lambda_N = \lambda_B
+\end{equation}
+Note that this methods does not require an in depth knowledge of the energy landscape
+between the two states, choice of order parameter will however heavily influence the
+efficiency of the simulation.
+
+When we study these rare events, we want to get to understand their kinetics or in other
+words their reactions speed $k_{AB}$.
+
+ \begin{equation}
+    k_{AB} = \frac{\langle \Phi_{A,n} \rangle}{\langle h_{\mathcal{A}}\rangle} =
+    \frac{\langle \Phi_{A,0} \rangle}{\langle h_{\mathcal{A}}\rangle}
+    P(\lambda_n|\lambda_0)
+ \end{equation}
+ $\langle \Phi_{A,n} \rangle$ is the steady state flux from $A$ to  $B$ and
+$\langle h_{\mathcal{A}}\rangle$ is the average fraction of time that  a trajectory
+spends in the local minima basin $A$. In the above equation this steady state flux is
+factorised into the flux over the interface corresponding to the first order lever,
+$\lambda_0$ and the subsequent probability of reaching the final state from this
+interface. Using the previously defined interfaces, we can now factorize the events'
+probability into transition probabilities between the individual interfaces as
+
+\begin{equation}
+    P(\lambda_n|\lambda_0) = \prod_{i=0}^{n-1} P(\lambda_{i+1}|\lambda_i).
+ \end{equation}
+
+Estimate the transition probabilities can be done by shooting trajectories starting from
+one interface to the next, while keeping track of the number of attempts. Since not the
+entire energy landscape between the minima has to be crossed, measuring these small
+transitions can be more easily done.
+
+
+Note that this set-up allows for simulations of both equilibrium and out-of-equilibrium
+systems, it does not require detailed balance like other sampling techniques.  Non
+equilibrium systems are ubiquitous in soft matter physics, illustrating another strength
+of the method.
+
+\begin{figure}[ht]
+\begin{center}
+  \includegraphics[width=0.5\textwidth]{Figures/FFS.png}
+  \caption{write caption[.]}
+\end{center}
+\end{figure}
+
+Different variants on the FFS method have been devised, they differ in the approach by
+which they calculate the probability $P(\lambda_n|\lambda_0)$. During this thesis I
+choice is the “Branched Growth” (BG) algorithm [zie citation allen review], motivated by
+the nicely implemented in recursive programming.
+
+\begin{enumerate}
+   \item Evaluate $\langle\phi_{A,0}\rangle$ + generate configs on $\lambda_0$
+   \item fire $k_0$ trial runs.
+   \item for each stored configuration firing runs at each interface
+ $k_1$ to $lambda_2$ or back to  $
+      lambda_1$
+   \item Iterate until end is reached or no more configs, start over. Generate branching
+      traj from one initial $\lambda_0$
+   \item repeat 2 to 4 until succes.
+\end{enumerate}
