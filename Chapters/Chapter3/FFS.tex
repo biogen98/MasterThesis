@@ -44,66 +44,83 @@ state $B$.
 Using this function the two local minima can
 now be specified as $A := \{x: \lambda(x) < \lambda_A\} $ and $B := \{x: \lambda(x) \geq
 \lambda_B\} $. The chosen levels of order, $\lambda_A$ and $\lambda_B$, construct the
-interfaces separating the two local energy basins of our rare event from the rest of the
-phase space. Finally this procedure can be done for a $N$-number of interfaces spanning
-between $A$ and  $B$, we find
+interfaces separating the two local energy basins from the rest of the
+phase space. Finally this procedure can be done for a $N$-number of interfaces
+partitioning the space between $A$ and  $B$, we find
 \begin{equation}
 \lambda_A = \lambda_0 < \lambda_1< \dots < \lambda_{N-1} < \lambda_N = \lambda_B
 \end{equation}
-Note that this methods does not require an in depth knowledge of the energy landscape
-between the two states, choice of order parameter will however heavily influence the
-efficiency of the simulation.
+Note that this methods does not require an in depth knowledge of the systems energy
+landscape, however the choice of order parameter will heavily influence the
+efficiency of the simulation. Analogues to the ambiguous choice of a collective variable
+in free energy methods, making these decisions is often more an art then a science.
 
-When we study these rare events, we want to get to understand their kinetics or in other
-words their reactions speed $k_{AB}$.
-
+The ultimate aim of these methods is to get a grasp of the kinetics of rare events. In
+quantitative terms this means determining the rate constant of the transition
+from $A$ to  $B$, denoted as $k_{AB}$. The expression used to calculate $k_{AB}$ is:
  \begin{equation}
     k_{AB} = \frac{\langle \Phi_{A,n} \rangle}{\langle h_{\mathcal{A}}\rangle} =
     \frac{\langle \Phi_{A,0} \rangle}{\langle h_{\mathcal{A}}\rangle}
     P(\lambda_n|\lambda_0)
  \end{equation}
- $\langle \Phi_{A,n} \rangle$ is the steady state flux from $A$ to  $B$ and
+ where $\langle \Phi_{A,n} \rangle$ is the steady-state flux of trajectories starting in
+ $A$ and reaching the final interface $\lambda_n$ (i.e. reaching B) and
 $\langle h_{\mathcal{A}}\rangle$ is the average fraction of time that  a trajectory
-spends in the local minima basin $A$. In the above equation this steady state flux is
-factorised into the flux over the interface corresponding to the first order lever,
-$\lambda_0$ and the subsequent probability of reaching the final state from this
+spends in the basin of local minima $A$. In the above equation this steady state flux is
+factorised into the flux of trajectories starting in $A$ and crossing $\lambda_0$ and the
+subsequent probability of reaching the final state from this
 interface. Using the previously defined interfaces, we can now factorize the events'
 probability into transition probabilities between the individual interfaces as
-
 \begin{equation}
     P(\lambda_n|\lambda_0) = \prod_{i=0}^{n-1} P(\lambda_{i+1}|\lambda_i).
  \end{equation}
-
-Estimate the transition probabilities can be done by shooting trajectories starting from
-one interface to the next, while keeping track of the number of attempts. Since not the
-entire energy landscape between the minima has to be crossed, measuring these small
-transitions can be more easily done.
-
+Estimating these transition probabilities can be done by shooting trajectories starting
+from one interface to the next, while keeping track of the fraction of attempts
+successfully crossing the next interface. Since not the entire energy landscape between
+the minima has to be crossed, measuring these small transitions can be more easily done.
 
 Note that this set-up allows for simulations of both equilibrium and out-of-equilibrium
-systems, it does not require detailed balance like other sampling techniques.  Non
+systems, it does not require detailed balance like other sampling techniques. Non
 equilibrium systems are ubiquitous in soft matter physics, illustrating another strength
 of the method.
-
 \begin{figure}[ht]
 \begin{center}
   \includegraphics[width=0.5\textwidth]{Figures/FFS.png}
   \caption{write caption[.]}
 \end{center}
 \end{figure}
-
 Different variants on the FFS method have been devised, they differ in the approach by
 which they calculate the probability $P(\lambda_n|\lambda_0)$. During this thesis I
-choice is the “Branched Growth” (BG) algorithm [zie citation allen review], motivated by
-the nicely implemented in recursive programming.
-
-\begin{enumerate}
-   \item Evaluate $\langle\phi_{A,0}\rangle$ + generate configs on $\lambda_0$
-   \item fire $k_0$ trial runs.
-   \item for each stored configuration firing runs at each interface
- $k_1$ to $lambda_2$ or back to  $
-      lambda_1$
-   \item Iterate until end is reached or no more configs, start over. Generate branching
-      traj from one initial $\lambda_0$
-   \item repeat 2 to 4 until succes.
+choose to use the “Rosenbluth-like” (RB) method [zie citation allen review]. The choice
+is motivated
+by its resemblance with well known Monte Carlo Simulations and recursive nature, making
+it easy to implement.  This method generates unbranched transition paths from state $A$
+to state $B$, making them easy to analyse. The algorithm is described in six steps:
+\begin{enumerate}[label=(\roman*)]
+   \item Generate configurations on the $\lambda_0$ interface by running
+      simulations in the $A$ basin. Keeping track of the fractions $\langle
+      \Phi_{A,0} \rangle/\langle h_{\mathcal{A}}\rangle$ is evaluated.
+   \item Fire $k_0$ trial runs from generated configurations on $\lambda_0$ until they
+      cross $\lambda_1$ or cross back to $\lambda_0$. Store the final configurations of
+      the successful simulations.
+   \item Sample one of the saved configuration on the $\lambda_1$ interface and use it to
+      shoot $k_1$ runs to the next interface $\lambda_2$.
+   \item Iterate the previous steps until the trajectories reach $\lambda_n$ or no more
+     configurations are available.
+   \item If not successful, sample a stored configuration on $\lambda_0$ and repeat the
+      steps $\textbf{(i)}$ to $\textbf{(iv)}$.
+   \item Finally compute $P(\lambda_n|\lambda_0)$ using a weighted average of individual
+     transition probabilities as described below.
 \end{enumerate}
+Calculating the transition probabilities is done by taking a weighted average of the
+attempted trial runs. The trial runs of path $b$ starting at interface
+$\lambda_i$ is assigned a  weight $w_{i,b}$ as
+\begin{equation}
+   w_{i,b} = \prod_{j=0}^{i-1} S_{j,b}/k_j.
+\end{equation}
+where $S_{j,b}$ is the number of successful trajectories during the
+generation of path $b$. Using these weights the transition probability is computed using
+\begin{equation}
+   P(\lambda_{i+1} | \lambda_i) = \frac{\sum_{b} w_{i,b}\ S_{i,b}/k_i}{\sum_b w_{i,b}}.
+\end{equation}
+

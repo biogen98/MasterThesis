@@ -8,7 +8,6 @@ $\boldsymbol{u}_i = \boldsymbol{r}_i - \boldsymbol{r}_{i-1}$. During this discus
 will assume these bonds to be inextensible, i.e. having a fixed
 bond length of $|\boldsymbol{u}_i| = a$.\\
 
-
 Various different models can be used to describe a polymer. The most simple version is
 called
 the Freely Jointed Chain (FJC). This model is an example of an ideal flexible polymer, in
@@ -22,7 +21,6 @@ an uniform probability distribution
     \delta(|\boldsymbol{u}| - a), \\
 \end{equation}
 where $a$ is the fixed bond length.
-
 
 The above described model provides a relatively accurate description of long polymers.
 However, the assumption that consecutive monomers are uncorrelated becomes
@@ -63,12 +61,10 @@ single bond-vector partition function. Carrying out the integration yields the r
     Z_{\mathrm{WLC}}(1, T)=\int_{0}^{\pi} d \theta e^{\beta \kappa \theta}=\frac{2
     \sinh(\beta \kappa)}{\beta \kappa}.
 \end{equation}
-
 %\begin{equation}
 %    \left\langle\cos \theta_{i+1}\right\rangle
 %    =\frac{\partial \log Z_{\mathrm{WLC}}(1, T)}{\beta \partial \kappa}.
 %\end{equation}
-
 From the found partition function we can now determine the bond-vector correlation
 function. Using the definition of the partition function, we determine the average cosine
 of the angle between consecutive bonds to be,
@@ -79,7 +75,6 @@ of the angle between consecutive bonds to be,
     &= \frac{1}{\tanh(\beta \kappa)} - \frac{1}{\beta \kappa}.
     \end{aligned}
 \end{equation}
-
 Studying the conformation of polymers is often times done assuming a low
 temperature or large bending rigidity, where we find
 that the above expression simplifies. In the limit, $\beta \kappa \gg 1$, the lowest
@@ -87,7 +82,6 @@ order approximation yields,
 \begin{equation}
     \langle\cos \theta\rangle \approx 1-\frac{1}{\beta \kappa}.
 \end{equation}
-
 Decomposing the bond-vector $\boldsymbol{\hat{u}}_{n+1}$ in terms of an orthonormal
 basis, defined by the normal and tangential directions of the preceding vector
 $\boldsymbol{\hat{u}}_{n+1}$, gives
@@ -114,7 +108,6 @@ Exploring this result in the limit, $\beta \kappa \gg 1$, we find the expression
     e^{m \log(1 - \frac{1}{\beta \kappa})} \approx e^{-na/l_p},
 \end{equation}
 introducing a new polymer quantity, the bending persistence length
-
 \begin{equation}
     l_b \equiv \frac{a \kappa}{k_{b} T}.
 \end{equation}
@@ -133,7 +126,6 @@ The persistence length is a central result in the theory of polymer physics, pro
 measurable quantity related to the bending rigidity of a polymer. During the
 simulations performed in this thesis, the notion of bending persistence length is used to
 discuss the flexibility of the DNA polymer.
-
 
 %The end-to-end vector $\boldsymbol{R}$ in the continuum limit. For example can be
 %rewritten using the arc-length parameter $s$ where $0 \leq s \leq L$ and $L = Na$ as:
@@ -155,4 +147,3 @@ discuss the flexibility of the DNA polymer.
 %l_{\mathrm{b}}}\right)\right\}.
 %\end{aligned}
 %\end{equation}
-

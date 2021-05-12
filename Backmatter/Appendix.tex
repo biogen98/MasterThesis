@@ -50,8 +50,20 @@ The general solution is given by the linear combination,
   \sum_{k=0}^{+\infty} \frac{1}{(2k+1)^4} e^{- \frac{D(2k+1)^2 \pi^2}{L^2}t}\Bigg]\\
 \end{align*}
 As expected, the mean squared distances saturates to $\langle \Delta x^2 \rangle = L^2/6$
-in the long-time limit $t \gg L^2 / D.$
+in the long-time limit $t \gg L^2 / D.$ To explore the other limiting case $t \ll L^2/D
+$ we perform a taylor expansion and find
 \begin{align*}
-  \langle \Delta x^2 \rangle &= \frac{L^2}{6}\Bigg[1 -
-  \frac{96}{\pi^4} e^{- \frac{D \pi^2}{L^2}t}\Bigg]\\
+  \langle \Delta x^2 \rangle &= \frac{L^2}{6} - \frac{16 L^2}{\pi^4} \sum_{k=0}^{\infty}
+  \frac{1}{(2k+1)^4} + \frac{16 D t}{\pi^2} \sum_{k=0}^{\infty} \frac{1}{(2p+1)^2} +
+  \mathcal{O}\bigg(\frac{D^2 t^2}{L^4}\bigg).
 \end{align*}
+
+[cite in bickel]
+\begin{equation*}
+  \sum_{k=0}^{\infty} \frac{1}{(2k+1)^2} = \frac{\pi^2}{8} \qquad \text{and} \qquad
+  \sum_{k=0}^{\infty} \frac{1}{(2k+1)^4} = \frac{\pi^4}{96}
+\end{equation*}
+
+\begin{equation*}
+\langle \Delta x^2 \rangle = 2Dt \qquad t \ll L^2/D
+\end{equation*}
