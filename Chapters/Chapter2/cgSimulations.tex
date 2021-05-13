@@ -17,6 +17,35 @@
   \end{centering}
 \end{figure}
 
+Undertanding the Entropic interactions + providing a way to look into detail what
+happens. Chemist only measure current, we can provide a new window into the world of the
+nanopore.
 
-As is common in simula- tions of coarse-grained models, we use a higher diffusion
-coefficient than for physical DNA
+LAMMPS.
+
+Discuss bead spring model DNA + repulsive LJ interactions to simulate excluded volume
+interactions.
+
+The bond strength is chosen to be, by transforming the equation for persistence length
+kSsDNA = persistenceSsDNA * boltzmann * temperature / lengthNt
+kDsDNA = persistenceDsDNA * boltzmann * temperature / lengthBp
+$k_{bend} = l_p * k_{bt} * T / \langle a \rangle$
+Kuhn segments for ssDNA en dsDNA are different!
+
+Gaussian probably distribution of the beads, i.e. the beads show ideal chain behaviour.
+Equipartition theorem.
+
+$k_{bond} = 3 k_b T / \langle a \rangle$
+
+Design nanopore and neutravidin pore. Based on electrostatic calculations + size stopper
+is fittud using simulations, requiring blockage to occur.
+
+Langevin integrator is used As is common in simula- tions of coarse-grained models, we
+use a higher diffusion coefficient than for physical DNA.
+
+discuss limits of the model. Limited accuracy of the CG model since it does not caputre
+the full structure of DNA accurately. For example the double helix structure is note
+captured. Another consequence is that the DNA hybridisation can not be simulated using
+this model, since both ssDNA nucleotides and dsDNA basepairs are represented by simple
+beads. To further analyse and understand the operation cycle of the nanopiston a more
+accurate CG model is nodig.
