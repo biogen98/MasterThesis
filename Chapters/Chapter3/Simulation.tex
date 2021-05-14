@@ -1,1 +1,31 @@
-\section{Simulation technique}
+\section{Computational setup}
+
+The model used to study the DNA nanopiston, is largely based on the model
+previously devised by Bayoumi et al. The difference main between the two models lays in
+the coarse-grained model used to simulate the DNA strands. As discussed in Chapter 2, the
+model of the previous simulated the DNA strands using a bead-spring approach, where now
+we used oxDNA. The usages of this more sophisticated model gives a better represntation
+of the dynamics of DNA strans, also allowing for accurate simulations of the
+thermodynamic transitions in the DNA nanopiston.
+
+The simulations were performed using the popular molecular dynamics simulator, LAMMPS[.].
+Thanks to the Lammps implementation of oxDNA, developed by Henri et al[.],  this
+simulator enabled us to simulate the interaction of oxDNA strands with externally defined
+particles. The intial configurations of the simulations where generated using the
+Moltemplate package[.], a general purpose molecule builder for LAMMPS.
+
+The molecular dynamics simulation performed in this thesis utilised a langevin
+thermostat, more precisely the $Dot-C$ langevin integrator also implemented by Henri et
+al. This is a LAMMPS implementation of the “Langevin C” integrator developed Davidchack
+et al. [.], falling in the class of  rigid-body Langevin-type integrators. This type of
+thermostat separates the stochastic and deterministic parts of a Langevin thermostat to
+efficiently take into account the extra degrees of freedom in the system, arising from
+the non-spherical shape of the oxDNA beads. As is common practice in MD simulations, the
+diffusion coefficient of the oxDNA strand is chosen larger then value of physical DNA.
+This is done to speed up the simulations, while ensuring its physical accuracy.
+
+The Model is used to study the more accurately study the conformational fluctuation of
+the Rotaxane and develop understanding of the entropic interactions between the DNA and
+the nanopore. Next the thermodynamic transitions in the operation cycle of the piston are
+simulated using a forward flux sampling algorithm. The FFS algorithm is implemented as
+Python script, performing the simulations by interfacing with the Python api of LAMMPS.

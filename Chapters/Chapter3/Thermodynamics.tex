@@ -1,4 +1,36 @@
 \section{DNA Thermodynamics}
+ The field of DNA thermodynamics focuses on understand how the structure of DNA varies
+with temperature. Due to nature of the hydrogen bond interactions that give rise to the
+structure of dsDNA, the association and dissociation of the DNA duplex is possible. The
+former is called DNA hybridisation shown in fig. ..., driven by a reduction in free
+energy due to the bonding of complementary base-pairs. While the latter is called DNA
+melting, a process observed at high temperatures, where the trade-off in configurational
+entropy during duplex formation is no longer favourable compared to the reduction in free
+energy.
+
+During the discussion of the DNA nanopiston, we stated that thermodynamic transitions are
+the driving force behind its operating cycle. The power stroke of the piston is induced
+by a toehold mediated strand displacement reaction, while a hybridisation reaction
+facilitates the recovery stroke.
+
+Initiating a hybridisation reaction between two strands of ssDNA incurs a thermodynamic
+penalty, this penalty originates in the decrease of configurational entropy when the
+strand start to form a duplex. This has a consequence that initial contacts in these
+reactions often dissociate, this initial energy barrier needs to be crossed before the
+full hybridisation becomes energy favourable. Even when an initial contact results in the
+stabilisation of a dsDNA duplex for select base-pairs, the configuration often times is
+not conducive to full duplex formation. Especially in repetitive sequences, the chance
+of a mismatched initial hybridisation is significant.
+
+Another limiting factor to the rate constant of hybridisation reactions is that these
+transitions are not characterised by a single state but rather by a ensemble of possible
+transition pathways. The number of pathways increase dramatically when the strand
+sequences are repetitive, giving rise to hybridisation pathways facilitated by  Inchworm
+displacement and pseudo knot displacement.
+
+The combination of the unstable initialisation of hybridisation reactions together
+with its many transition pathways, complicates the analysis of the full reaction kinetics
+observed in DNA hybridisation.
 
 \begin{figure}[ht]
   \begin{centering}
@@ -44,90 +76,53 @@
 
 \end{figure}
 
+% ‘fraying’ to describe the disruption of base-pairs at the end of a duplex; if all base
+% pairs fray, the duplex melts or dissociates.
+%
+% ‘zippering’ refers to when a new base-pair forms at the end of an existing duplex, shown
+% in figure 3.2
 
-\newpage
+The other important thermodynamic transition during the operating cycle of the nanopiston
+is the Toehold mediated strand displacement. Initially this reaction consists out of two
+components, the first is an imperfect duplex structure formed by a substrate strand and
+an incumbent strand. The two strands are partially complementary by having either a
+mismatch in their base-pair sequence or a surplus of base-pairs on the substrate strand.
+The non-hybridised part of the substrate constitutes a flexible strand of ssDNA
+that is referred to as the toehold.
 
+The second component is called the invasive strand, and is fully complementary with the
+substrate. It is energetically favourable for the invading
+strand to disrupt the imperfect duplex structure and form a fully Watson–Crick
+complementary dsDNA with the substrate strand. This displacement reaction results in an
+overall reduction in the free energy of the system since the strand displacement
+increases the total number of hybridised base-pairs.
 
+The process of strand displacement starts with the hybridisation of the toehold and the
+invading strand. Once this initial hybridisation has occurred the invading strand can
+start to contest hybridised base-pairs of the imperfect duplex. Disrupting the
+base-pairing of the duplex is referred to as fraying, while the reverse process
+where new base-pairs are formed is called zippering. During this process the invading
+strand competes with the incumbent strand to form base-pairs with the substrate.
 
- The field of DNA thermodynamics focuses on understand how the structure of DNA varies
- with temperature. Due to nature of the hydrogen bond interactions that give rise to the
-structure of dsDNA, the association and dissociation of the DNA duplex is possible. The
-former is called DNA hybridisation, which is driven by a reduction in free energy due to
-the bonding of complementary base-pairs. While the latter is called DNA melting, a
-process seen at high temperatures, where the trade-off in configurational entropy during
-duplex formation is no longer favourable compared to the reduction in free energy.
+The reaction can be modeled using a one-dimensional energy landscape, called the
+intuitive energy landscape (IEL) model[.], shown in figure ... . In the shape of the
+energy landscape we recognise two distinct features. The first features is the initial
+energy barrier, also seen in DNA hybridisation. This energy barrier again arises from a
+reduction in configurational entropy, when the intial binding happens. The second feature
+is the plateau, representing the change in free energy when the when the strand
+displacement takes place. This plateau gives rise to a relatively slow reaction, which
+can be explained using a simple toy model. Lets look at the scenario where the substrate
+consists of N+1 nucleotide, with only one of these nucleotide constituting the toehold.
+If we assume that both the incumbent and invasive strand contest each others hybridised
+base-pairs at the same rate, the displacement reaction can be modelled as a random walk.
+The problem reduces to a famous problem in probability theory called the gamblers ruin.
+It can be shown that the reaction rate scales as $1\3N$[.], making the Toehold
+displacement reaction increasingly difficult to study for large strands.
 
-During the discussion of the DNA nanopiston, we stated that thermodynamic transitions are
-the driving force behind its operating cycle. The power stroke in the cycle is induced by
-a toehold mediated strand displacement reaction, while a hybridisation reaction
-facilitates the recovery stroke.
-
-
-Initiating strand hybridisation reaction incurs a thermodynamic penalty, this penalty
-originates in the decrease of configurational entropy when the strand start to form a
-duplex. This has a consequence that initial contacts in these reactions often dissociate.
-Even when an initial contact results in the stabilisation of the duplex for select
-base-pairs, the configuration often times is not conducive to full duplex formation.
-
-The main reasons is that these transitions are not characterised by a single state but
-rather by a ensemble of possible transition pathways. The number of pathways increase
-dramatically when the strand sequences are repetitive, giving rise to hybridisation
-pathways called the Inchworm and the pseudo knot.
-
-The combination of  unstable initialisation of the hybridisation reaction together with
-the many transition pathways complicates the study of hybridisation with MD simulations
-
-Deze nog ergens gebruiken:
-
-‘fraying’ to describe the disruption of base pairs at the end of a duplex; if all base
-pairs fray, the duplex melts or dissociates.
-
-‘zippering’ refers to when a new base pair forms at the end of an existing duplex, shown
-in figure 3.2
-
------------------------------------------------------------------------------------------
-
-The other important thermodynamic transition is the Toehold mediated strand displacement.
-This reaction involved three DNA strand, of which two partially complementary strands
-from an imperfect duplex structure. The two strands can be partially complementary by
-having either a mismatch in basepair or a number of basepairs. The non hybridised part of
-the strand constitutes a flexible ssDNA strand that is refered to as the toehold.
-
-The third strand in this reaction is fully complementary with one of the strands in the
-duplex, making it energetically favourable for the .
-
-strand displacement increases number of hybridised base pairs, fully Watson–Crick
-complementary -> descreasing the overall free energy of the system. Overall, displacement
-is thermodynamically driven forward by the net gain in base pairs due to the toehold
-
-
-Once the toehold has bound, there are two possibilities: (i) the toehold base pair could
-dissociate, leading to the dissoci- ation of the invader or (ii) the nearest base pair of
-the substrate-incumbent complex could fray, allowing the invader to compete to replace
-that base pair and complete the first step of branch migration.
-
-as may seem reasonable, that the rate at which either base pair frays is similar, process
-(ii) should be approximately half as fast as process (i).  strand displacement kinetics
-depends on toehold length.  Intiating strand displacement incurs a thermodynamic penalthy
-(making is difficult to simulate).
-
-This is because, once the substrate- incumbent base pair frays, there is a 50% chance of
-the invader replacing the frayed base pair, and a 50% chance of returning to the initial
-step.
-
-Therefore, the probability of successfully completing the remaining steps ofbranch
-migration before going back to the toehold-only- bound state is 1/20, from the gambler’s
-ruin analysis
-
-model branch migration at a more detailed level. we analyze a 1D (single-pathway) model
-of toehold-mediated strand displacement called the intuitive energy landscape (IEL) model
--> refer to graph on image.
-
------------------------------------------------------------------------------------------
-
-Conclusion: Reactions do not happen that easy, difficult to simulate, especially the
-toehold displacement reaction. An advanced sampling technique is needed to sample these
-rare events.
+Both the thermodynamic transitions central in the operation cycle of the DNA nanopiston
+are relatively difficult to study due to their slow reaction rates. To accurately
+analysing the reaction kinetics of there rare events, requires the use of advanced
+sampling techniques.
 
 \begin{figure}[ht]
 \begin{center}

@@ -8,13 +8,11 @@ gap in the time-scales of the duration of the events and their temporal spacing.
 The infrequency of their occurrence in combination with their short duration, makes them
 hard to study with both experimental and computational approaches.
 
-
 Using this definition many natural processes can be classified as rare events, among
 which the hybridisation and toehold displacement reactions studied in this thesis. Due to
 the large temporal spacing of these rare events, brute-force molecular dynamics
 simulations would simulate a lot of wait time between events. To effectively probe the
 kinetics of these rare events, advanced sampling methods are needed.
-
 
 A large ensemble of advanced sampling methods have been developed and can be largely
 divided into two classes. The first class are the free energy methods, based upon
@@ -23,14 +21,12 @@ Hamiltonian of the system in such a way that rare parts of its configuration spa
 explored. Notable examples of these methods are adaptive biasing force algorithm[.],
 basis function sampling[.] and umbrella sampling[.]. %(SSAGES)
 
-
 The second class of methods, known as path sampling methods, do not influence the
 systems Hamiltonian, but rather interface directly with the simulations trajectories. The
 transition path ensemble is usually sampled by perturbing an initial transition path or
 partitioning the phase space in subregions. Examples of these methods are transition
 path sampling [.] and forward flux sampling[.][.].  The latter will be used in our
 hybridisation simulations, motivated by its relative simplicity.
-
 
 Forward Flux Sampling (FFS) starts with identifying two local minima, $A$ and $B$, in the
 energy landscape of our system, for which we want to sample the transition path ensemble.
@@ -39,7 +35,6 @@ phase space, $\Omega$, using a set of nonintersecting hypersurfaces. By design, 
 choose this order parameter to be a function, $\lambda(.):\ $\Omega$\ \rightarrow
 \mathcal{R}$, monotonically increasing from the initial state $A$ and too the final
 state $B$.
-
 
 Using this function the two local minima can
 now be specified as $A := \{x: \lambda(x) < \lambda_A\} $ and $B := \{x: \lambda(x) \geq
@@ -96,7 +91,7 @@ is motivated
 by its resemblance with well known Monte Carlo Simulations and recursive nature, making
 it easy to implement.  This method generates unbranched transition paths from state $A$
 to state $B$, making them easy to analyse. The algorithm is described in six steps:
-\begin{enumerate}[label=(\roman*)]
+\begin{enumerate}[label=\textbf{(\roman*)}]
    \item Generate configurations on the $\lambda_0$ interface by running
       simulations in the $A$ basin. Keeping track of the fractions $\langle
       \Phi_{A,0} \rangle/\langle h_{\mathcal{A}}\rangle$ is evaluated.
@@ -113,13 +108,14 @@ to state $B$, making them easy to analyse. The algorithm is described in six ste
      transition probabilities as described below.
 \end{enumerate}
 Calculating the transition probabilities is done by taking a weighted average of the
-attempted trial runs. The trial runs of path $b$ starting at interface
-$\lambda_i$ is assigned a  weight $w_{i,b}$ as
+attempted trial runs. The path $b$ starting at the inital basin and reaching
+interface $\lambda_i$ is assigned a weight $w_{i,b}$ as
 \begin{equation}
-   w_{i,b} = \prod_{j=0}^{i-1} S_{j,b}/k_j.
+   w_{i,b} = \prod_{j=0}^{i-1} S_{j,b}/k_j,
 \end{equation}
-where $S_{j,b}$ is the number of successful trajectories during the
-generation of path $b$. Using these weights the transition probability is computed using
+where $S_{j,b}$ is the number of successful trajectories crossing interface $j$ during
+the generation of path $b$. Using these weights, the transition probability is computed
+using
 \begin{equation}
    P(\lambda_{i+1} | \lambda_i) = \frac{\sum_{b} w_{i,b}\ S_{i,b}/k_i}{\sum_b w_{i,b}}.
 \end{equation}
