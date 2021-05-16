@@ -10,20 +10,18 @@
   \vspace{0.3cm}
 \end{theo}
 
-The central topic of this is thee DNA nanopiston,  a molecular machine developed by the
-Maglia research group[.]. The piston operates by turning over chemical fuel,
-consisting of ssDNA,  into autonomous motion.
+The DNA nanopiston is a molecular machine developed by the Maglia research group[.].  Its
+main function constitutes the turning over of chemical fuel, in the form of ssDNA,  into
+autonomous motion. The design is based upon the group earlier work, where they developed
+a protein rotaxane[.], consisting of a polypeptide thread trapped in a Clya nanopore by
+two stopper proteins. This rotaxane could be moved between two stable states inside the
+nanopore by an electric potential, acting as a molecular switch.
 
-The design is based upon their earlier
-work, where the group developed a protein rotaxane[.], consisting of a polypeptide thread
-trapped in a Clya nanopore by two stopper proteins. This rotaxane could be moved between
-two stable states inside the nanopore by an electric potential, acting as a molecular
-switch.
-
-This research lead to the development of the DNA nanopiston by Bayoumi et al.[.] in the
-Maglia group. In this new molecular machine the rotaxane now constitutes of a DNA strand
-instead of a polypeptide thread. Utilising the thermodynamic transitions of DNA, this
-complex is capable of actively transporting DNA cargo-strands through the nanopore.
+Motivated by the results from this research, the DNA nanopiston was developed by Bayoumi
+et al.[.] in the Maglia group. In this new molecular machine the rotaxane constitutes of
+a DNA strand instead of a polypeptide thread. Utilising the thermodynamic transitions of
+DNA, this complex is capable of actively transporting DNA cargo-strands through the
+nanopore.
 
 In this chapter the work of Bayoumi et al. is discussed, giving an overview of the
 construction and operating cycle of this molecular machine.  At the end of this chapter
@@ -37,64 +35,67 @@ Synthetic molecular machines are often times embedded in larger complexes, provi
 necessary structure for their operation. For this reason biological nanopores are an
 suitable starting point in the development of molecular machines. These transmembrane
 proteins spontaneously self-assemble into well defined structures, embedded into a lipid
-bilayer. Extensive research has been performed, designing methods and tools to tailor
-their structural and electrostatic properties for specific use cases, originally focused
-on Ionic current spectroscopy. This large back catalogue of research can now be employed
-into building out their utility as an ideal building block for membrane bound molecular
-machines.
+bilayer. Extensive research has been performed towards designing methods and tools to
+tailor their structural and electrostatic properties for specific use cases, originally
+focused on Ionic current spectroscopy. This large back catalogue of research can now be
+employed into building out their utility as an ideal building block for membrane bound
+molecular machines.
 
 The design of the DNA nanopiston is centred around the biological nanopore Cytolysin
 A (ClyA). A modified variant ClyA-AS is used, which has been specially engineered for
-use in Ionic Current Spectroscopy[.].
+use in Ionic Current Spectroscopy.[.] By virtue of the large inner lumen of ClyA,
+translocation of dsDNA through the pore is possible. The molecular machine utilises this
+property by capturing a DNA rotaxane structure inside of the pore, anchoring it to the
+lipid membrane. The rotaxane is composed of a DNA complex connected to two neutravidin
+protein stoppers via biotin, which serve to keep the structure captured in the pore. The
+DNA complex consists of three ssDNA strands: ssDNA 1, ssDNA 2, and ssDNA 3, shown in fig
+....
+
+The formation of the DNA nanopiston takes place in a saline filled reservoir, where a
+ClyA nanopore is embedded into a membrane portioning the reservoir into a cis- and
+trans-side. To start the formation process Neutravidin ($0.5\ \mu M$), ssDNA1
+($5′-\text{biotinylated, }100\text{ bases, }1.2\ \mu M$) and ssDNA 2 ($80\text{ bases, }1
+\mu M$) are added to the cis-compartment. Since the first 70 nucleotides of ssDNA 1 are
+complementary to the last 70 nucleotides of ssDNA 2 both, the two strands will partially
+hybridise. Resulting in an DNA duplex structure, on one side connected to a
+neutravidin stopper and on the other two ssDNA overhangs.
+
+Applying a voltage of $+100\ mV$ over the reservoir results in a net force guiding the
+DNA complex from the cis towards the trans-side. The applied potential drives the
+capturing of the DNA inside the nanopore, observed as a drop in the current through the
+pore (Fig ..). The complex remains indefinitely captured inside the pore until the
+applied potential is reversed, restoring the open-pore current.
+
+Finally neutravidin ($1\ \mu M$) and ssDNA 3 ($3\text{′-biotinylated, }20\text{ bases, }2
+\mu\ M$) are brought into the solution at the trans-side, while keeping the potential at
+$+ 100\ mV$. The longest overhang of the captured DNA thread is formed by the 30 free
+nucleotides of ssDNA. The added strand, ssDNA 3, is fully complementary with the last 20
+nucleotides of this overhang, resulting in the hybridisation of both strands. To verify
+if the hybridisation has successfully taken place, the voltage over the reservoir is
+reversed. If no difference is measured in the pore-current, we conclude that the stable
+structure is formed, capturing the rotaxane inside the pore by the two protein stoppers.
+
+After the hybridisation we find the final structure, which is referred to as the
+rotaxane-ds. Here the suffix alludes to the predominately dsDNA composition of the
+rotaxane.\\
 
 
-The nanopore is used to anchor a DNA Rotaxane structure inside the lipid membrane. The
-large diameter of both its lumen and stem allows for the translocation of double
-stranded DNA through the pore.
-
-
-
-3. The DNA complex, built from three ssDNA sequences: ssDNA 1, ssDNA 2, and ssDNA 3.  The
-last 70 bases of ssDNA 2 are complementary to the first 70 bases of ssDNA 1,  hence a
-complex with neutravidin on one end, a 70-base dsDNA and two ssDNA overhangs on the other
-end is formed, toehold. This complex is called the rotaxane.
-
-2. The rotaxane is trapped in the nanopore by connecting it to two neutravidin stoppers
-via biotin
-
-The initial configuration is inspired by Ionic current spectroscopy. A clya nanopore
-embeded on a lipid bilayer, seperating a saline liquid filed basin into two compartments.
-
-To form the nanopiston Neutravidin (0.5 μM), ssDNA1 (5′-biotinylated, 100 bases, 1.2 μM)
-and ssDNA 2 (80 bases,1 μM) were added to the cis solution. Applied a voltage of +100mV,
-equal to a downward force on the analytes. The applied voltage induces an open pore
-current through the pore, when the analytes enter the pore this blockage is measured.
-The complex is trapped inside to pore indefinetely until the voltage is reversed.
-
-While keeping the potential at +100 mV, the addition to the trans side of neutravidin (1
-μM) and ssDNA 3 (3′-biotinylated, 20 bases, 2 μM), complementary to the last ten bases of
-the ssDNA 1 overhang of the trapped thread. With the aim of reducing the free enrgy in
-the system, the ssDNA strand hybridises will spontaneously hybridise with the other
-strand. The completion of the hybridisation is checked by reversing the potential over
-the pore, if the measured bloackage current remains the same it is assumed that the
-hybridisation has occured and the rotaxane is formed.
-
-\begin{figure}[ht]
+\begin{figure}[ht!]
   \begin{centering}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.8\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.92\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=\linewidth,valign=t]{Figures/RConstruction1.png}
   \end{subfigure}%
   \vspace{0.5cm}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.8\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.92\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=\linewidth,valign=t]{Figures/RConstruction2.png}
   \end{subfigure}%
   \vspace{0.5cm}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testb}}%
-  \begin{subfigure}[t]{\dimexpr.8\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.92\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=\linewidth,valign=t]{Figures/RConstruction3.png}
   \end{subfigure}
@@ -102,3 +103,6 @@ hybridisation has occured and the rotaxane is formed.
   \label{fig:test}
   \end{centering}
 \end{figure}
+
+
+\newpage

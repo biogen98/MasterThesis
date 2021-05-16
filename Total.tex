@@ -11,7 +11,17 @@
 \usepackage{fancyhdr}
 \usepackage{multicol}
 \usepackage{setspace}
-\usepackage[super, numbers]{natbib}
+% \usepackage[super, numbers]{natbib}
+\usepackage[
+backend=biber,
+style=ieee,
+style=ieee,
+sorting=none,doi=false,
+isbn=false,
+url=false,
+eprint=false,
+maxnames = 5
+]{biblatex}
 \usepackage{emptypage}
 \usepackage[linktocpage=true]{hyperref}
 \usepackage[toc,acronym,nonumberlist]{glossaries}
@@ -152,7 +162,8 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% defining bibliographystyle
-\bibliographystyle{apalike}
+% \bibliographystyle{apalike}
+\addbibresource{Bibliography/thesis.bib}
 
 
 
@@ -254,18 +265,21 @@ oscilator in ever-incresing levels of abstraction.}
 \end{appendices}
 
 % BIBLIOGRAPHY
-\addcontentsline{toc}{chapter}{Bibliography}
-% \begin{multicols}{2}
+% \addcontentsline{toc}{chapter}{Bibliography}
+% \begin{multicols}{1}
 % \begin{smallfont}
 \twocolumn
-\bibliography{Bibliography/thesis.bib}
+% \bibliography{Bibliography/thesis.bib}
+\printbibliography
 % \end{smallfont}
 % \end{multicols}
+% \cleardoublepage
 
+\onecolumn
+% \thispagestyle{empty}
+\input{Backmatter/Acknowledgements.tex}
 \cleardoublepage
-
-\input{Backmatter/Acknowledgements.tex} \cleardoublepage
-
+\thispagestyle{empty}
 
 % Back side of book
 \cleartoleftpage{} % Make sure the back page is at an even page number
