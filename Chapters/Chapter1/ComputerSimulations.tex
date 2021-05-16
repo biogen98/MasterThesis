@@ -2,18 +2,19 @@
 
 The theory of classical mechanics is often regarded as the first major breakthrough in
 the field of physics. For every aspiring physicist this is still the starting point of
-their studies. Unfortunately, getting to know these relatively simple laws of nature,
+their studies. Unfortunately, getting to know these relatively simple laws of nature
 leads to the inescapable realisation that these theories are expressed in mathematical
 formalisms that are only analytically solvable in few idealised scenarios. Applying these
 formulas to a problem consisting of just more then two particles already leads to
-practically unsolvable equations.\\
+practically unsolvable equations.
 
-Although it is often times not possible to find an exact solution to equations
+Although it is often not possible to find an exact solution to equations
 related to complex physical systems, finding reasonable approximations to their solution
 is achievable. One popular method to analyse the dynamics of complex systems is the use
-of simulations.\\
+of simulations.
 
-\begin{wrapfigure}[20]{r}{0.5\textwidth}
+\begin{wrapfigure}[18]{r}{0.5\textwidth}
+    \vspace{-1cm}
   \begin{center}
     \includegraphics[width=0.38\textwidth]{Figures/WaterModel.png}
   \end{center}
@@ -21,21 +22,20 @@ of simulations.\\
 \end{wrapfigure}
 
 Simulations have a rich history within physics and engineering, starting even before the
-invention of the computer.
+invention of the computer. An example of one of these mechanical simulations is the
+'Waterloopkundig Laboratorium', a hydrological laboratory located in Delft[.]. This
+laboratory houses a scale model of important Dutch waterways, where the influence of
+waves on harbours and docks was studied.  The simulation provided revolutionary insights
+into the behaviour of water and played an important part in the design of the famous
+Delta Works.
 
-An example of one of these mechanical simulations is the Waterloopkundig Laboratorium,
-a hydrological laboratory, located in Delft[.]. This laboratory houses a scale model of
-important Dutch waterways, where the influence of waves on harbours and docks was
-studied.  The simulation provided revolutionary insights into the behaviour of water and
-played an important part in the design of the famous Delta Works.\\
-
-Another more relevant example is the use of mechanical simulations to study the
-structure of water.  In the early 20th century physicist J.D. Bernal and his fellow
+Another more topical example is the use of mechanical simulations to study the
+structure of water.  In the early 20th century Prof. J.D. Bernal and his fellow
 researchers build various ball and stick models of water to analyse the possible 3D
 configurations of water molecules in a liquid[.]. Their research eventually explained the
-peculiar physical properties of water from a atomistic perspective. However useful these
-mechanical simulations turned out to be, the biggest drawback of the method was the
-extreme cost of labour involved with their construct. As Bernal alluded to in his
+peculiar physical properties of water from an atomistic perspective. Despite how useful
+these mechanical simulations turned out to be, the biggest drawback of the method was the
+extreme cost of labour involved with their construct. As Prof. Bernal alluded to in his
 famous 1962 lecture,
 
 \begin{quote}
@@ -45,14 +45,14 @@ first place as casually as possible, working in my own office being interrupted 
 five minutes or so and not remembering what I had done before the interruption.\dots[.]
 \end{quote}
 
-After the first computer simulations where performed in the Los Alamos labs[.], the
+After the first computer simulations where performed in the Los Alamos laboratory[.], the
 popularity of simulations rapidly increased. The remarkable explanatory power of
-simulations, combined with the relative easy construction of computer models, lead to a
+simulations, combined with the relative easy construction of computer models, led to a
 fast adoption of computer simulations in the scientific community. Within the context of
 this thesis, computer simulations are used to study the mechanics of
-the DNA polymer. Due to the high number of atoms in a typical system, it is generally
+the DNA polymer. Due to the high number of atoms in a typical system it is generally
 not possible to find an analytical solution to their equations of motion. In this
-context, simulations are often used to gain an insight into the complex dynamics of the
+context simulations are often used to gain an insight into the complex dynamics of the
 system and guide the developments of more simple approximate theories. The simulations
 act as a bridge between the microscopic constituents of the systems and the macroscopic
 properties we want to understand.
@@ -71,25 +71,25 @@ usually derived from the interaction potentials $U_i$.
 Solving these differential equations is achieved by employing a discretized time
 integration scheme.  Algorithm 1 shows the typical structure of a molecular dynamics
 simulation. The discretization resolution is conventionally called the time step of the
-simulations denoted by $\Delta t$.\\
+simulations denoted by $\Delta t$.
 
 \noindent There are a large number of different integrations schemes that one can choose
-from, where the choice depends entirely on the system at hand.
+from, in which the choice depends entirely on the system at hand.
 When working with an isolated system -- i.e. microcanonical ensemble --, logically an
 energy conserving integrator is needed. The canonical
 choice for this type of integration scheme is the Velocity-Verlet algorithm. This
 algorithm is an example of leapfrog integration, where the updating of the positions
 and velocities are interleaved at different points in time. The major strength of this
-type of algorithm is that it turns out to be a symplectic integrator, which means the
+type of algorithm is that it turns out to be a symplectic integrator. This means that the
 errors on the conserved energy are bounded.
 
 On the other hand, when a system is in contact with a thermal reservoir --i.e. canonical
 ensemble-- not the total energy is conserved, but rather the temperature of the
-simulation is fixed. To achieve this, a thermostat is implemented in the MD
+simulation is fixed. To achieve this a thermostat is implemented in the MD
 simulation. A typical thermostat attempts to negate any drift in temperature by
-appropriately importing or exporting energy to the system after each timestep.
-Poplular examples of thermostats are the Nos\'e-Hoover thermostat or the Langevin
-thermostat.  The latter regulates the temperature by introducing an implicit solvent to
+appropriately importing or exporting energy to the system after each time step.
+Popular examples of thermostats are the Nos\'e-Hoover thermostat or the Langevin
+thermostat. The latter regulates the temperature by introducing an implicit solvent to
 the simulation that gives rise to random thermal kicks. The resulting equations of motion
 are the Langevin equations given by,
 
@@ -98,7 +98,7 @@ are the Langevin equations given by,
     \boldsymbol{r}_i}{d t} +
     \xi_i(t),
 \end{equation}
-where $\gamma_i$ is known  as the friction coefficient and $\xi_i(t)$ a random force
+where $\gamma_i$ is known  as the friction coefficient and $\xi_i(t)$ a stochastic force
 acting upon the particles. The combination of the last two terms fully capture the
 statistical consequences of the solvent interacting with the system.
 
@@ -124,7 +124,7 @@ statistical consequences of the solvent interacting with the system.
     }
 
     \KwRet{$newList$}
-    \caption{The Velocity Verlet algorithm}
+    \caption{The Velocity Verlet algorithm: \textbf{Nog maken}}
 \end{algorithm}
 
 % \begin{center}
@@ -154,57 +154,57 @@ statistical consequences of the solvent interacting with the system.
 % \end{center}
 
 \subsection{Coarse Grained modelling}
-As most thing do, molecular dynamics simulations have their pitfalls. A commonly
-encountered problem is the rapidly increasing computational cost, when the number of
+As most things do, molecular dynamics simulations have their pitfalls. A commonly
+encountered problem is the rapidly increasing computational cost when the number of
 particles in the system increase. If not addressed, this would limit the scope of MD
-simulations to systems of a few particles over short time-scales.\\
+simulations to systems of a few particles over short time-scales.
 
 During these simulations the most costly calculations involve the non-bonded
 interactions in the system. These interatomic interactions make the computational
 complexity for rudimentary MD simulations scale as $O(N^2t)$, where $N$ is the number of
 particles in the system and $t$ the simulation time. This bad scaling behaviour comes
-from the fact, that for each individual particle all the other particles are contributing
-to its interaction potential. To improve this scaling behaviour, the non-bonded
+arises from the fact that for each individual particle all the other particles are
+contributing to its energy potential. To improve this scaling behaviour, the non-bonded
 interactions in a MD simulation are almost always truncated. This localization of the
-interatomic interactions has the nice effect that not all atoms are involved in every
-calculation. Efficient algorithms, like the multigrid method[.], have been derived to
-improve the scaling complexity of MD simulations up to $O(Nt)$.\\
+interatomic interactions has the favourable effect that not all atoms are involved in
+every calculation. Efficient algorithms, like the multigrid method, have been derived
+to improve the scaling complexity of MD simulations up to $O(Nt)$.[.]
 
 Coarse graining is a method to further optimize molecular dynamics simulations.
-In contrary to all atom simulations, where each atom is explicitly represented in the
-simulation, in coarse grained simulations multiple atoms are grouped together to form
-generalised pseudo-atoms with their respective pseudo-interaction.
+In all atom simulations each atom is explicitly represented as a particle in the
+simulation. Contrarily, coarse grained simulation use multiple atoms grouped
+together to form generalised pseudo-atoms, with their respective pseudo-interaction.
 
 There are two distinctly different ways to construct a coarse grained model. The first
 method starts from the all atom model of the system and generalises nearby atoms into
-larger pseudo-atoms, this is called the bottom up approach. The second method focuses
-more on the precise reproduction of experimental results, rather than
-the precise small scale dynamics. Here larger pseudo-atoms are designed, based upon
-characteristic patterns in the structure, after which the pseudo-interactions are tweaked
-to accurately reproduce the system's dynamics.
+larger pseudo-atoms. This is called the bottom up approach. The top down approach, which
+is the alternative method, focuses more on the precise reproduction of experimental
+results. Here larger pseudo-atoms are designed based upon characteristic patterns in the
+structure. Next the pseudo-interactions are tweaked to accurately reproduce the
+system's dynamics.
 
-In the case of DNA simulations, coarse graining turned out to be a very important method.
-Previous all atom simulations of DNA polymers were restricted to simulations of less then
-hundred baisepairs over only a few microseconds. Studying large scale systems, often
-encountered in DNA technology, was only possible after the development of coarse grained
-models. A few examples of commonly used coarse grained models of DNA are Martini[.],
-3SPN[.] and oxDNA[.].\\
+In the field of DNA simulations coarse graining turned out to be a very important
+method. Previously all atom simulations of DNA polymers were restricted to simulations of
+less then hundred baisepairs over only a few microseconds. The development of
+coarse-grained models allowed for the simulation of large scale systems, often
+encountered in DNA technology. A few examples of commonly used coarse grained models of
+DNA are Martini[.], 3SPN[.] and oxDNA[.].\\
 
 \begin{figure}[ht]
   \begin{centering}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.3\linewidth-1.3em\relax}
   \centering
   \vspace{-0.9cm}
   \includegraphics[width=.9\linewidth,valign=t]{Figures/ballnstick.png}
   \end{subfigure}%
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.3\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=.67\linewidth,valign=t]{Figures/oxDNA.png}
   \end{subfigure}%
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testb}}%
-  \begin{subfigure}[t]{\dimexpr.3\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.25\linewidth-1.3em\relax}
   \centering
   \vspace{-0.5cm}
   \includegraphics[width=.5\linewidth,valign=t]{Figures/beadSpring.png}

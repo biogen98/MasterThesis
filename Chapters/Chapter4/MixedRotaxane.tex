@@ -1,5 +1,53 @@
 \section{Mixed Rotaxane}
 
+%% Zelf nog schrijven
+To highlight the crucial role of the entropic forces, we designed and studied four
+different rotaxanes, hereby referred to as mixed rotaxanes. These are an alternative
+version of rotaxane-ds, in which the toehold is removed, and the ssDNA connection strand
+varied in length. the total length of the rotaxane thread was fixed at 100 nt/bp, with
+the ss-DNA connection strand length varying from 0 nt to 40 nt and the ds DNA varying
+from 100 bp to 60 bp, in steps of 10 nt/bp
+
+We then performed I-V measurements in the range, see figure.
+
+The mixed rotaxane composed entirely of dsDNA yields an almost linear I-V plot in the
+measured voltage range indicating a constant obstruction of the nanopore. constant
+resistance of the nanopore.
+
+The rotaxane with a 10 nt ssDNA, however, has a rather different behavior. Observed
+blockage at high voltages in experiments.
+
+Longer strands we observe no blockage.
+
+Shed light on these experimental results we performed MD Simulations at zero bias, here
+the entropic contributions can be isolated.
+
+1D diffusion
+
+We identify the z-axis with the symmetry axis of the pore and fix the origin of the
+coordinate system at the center of the trans-entry of the pore. The center of the cis
+entry is then located at $r_{cis} = (0, 0, z_{0})$ , with respect to the origin,
+where $z_0 = 14.3\ nm$ (see Figure S6). We define the reaction coordinate as follows
+
+\begin{equation}
+  X = \begin{cases}
+        &Z_0 + |\textbf{r} - \textbf{r}_{cis}|, \hspace{0.5cm} \textit{if on cis-side}\\
+        &Z, \hspace{2.5cm} \textit{if inside pore}\\
+        &-|\textbf{r}|, \hspace{2.11cm} \textit{if on trans-side}
+      \end{cases}
+\end{equation}
+
+The simulation data show that the peak gradually shifts towards negative values of $X$
+with increasing ssDNA length, suggesting that full pore blockage requires increasingly
+stronger electrophoretic force.
+
+
+
+
+
+
+
+
 \begin{figure}[ht]
 
   \begin{centering}

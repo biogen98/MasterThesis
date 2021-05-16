@@ -5,6 +5,7 @@
 \usepackage{graphicx,textpos}
 \usepackage{float}
 \usepackage{helvet}
+\usepackage{lettrine}
 \usepackage{lipsum}
 \usepackage{amsmath}
 \usepackage{fancyhdr}
@@ -17,7 +18,6 @@
 \usepackage{tocloft}
 \usepackage{wrapfig}
 \makeglossaries
-
 
 % Import packages for drawing diagram
 %More defined colors
@@ -122,6 +122,39 @@
 
 \newenvironment{smallfont}{\fontfamily{lmodern}\small\selectfont}{\par}
 
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{amsthm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Theorem
+\newcounter{theo}[section] \setcounter{theo}{0}
+\renewcommand{\thetheo}{\arabic{theo}}
+\newenvironment{theo}[2][]{%
+\refstepcounter{theo}%
+\ifstrempty{#1}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=blue!20]
+{\strut};}}
+}%
+{\mdfsetup{%
+frametitle={%
+\tikz[baseline=(current bounding box.east),outer sep=0pt]
+\node[anchor=east,rectangle,fill=blue!20]
+{\strut ~#1};}}%
+}%
+\mdfsetup{innertopmargin=10pt,linecolor=blue!20,%
+linewidth=2pt,topline=true,%
+frametitleaboveskip=\dimexpr-\ht\strutbox\relax
+}
+\begin{mdframed}[]\relax%
+\label{#2}}{\end{mdframed}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 % Start of the actual document
 \begin{document}
 
@@ -173,17 +206,21 @@ wigglings of atoms.”}
 \input{Chapters/Chapter1/ComputerSimulations.tex}
 
 \cleardoublepage
-
+% \vspace{-1cm}
+% \epigraph{Given for one instant an intelligence which could comprehend all
+% the forces by which nature is animated and the respective positions
+% of the beings which compose it, if moreover this intelligence were vast
+% enough to submit these data to analysis, it would embrace in the same
+% formula both the movements of the largest bodies in the universe and
+% those of the lightest atom; to it nothing would be uncertain, and the
+% future as the past would be present to its eyes.}
+% {--- \textup{Pierre-Simon Laplace}}
 \chapter{The DNA Nanopiston}
-\epigraph{The career of a young theoretical physicist consists of treating the harmonic
-oscilator in ever-incresing levels of abstraction.}
-{--- \textup{Sidney Coleman}}
-\vspace{-1cm}
 \input{Chapters/Chapter2/rotaxaneFormation.tex}
 \input{Chapters/Chapter2/operatingPrinciples.tex}
 \input{Chapters/Chapter2/cgSimulations.tex}
 
-\chapter{Adapting the Model}
+\chapter{Improving the Model}
 \vspace{-1cm}
 \epigraph{All models are wrong, but some are useful.}
 {--- \textup{George Box}}
@@ -194,14 +231,9 @@ oscilator in ever-incresing levels of abstraction.}
 
 \chapter{Simulations of the Rotaxane}
 \vspace{-1cm}
-\epigraph{Given for one instant an intelligence which could comprehend all
-the forces by which nature is animated and the respective positions
-of the beings which compose it, if moreover this intelligence were vast
-enough to submit these data to analysis, it would embrace in the same
-formula both the movements of the largest bodies in the universe and
-those of the lightest atom; to it nothing would be uncertain, and the
-future as the past would be present to its eyes.}
-{--- \textup{Pierre-Simon Laplace}}
+\epigraph{The career of a young theoretical physicist consists of treating the harmonic
+oscilator in ever-incresing levels of abstraction.}
+{--- \textup{Sidney Coleman}}
 \input{Chapters/Chapter4/MixedRotaxane.tex}
 \input{Chapters/Chapter4/ConfFluct.tex}
 \input{Chapters/Chapter4/Toehold.tex}
@@ -221,14 +253,17 @@ future as the past would be present to its eyes.}
 \end{appendices}
 
 % BIBLIOGRAPHY
-%\addcontentsline{toc}{chapter}{Bibliography}
-%\bibliographystyle{apalike}
-%\begin{multicols}{2}
-%\begin{smallfont}
-%\bibliography{Bibliography/thesis.bib}
-%\end{smallfont}
-%\end{multicols}
-%\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliographystyle{apalike}
+% \begin{multicols}{2}
+% \begin{smallfont}
+\twocolumn
+\bibliography{Bibliography/thesis.bib}
+% \end{smallfont}
+% \end{multicols}
+
+
+\cleardoublepage
 
 \input{Backmatter/Acknowledgements.tex} \cleardoublepage
 
