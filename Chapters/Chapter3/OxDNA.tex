@@ -1,12 +1,15 @@
+\vspace{1cm}
+Although the simulations discussed in the previous chapter provided an answer to
+important questions regarding the piston's operation, some remarks need to be made. Due
+to the nature of this spring-and-bead model it does not allow for hybridisation reactions
+to be simulated. Improving upon this model by using a more advanced coarse-grained
+representation of DNA is therefore needed, providing also a more realistic description of
+the conformational fluctuations. In this thesis we opted to use the OxDNA coarse-grained
+model.\\
+
+
 \section{OxDNA}
 
-\begin{wrapfigure}{r}{0.45\textwidth}
-  \begin{center}
-    \includegraphics[width=0.42\textwidth]{Figures/oxDNA_model.png}
-  \end{center}
-  \caption{Structure of the OxDNA model with the different interactions.
-  Figure was taken form.[.]}
-\end{wrapfigure}
 
 OxDNA is a coarse-grained model of DNA developed by Thomas E. Ouldridge et al. at the
 University of Oxford.[.] The central aim of the project was to develop a coarse-grained
@@ -28,6 +31,14 @@ coarse-graining. The interactions defined in the OxDNA model can be summarized a
     V_{\text{exc}} + V_{\text{coax stack}}\bigg].
   \end{aligned}
 \end{equation}
+
+\begin{wrapfigure}[15]{r}{0.5\textwidth}
+  \begin{center}
+    \includegraphics[width=0.45\textwidth]{Figures/oxDNA_model.png}
+  \end{center}
+  \caption{Structure of the OxDNA model with the different interactions.
+  Figure was taken form.[.]}
+\end{wrapfigure}
 
 The first interaction site is the hydrogen-bonding/base excluded volume site,
 incorporating the hybridisation of complementary nucleotides into the model. The
