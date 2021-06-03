@@ -1,22 +1,26 @@
-\chapter{1D Confined Diffusion}
+\chapter{One Dimensional Confined Diffusion}
 
-\begin{align*}
-  \langle \Delta x^2 \rangle \simeq 2n Dt.
-\end{align*}
+This appendix provides a detailed description of the motion of a Brownian particle
+confined to a one dimensional domain. Due to the statistical nature of this motion we
+will discuss the evolution of the probability density function $\phi(x,t)$, which
+represents the probability of finding the particle on time t at the position $x$ in our
+one dimensional domain.  Once the
+evolution of this probability function is known, the statistical properties can be
+evaluated. Here we will discuss the mean square displacement (MSD) as it is used to
+analyse the motion of the fully double stranded mixed rotaxane.
 
-
+A central result in statistical mechanism is that in the continuum limit the evolution of
+$\phi$ is  described by the heat equation, given by
 \begin{align*}
   \frac{\partial \psi}{\partial t} =  D \frac{\partial^2 \psi}{\partial x^2}, \quad
-\psi(x,t) =
-f(x)g(t)
 \end{align*}
+where D is the diffusion coefficient of our particle.
+The Confinement is imposed through reflecting boundary conditions $j = - D \frac{\partial
+\psi}{\partial x} = 0$. This condition enforces the vanishing particle current at the
+boundaries. Solving the heat the equation is often times done by performing a separation
+of variables, here we express $ \psi(x,t) = f(x)g(t)$.
 
-\begin{align*}
-\end{align*}
-
-Reflecting boundary conditions $j = - D \frac{\partial \psi}{\partial x} = 0$. Current
-vanishes at the boundaries
-
+As a result we find,
 \begin{align*}
 t:\quad \dot{g} = - \alpha g(t) \Rightarrow g(t) = e^{-\alpha t}
 \end{align*}
@@ -25,12 +29,12 @@ t:\quad \dot{g} = - \alpha g(t) \Rightarrow g(t) = e^{-\alpha t}
   x:\quad D \ddot{f} = - \alpha f(x) \Rightarrow f(x) &= A \sin(K x) + B \cos(Kx)\\
   &= B \cos(\frac{\pi n x}{L})
 \end{align*}
+where the boundary conditions impose the following restrictions
 \begin{align*}
   \frac{\alpha}{D} = \frac{\pi^2 n^2}{L^2}
 \end{align*}
 
 The general solution is given by the linear combination,
-
 \begin{align*}
   \psi(x,t) &= \sum_{n=0}^{+\infty} C_n \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2
   n^2}{L^2}t}\\
@@ -51,7 +55,8 @@ $ we perform a taylor expansion and find
   \mathcal{O}\bigg(\frac{D^2 t^2}{L^4}\bigg).
 \end{align*}
 
-[cite in bickel]
+\cite{BICKEL200724}
+
 \begin{equation*}
   \sum_{k=0}^{\infty} \frac{1}{(2k+1)^2} = \frac{\pi^2}{8} \qquad \text{and} \qquad
   \sum_{k=0}^{\infty} \frac{1}{(2k+1)^4} = \frac{\pi^4}{96}
