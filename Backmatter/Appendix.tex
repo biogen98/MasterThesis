@@ -6,61 +6,72 @@ will discuss the evolution of the probability density function $\phi(x,t)$, whic
 represents the probability of finding the particle on the position $x$ at time t.
 Once the evolution of this probability function is known, the statistical properties can
 be evaluated. Here we will discuss the mean square displacement (MSD) as it is used to
-analyse the motion of the fully double stranded mixed rotaxane.
-
-A central result in statistical mechanism is that in the continuum limit the evolution of
-$\phi$ is  described by the heat equation, given by
-\begin{align*}
+analyse the motion of the fully double stranded mixed rotaxane.\\
+A central result in statistical mechanism is that the evolution of
+$\phi$ is  described by the diffusion equation, given by
+\begin{align}
   \frac{\partial \psi}{\partial t} =  D \frac{\partial^2 \psi}{\partial x^2}, \quad
-\end{align*}
-where D is the diffusion coefficient of our particle.
-The Confinement is imposed through reflecting boundary conditions $j = - D \frac{\partial
-\psi}{\partial x} = 0$. This condition enforces the vanishing particle current at the
-boundaries. Solving the heat the equation is often times done by performing a separation
-of variables, here we express $ \psi(x,t) = f(x)g(t)$.
+  \label{eq:diff}
+\end{align}
+here D is the diffusion coefficient of our particle.
+The confinement is imposed through reflecting boundary conditions, equivalent to a
+vanishing particle current at the boundaries of our domain, $j = - D \frac{\partial
+\psi}{\partial x} = 0$. Solving the heat the equation can be done using the method of
+separation of variables, here we assume that the solution can be expressed as $ \psi(x,t)
+= f(x)g(t)$. Upon substitution \ref{eq:diff} becomes,
+\begin{equation}
+  \frac{\dot{g}}{g} = \frac{\ddot{f}}{f} = - \alpha,
+\end{equation}
+here the two expressions are implied to be constant since the variables are independent.
+The partial differential equation is now treated as two seperate ordinary differential
+equations, for which we find,
 
-As a result we find,
-\begin{align*}
-t:\quad \dot{g} = - \alpha g(t) \Rightarrow g(t) = e^{-\alpha t}
-\end{align*}
+\begin{align}
+t:\quad \dot{g} = - \alpha g(t) \Rightarrow g(t) = e^{-\alpha t},
+\end{align}
 
-\begin{align*}
+\begin{align}
   x:\quad D \ddot{f} = - \alpha f(x) \Rightarrow f(x) &= A \sin(K x) + B \cos(Kx)\\
-  &= B \cos(\frac{\pi n x}{L})
-\end{align*}
-where the boundary conditions impose the following restrictions
-\begin{align*}
-  \frac{\alpha}{D} = \frac{\pi^2 n^2}{L^2}
-\end{align*}
-
-The general solution is given by the linear combination,
-\begin{align*}
+  &= B \cos(\frac{\pi n x}{L}).
+\end{align}
+In the latter expression the boundary conditions impose $A=0$ and the following relation,
+\begin{align}
+  \frac{\alpha}{D} = \frac{\pi^2 n^2}{L^2}.
+\end{align}
+By substituting the found results into the assumed form of the solution we find the
+general solution by the linear combination,
+\begin{align}
   \psi(x,t) &= \sum_{n=0}^{+\infty} C_n \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2
-  n^2}{L^2}t}\\
-            &=\frac{1}{L} \Bigg[ 1 + \sum_{n=1}^{+\infty} \cos\Big(\frac{\pi n
-  x_0}{L}\Big) \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2  n^2}{L^2}t}\Bigg]
-\end{align*}
-\begin{align*}
+  n^2}{L^2}t}
+\end{align}
+\begin{align}
+  \psi(x, 0) = \delta(x-x_0) = \sum_{n=0}^{+ \infty} C_n \cos(\frac{\pi n x}{L})
+\end{align}
+\begin{align}
+  \psi(x, t)=\frac{1}{L} \Bigg[ 1 + \sum_{n=1}^{+\infty} \cos\Big(\frac{\pi n
+  x_0}{L}\Big) \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2  n^2}{L^2}t}\Bigg].
+\end{align}
+This expression describes the behaviour of a Brownian particle in a one dimensional
+confined domain. Using the found expression the MSD is calculated to be,
+\begin{align}
   \langle \Delta x^2 \rangle &= \langle(x-x_0)^2\rangle\\&= \frac{L^2}{6}\Bigg[1 -
   \frac{96}{\pi^4}
-  \sum_{k=0}^{+\infty} \frac{1}{(2k+1)^4} e^{- \frac{D(2k+1)^2 \pi^2}{L^2}t}\Bigg]\\
-\end{align*}
+  \sum_{k=0}^{+\infty} \frac{1}{(2k+1)^4} e^{- \frac{D(2k+1)^2 \pi^2}{L^2}t}\Bigg].
+\end{align}
 As expected, the mean squared distances saturates to $\langle \Delta x^2 \rangle = L^2/6$
 in the long-time limit $t \gg L^2 / D.$ To explore the other limiting case $t \ll L^2/D
-$ we perform a taylor expansion and find
-\begin{align*}
+$ we perform a Taylor expansion of the exponential and find,
+\begin{align}
   \langle \Delta x^2 \rangle &= \frac{L^2}{6} - \frac{16 L^2}{\pi^4} \sum_{k=0}^{\infty}
   \frac{1}{(2k+1)^4} + \frac{16 D t}{\pi^2} \sum_{k=0}^{\infty} \frac{1}{(2k+1)^2} +
   \mathcal{O}\bigg(\frac{D^2 t^2}{L^4}\bigg).
-\end{align*}
-
-\cite{BICKEL200724}
-
-\begin{equation*}
+\end{align}
+Using the two convergent series,
+\begin{equation}
   \sum_{k=0}^{\infty} \frac{1}{(2k+1)^2} = \frac{\pi^2}{8} \qquad \text{and} \qquad
   \sum_{k=0}^{\infty} \frac{1}{(2k+1)^4} = \frac{\pi^4}{96}
-\end{equation*}
-
-\begin{equation*}
-\langle \Delta x^2 \rangle = 2Dt \qquad t \ll L^2/D
-\end{equation*}
+\end{equation}
+the free diffusion is recovered at short time scales, \cite{BICKEL200724}
+\begin{equation}
+\langle \Delta x^2 \rangle = 2Dt \qquad for\, t \ll L^2/D.
+\end{equation}

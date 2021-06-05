@@ -1,7 +1,7 @@
 \vspace{1cm}
 \noindent Although the simulations discussed in the previous chapter provided an answer
-to
-important questions regarding the piston's operation, some remarks need to be made. Due
+to important questions regarding the piston's operation, some remarks need to be made.
+Due
 to the nature of this bead-and-spring model it does not allow for hybridisation reactions
 to be simulated. Improving upon this model by using a more advanced coarse-grained
 representation of DNA is therefore needed, providing also a more realistic description of
@@ -13,9 +13,10 @@ OxDNA coarse-grained model for DNA.\\
 
 
 OxDNA is a coarse-grained model of DNA developed by Thomas E. Ouldridge et al. at the
-University of Oxford.[.] The central aim of the project was to develop a coarse-grained
-model of DNA, that could be used in the design of DNA technology. For the development of
-these technologies a model was needed that accurately captured the structural, mechanical
+University of Oxford.\cite{thomas2011a}\cite{Ouldridge2010} The central aim of the
+project was to develop a coarse-grained model of DNA, that could be used in the design of
+DNA technology. For the development of these technologies a model was needed that
+accurately captured the structural, mechanical
 and thermodynamical properties of DNA, while keeping the computational cost low.
 
 The OxDNA model represents each nucleotide in the DNA strand as a rigid unit. Each rigid
@@ -38,7 +39,7 @@ coarse-graining. The interactions defined in the OxDNA model can be summarized a
     \includegraphics[width=0.45\textwidth]{Figures/oxDNA_model.png}
   \end{center}
   \caption{Structure of the OxDNA model with the different interactions.
-  Figure was taken form.[.]}
+  Figure was taken form. \cite{Ouldridge2010}}
 \end{wrapfigure}
 
 The first interaction site is the hydrogen-bonding/base excluded volume site,
@@ -55,8 +56,9 @@ The last interaction site is again located at the base, where it provides a base
 interaction between consecutive nucleotides. The nucleotide stacking in DNA is crucial
 for the formation of the characteristic helix structure. Using these stacking
 interactions, this structure is implicitly imposed in the OxDNA model. This is in
-contrast with the traditional approach, used in coarse grained-models like Martini[.] en
-3SPN[.],
+contrast with the traditional approach, used in coarse grained-models like Martini
+\cite{Souza2021} en
+3SPN \cite{Freeman2011},
 where the double helix structure is explicity constructed. This
 implicit structure allows for the
 unstacking of nucleotides, which especially in ssDNA is an important contribution to the
