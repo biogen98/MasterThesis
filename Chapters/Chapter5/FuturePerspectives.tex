@@ -1,30 +1,32 @@
 \section{Future Perspectives}
 
 During this thesis we were able to deepen our understanding of the DNA
-nanopiston, however some important questions remained unanswered. While studying the
-hybridisation reactions which drive the molecular machine, we encountered the limits of
+nanopiston. However, some important questions remained unanswered. While studying the
+hybridisation reactions, which drive the molecular machine, we encountered the
+limitations of
 our coarse-grained model. Simulations indicated that the compliancy of the nanopore
 is an integral component in facilitating these reactions. In our current model the ClyA
-nanopore is represented as a static complex, not allowing the diameter fluctuations which
+nanopore is represented as a static complex, not allowing the diameter fluctuations that
 are needed for the hybridisation to take place.
-Future research consists of incorporating a more accurate coarse-grained model of the
-Clya pore in simulations of the nanopiston.\\
+Future research should attempt to incorporate a more accurate represention of the ClyA
+nanopore in the coarse-grained model of the DNA nanopiston.\\
 
-Various approaches can be taken to more accurately represent the nanopore in our model.
-A first proposition is building further upon the current model, by incorporating the
-constriction of the pore in the Langevin integrator. Using experimental data, we can
-parametrise the interactions between the constituent beads of the pore and reproduce the
-diameter fluctuations of the constriction of the Clya pore. Another possible
-solution to this problem is using a different coarse-grained model to simulate the
-pore. An example is the Martini force-field, which allows for accurate simulations of
-transmembrane proteins like the Clya pore. In this new model both OxDNA or the Martini
-forcefield could be used to simulate the DNA strand. Both these possible improvements
-would increase the accuracy of our model, enabling the simulation of a full piston
+Various approaches can be taken to accomplish this improved accuracy.
+A first proposition would be to expand further upon the existing model, by
+incorporating the constriction of the pore in the Langevin integrator. Using experimental
+data, we can parametrise the interactions between the constituent beads of the pore and
+reproduce the diameter fluctuations of the constriction of the ClyA pore. Another
+possible solution could be to use a already parametrised coarse-grained model.
+An example is the Martini force-field, which allows for accurate simulations of
+transmembrane proteins such as the ClyA pore. In this new model both OxDNA or the Martini
+forcefield could be used to simulate the DNA strand. These possible improvements
+would increase the accuracy of our model, probably enabling the simulation of a full
+piston
 cycle.\\
 
 Molecular dynamics simulations will proof to be a useful tool in the development of
 new molecular machines. Future research is focused on designing molecular devices that
-are able to not only transport DNA but also other molecules through a membrane.
-Eventually, the aim is to implement these new molecular machines into a sophisticated
-droplet-based device with emergent properties, i.e. a fully synthetic cell.
+are able to not only transport DNA, but also other molecules through a membrane.
+Eventually the aim would be to implement these new molecular machines into a
+sophisticated droplet-based device with emergent properties, i.e. a fully synthetic cell.
 

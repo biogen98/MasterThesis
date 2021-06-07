@@ -1,10 +1,12 @@
+% O.K. tot voor Plimpton_{19}95
+
 \RequirePackage{fix-cm}
 \documentclass[11pt,a4paper,twoside]{vutinfth}
 
 % useful packages
 \usepackage{graphicx,textpos}
 \usepackage{float}
-\usepackage{helvet}
+% \usepackage{helvet}
 \usepackage{lettrine}
 \usepackage{lipsum}
 \usepackage{amsmath}
@@ -12,16 +14,18 @@
 \usepackage{multicol}
 \usepackage{setspace}
 % \usepackage[super, numbers]{natbib}
+
 \usepackage[
 backend=biber,
 style=ieee,
-style=ieee,
-sorting=none,doi=false,
+sorting=none,
+doi=false,
 isbn=false,
 url=false,
 eprint=false,
 maxnames = 5
 ]{biblatex}
+
 \usepackage{emptypage}
 \usepackage[linktocpage=true]{hyperref}
 \usepackage[toc,acronym,nonumberlist]{glossaries}
@@ -166,8 +170,6 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 % \bibliographystyle{apalike}
 \addbibresource{Bibliography/thesis.bib}
 
-
-
 % Start of the actual document
 \begin{document}
 
@@ -213,9 +215,8 @@ oscillator in ever-increasing levels of abstraction.}
 \input{Chapters/Chapter1/BiologicalNanopores.tex}
 \input{Chapters/Chapter1/DNA.tex}
 \input{Chapters/Chapter1/PolymerPhysics.tex}
-\input{Chapters/Chapter1/ComputerSimulations.tex}
+\input{Chapters/Chapter1/ComputerSimulations.tex} \cleardoublepage
 
-\cleardoublepage
 % \vspace{-1cm}
 % \epigraph{Given for one instant an intelligence which could comprehend all
 % the forces by which nature is animated and the respective positions
@@ -230,14 +231,15 @@ oscillator in ever-increasing levels of abstraction.}
 \input{Chapters/Chapter2/operatingPrinciples.tex}
 \input{Chapters/Chapter2/cgSimulations.tex}
 
+\cleardoublepage
 \chapter{Improving the Model}
 % \vspace{-1cm}
 \epigraph{All models are wrong, but some are useful.}
-{--- \textup{George Box}\cite{Box1976}}
+{--- \textup{George Box}}%\cite{Box1976}}
 \input{Chapters/Chapter3/OxDNA.tex}
 \input{Chapters/Chapter3/Thermodynamics.tex}
 \input{Chapters/Chapter3/FFS.tex}
-\input{Chapters/Chapter3/Simulation.tex}
+\input{Chapters/Chapter3/Simulation.tex} \cleardoublepage
 
 \chapter{Simulations of the Rotaxane}
 \vspace{0.5cm}
@@ -246,16 +248,17 @@ oscillator in ever-increasing levels of abstraction.}
 and on in an attempt to understand life, it is that all things are made of atoms, and
 that everything that living things do can be understood in terms of the jigglings and
 wigglings of atoms.”}
-{--- \textup{Richard P. Feynman}, The Feynman Lectures on Physics\cite{feynmanLectures}}
+{--- \textup{Richard P. Feynman}, The Feynman Lectures on Physics}
 \input{Chapters/Chapter4/MixedRotaxane.tex}
 \input{Chapters/Chapter4/ConfFluct.tex}
 \input{Chapters/Chapter4/Toehold.tex}
 
+\cleardoublepage
 \chapter{Conclusions and Perspectives}
 \vspace{0.5cm}
 \epigraphfontsize{\small\itshape}
 \epigraph{“ Blurring the line between life and the artificial.”}
-{--- Man-made molecular machines, \textup{Watson \& Cockroft}\cite{Watson2016}}
+{--- Man-made molecular machines, \textup{Watson \& Cockroft}}%\cite{Watson2016}}
 \input{Chapters/Chapter5/ResultsAndConclusions.tex}
 \input{Chapters/Chapter5/FuturePerspectives.tex}
 
@@ -264,20 +267,22 @@ wigglings of atoms.”}
 \begin{appendices}
 \addtocontents{toc}{\protect\setcounter{tocdepth}{1}}
 \input{Backmatter/Appendix.tex}
+\cleardoublepage
 \end{appendices}
 
-% BIBLIOGRAPHY
-% \addcontentsline{toc}{chapter}{Bibliography}
-% \begin{multicols}{1}
-% \begin{smallfont}
-\twocolumn
-% \bibliography{Bibliography/thesis.bib}
-\printbibliography
-% \end{smallfont}
-% \end{multicols}
-% \cleardoublepage
+\newpage
+\thispagestyle{empty}
+\mbox{}
+\newpage
 
-\onecolumn
+% BIBLIOGRAPHY
+
+\linespread{0.816}
+{\small \printbibliography}
+\cleardoublepage
+\linespread{1}
+
+% \onecolumn
 % \thispagestyle{empty}
 \input{Backmatter/Acknowledgements.tex}
 \cleardoublepage
