@@ -1,14 +1,15 @@
 \section{Deoxyribonucleic acid (DNA)}
 
-\begin{wrapfigure}[36]{r}{0.2\textwidth}
-  \begin{center}
-    \includegraphics[width=0.2\textwidth]{Figures/DNAStrand.png}
-  \end{center}
-  \caption{caption nog maken}
-\end{wrapfigure}
+% \begin{wrapfigure}[36]{r}{0.2\textwidth}
+%   \begin{center}
+%     \includegraphics[width=0.2\textwidth]{Figures/DNAStrand.png}
+%   \end{center}
+%   \caption{caption nog maken}
+% \end{wrapfigure}
 
 Deoxyribonucleic acid (DNA) is a long biopolymer composed of two strands, commonly found
-in its characteristic double helix structure. DNA is most famously know for storing the
+in its characteristic double helix structure, shown in Figure \ref{fig:DNA}. DNA is most
+famously know for storing the
 genetic code of organisms in the nucleus of their cells. The existence of this genetic
 code was already
 postulated by the Greek philosopher Aristotle. He developed a heredity theory based
@@ -42,13 +43,25 @@ hybridisation, which is the selective binding of complementary nucleotides to fo
 The double helix structure of DNA comes in three different types, B-DNA, A-DNA and Z-DNA,
 all having a slightly different geometric arrangement. In nature the B-form is most
 commonly observed, which is characterised by a right-handed helix and the coplanarity
-between the complementary bases as shown in Figure ... . A helical twist of B-DNA
-consists of around 10 base pairs, having a net helical pitch of $0.34\ nm$. During this
-thesis, when analysing DNA we refer to the B-DNA form.
+between the complementary bases as shown in Figure \ref{fig:DNA}. A helical twist of
+B-DNA consists of around 10 base pairs, having a net helical pitch of $0.34\ nm$. During
+this thesis, when analysing DNA we refer to the B-DNA form.
 
-When studying DNA the statistical theory of polymer physics is a useful tool. An
-atomistic resolution is not always needed to accurately describe processes involving
+
+Thermal fluctuations in the environment dominate the DNA strands dynamics, giving rise to
+an inherently stochastic system. Consequently, a statistical theory of polymer physics
+is an essential tool in describing these dynamics.  An atomistic
+resolution is not always needed to accurately describe processes involving
 relatively long DNA strands.  Reducing the complexity of DNA to the monomer level is
 often justified, allowing us to use more general results in polymer physics.
 
-
+\begin{figure}[h!]
+   \centering
+   \includegraphics[width=\linewidth]{Figures/DNAStrand2.png}
+   \caption[Figure showing the double helical structure of
+   DNA.]{\linespread{0.816}{\small Figure of the double helical structure of
+   DNA, here in the B-DNA form as it is the most commonly observed in nature. The
+   phosphate backbones are represented as ribbons, enclosing the bases forming coplanar
+   hydrogen bonds. Image was made in Blender, using generated PDB data.}}
+   \label{fig:DNA}
+\end{figure}

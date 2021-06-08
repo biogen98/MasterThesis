@@ -11,14 +11,15 @@ practically unsolvable equations.
 Although it is often not possible to find an exact solution to equations
 related to complex physical systems, finding reasonable approximations to their solution
 is achievable. One popular method to analyse the dynamics of complex systems is the use
-of simulations.
+of computer simulations.
 
-\begin{wrapfigure}[18]{r}{0.5\textwidth}
-    \vspace{-1cm}
+\begin{wrapfigure}[20]{r}{0.5\textwidth}
+    \vspace{-0.5cm}
   \begin{center}
-    \includegraphics[width=0.38\textwidth]{Figures/WaterModel.png}
+    \includegraphics[width=0.4\textwidth]{Figures/WaterModel.png}
   \end{center}
-  \caption{Example of an expanded model of a simple liquid (J L Finney, Ph.D thesis)
+  \caption[Example of an expanded model of a simple liquid.]{Example of an expanded model
+  of a simple liquid (J L Finney, Ph.D thesis).
   \cite{Finney_2007}}
 \end{wrapfigure}
 
@@ -33,7 +34,7 @@ Delta Works.
 
 Another more topical example is the use of mechanical simulations to study the
 structure of water.  In the early 20th century Prof. J.D. Bernal and his fellow
-researchers build various ball and stick models of water to analyse the possible 3D
+researchers built various ball and stick models of water to analyse the possible 3D
 configurations of water molecules in a liquid \cite{Finney_2007}. Their research
 eventually explained the peculiar physical properties of water from an atomistic
 perspective. Despite how useful these mechanical simulations turned out to be, the
@@ -68,16 +69,15 @@ generate all the trajectories in a system of $N$ particles by numerically
 integrating the classical equations of motion,
 \[
 m_i \frac{d^2 \boldsymbol{r_i}}{dt^2} = \boldsymbol{f_i}, \quad \boldsymbol{f_i} = -
-    \frac{\partial}{\partial \boldsymbol{r_i}} \mathcal{U}_i, \quad for\ i \in N.
+    \frac{\partial}{\partial \boldsymbol{r_i}} \mathcal{U}, \quad for\ i \in N.
 \]
 The motion of the particles are governed by the forces $f_i$ acting upon them, which are
-usually derived from the interaction potentials $U_i$.
+usually derived from the interaction potential $\mathcal{U}$.
 Solving these differential equations is achieved by employing a discretized time
-integration scheme.  Algorithm 1 shows the typical structure of a molecular dynamics
-simulation. The discretization resolution is conventionally called the time step of the
-simulations denoted by $\Delta t$.
+integration scheme. The discretization resolution is conventionally called the time step
+of the simulations denoted by $\Delta t$.
 
-\noindent There are a large number of different integrations schemes that one can choose
+There are a large number of different integrations schemes that one can choose
 from, in which the choice depends entirely on the system at hand.
 When working with an isolated system -- i.e. microcanonical ensemble --, logically an
 energy conserving integrator is needed. The canonical
@@ -85,11 +85,11 @@ choice for this type of integration scheme is the Velocity-Verlet algorithm. Thi
 algorithm is an example of leapfrog integration, where the updating of the positions
 and velocities are interleaved at different points in time. The major strength of this
 type of algorithm is that it turns out to be a symplectic integrator. This means that the
-errors on the conserved energy are bounded.
+errors on the total energy due to discretization are bounded.
 
 On the other hand, when a system is in contact with a thermal reservoir --i.e. canonical
-ensemble-- not the total energy is conserved, but rather the temperature of the
-simulation is fixed. To achieve this a thermostat is implemented in the MD
+ensemble-- the total energy is not conserved, but rather the temperature of the
+simulation should be fixed. To achieve this a thermostat is implemented in the MD
 simulation. A typical thermostat attempts to negate any drift in temperature by
 appropriately importing or exporting energy to the system after each time step.
 Popular examples of thermostats are the Nos\'e-Hoover thermostat or the Langevin
@@ -98,7 +98,7 @@ the simulation that gives rise to random thermal kicks. The resulting equations 
 are the Langevin equations given by,
 
 \begin{equation}
-    m_i \frac{d^2 \boldsymbol{r}_i}{dt^2} = - \nabla \mathcal{U}_i - \gamma_i \frac{d
+    m_i \frac{d^2 \boldsymbol{r}_i}{dt^2} = - \nabla \mathcal{U} - \gamma_i \frac{d
     \boldsymbol{r}_i}{d t} +
     \xi_i(t),
 \end{equation}
@@ -106,31 +106,30 @@ where $\gamma_i$ is known  as the friction coefficient and $\xi_i(t)$ a stochast
 acting upon the particles. The combination of the last two terms fully capture the
 statistical consequences of the solvent interacting with the system.
 
-
-\begin{algorithm}
-    \SetKwFunction{isOddNumber}{isOddNumber}
-    \SetKwInOut{KwIn}{Input}
-
-    \KwIn{Configuration of the system at $t=0$}
-
-    $newList = [\ ]$
-
-    \tcc{For odd elements in the list, we add 1, and for even elements, we add 2.}
-
-    \For{$i \leftarrow 0$ \KwTo $n-1$}{
-        \eIf{$\isOddNumber(a_i)$}{
-
-            $newList.append(a_i + 1)$ \tcp*[f]{Some thought-provoking comment.}
-         }{
-            \tcp{Another comment}
-            $newList.append(a_i + 2)$
-         }
-    }
-
-    \KwRet{$newList$}
-    \caption{The Velocity Verlet algorithm: \textbf{Nog maken}}
-\end{algorithm}
-
+% \begin{algorithm}
+%     \SetKwFunction{isOddNumber}{isOddNumber}
+%     \SetKwInOut{KwIn}{Input}
+%
+%     \KwIn{Configuration of the system at $t=0$}
+%     $call init$
+%     $newList = [\ ]$
+%
+%     \tcc{For odd elements in the list, we add 1, and for even elements, we add 2.}
+%
+%     \For{$i \leftarrow 0$ \KwTo $n-1$}{
+%         \eIf{$\isOddNumber(a_i)$}{
+%
+%             $newList.append(a_i + 1)$ \tcp*[f]{Some thought-provoking comment.}
+%          }{
+%             \tcp{Another comment}
+%             $newList.append(a_i + 2)$
+%          }
+%     }
+%
+%     \KwRet{$newList$}
+%     \caption{The Velocity Verlet algorithm: \textbf{Nog maken}}
+% \end{algorithm}
+%
 % \begin{center}
 % 	\begin{tikzpicture}[
 % 	squarednode/.style={rectangle, draw=blue!60, fill=blue!5, very thick, minimum width=50mm,
@@ -164,7 +163,8 @@ particles in the system increase. If not addressed, this would limit the scope o
 simulations to systems of a few particles over short time-scales.
 
 During these simulations the most costly calculations involve the non-bonded
-interactions in the system. These interatomic interactions make the computational
+interactions\footnote{referring to the } in the system. These interatomic interactions
+make the computational
 complexity for rudimentary MD simulations scale as $O(N^2t)$, where $N$ is the number of
 particles in the system and $t$ the simulation time. This bad scaling behaviour comes
 arises from the fact that for each individual particle all the other particles are
@@ -174,10 +174,21 @@ interatomic interactions has the favourable effect that not all atoms are involv
 every calculation. Efficient algorithms, like the multigrid method, have been derived
 to improve the scaling complexity of MD simulations up to $O(Nt)$. \cite{Celeste2001}
 
-Coarse graining is a method to further optimize molecular dynamics simulations.
+From the scaling complexity we conclude that decreasing the total number of particles in
+the system drastically improves the computational cost of an MD simulation. To reduce the
+number of particles in a MD simulation a method called coarse-graining can be used.
 In all atom simulations each atom is explicitly represented as a particle in the
-simulation. Contrarily, coarse grained simulation use multiple atoms grouped
-together to form generalised pseudo-atoms, with their respective pseudo-interaction.
+simulation. Contrarily, coarse-grained simulation group together multiple atoms to form
+generalised pseudo-atoms, with their respective pseudo-interaction. During this
+simplification some atom details are neglected, resulting in a model that only
+approximates our initial system. However, useful results can be obtained from
+these simulations if we remain aware of the made approximations during the
+simplification.
+
+% Coarse graining is a method to further optimize molecular dynamics simulations.
+% In all atom simulations each atom is explicitly represented as a particle in the
+% simulation. Contrarily, coarse grained simulation use multiple atoms grouped
+% together to form generalised pseudo-atoms, with their respective pseudo-interaction.
 
 There are two distinctly different ways to construct a coarse grained model. The first
 method starts from the all atom model of the system and generalises nearby atoms into
@@ -214,7 +225,15 @@ DNA are Martini \cite{Souza2021}, 3SPN \cite{Freeman2011} and oxDNA
   \vspace{-0.5cm}
   \includegraphics[width=.5\linewidth,valign=t]{Figures/beadSpring.png}
   \end{subfigure}
-  \caption{This is a figure}
-  \label{fig:test}
+  \caption[Comparing different degrees of coarse graining of
+DNA]{\linespread{0.816}{\small Comparing different coarse-grained models of DNA. (a) The
+    most evident model is of course the All-atom model, providing an atomic description
+    of the DNA strand. (b) A second model called OxDNA utilises the individual
+    nucleotides as pseudo-atoms, thereby reducing the complexity while preserving much of
+    the DNA structure. (c) Further increasing the level of coarse-graining leads to
+simplified polymer models, as the bead-and-spring model shown here. The double helix
+structure of DNA is not incorporated in this type of model, allowing only for the large
+scale behaviour to be studied.}}
+    \label{fig:coare-graining}
   \end{centering}
 \end{figure}
