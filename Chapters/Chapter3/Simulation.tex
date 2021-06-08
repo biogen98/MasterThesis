@@ -8,19 +8,19 @@ we use the more sophisticated model oxDNA. This DNA model gives a better
 representation of the dynamics of DNA strands, at the same time allowing for accurate
 simulations of the thermodynamic transitions in the DNA nanopiston.
 
-The simulations are performed using the popular molecular dynamics simulator, LAMMPS
-\cite{PLIMPTON19951}.
-Employing the Lammps implementation of oxDNA developed by Henri et al \cite{Henrich18},
-it becomes
-possible to study the interactions between oxDNA strands and externally defined
-particles. The initial configurations of the simulations are generated using the
-Moltemplate package \cite{JEWETT2021}, a general purpose molecule builder for LAMMPS.
+The simulations are performed using the popular molecular dynamics simulator,
+LAMMPS.\cite{PLIMPTON19951} Employing the Lammps implementation of oxDNA developed by
+Henri et al.,
+it becomes possible to study the interactions between oxDNA strands and externally
+defined particles.\cite{Henrich18} The initial configurations of the simulations are
+generated using the
+Moltemplate package, a general purpose molecule builder for LAMMPS.\cite{JEWETT2021}
 
 The molecular dynamics simulations performed in this thesis utilises a Langevin
 thermostat, more precisely the Dot-C Langevin integrator also implemented by Henri et
 al. This is a LAMMPS implementation of the “Langevin C” integrator developed by
-Davidchack et al. \cite{Davidchack2015}, falling in the class of rigid-body Langevin-type
-integrators.
+Davidchack et al., falling in the class of rigid-body Langevin-type
+integrators.\cite{Davidchack2015}
 This type of thermostat separates the stochastic and deterministic parts of a Langevin
 thermostat to efficiently take into account the extra degrees of freedom in the system,
 arising from the non-spherical shape of the oxDNA beads. As is common practice in MD

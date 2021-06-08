@@ -19,7 +19,7 @@ a ClyA nanopore by two stopper proteins. This rotaxane could be moved between tw
 states inside the nanopore using an electric potential, acting as a molecular switch.
 
 Motivated by the results from this research, the DNA nanopiston was developed by Bayoumi
-et al. in the Maglia group. In this new molecular machine the rotaxane constitutes of
+et al. In this new molecular machine the rotaxane constitutes of
 a DNA strand instead of a polypeptide thread. Utilising the thermodynamic transitions of
 DNA, this complex is capable of actively transporting DNA cargo-strands through the
 nanopore.
@@ -31,7 +31,6 @@ they where the main inspiration behind our project.
 
 \section{Rotaxane Formation}
 
-
 Synthetic molecular machines are often times embedded in larger complexes, providing the
 necessary structure for their operation. For this reason biological nanopores are a
 suitable starting point in the development of molecular machines. These transmembrane
@@ -42,16 +41,18 @@ focused on ionic current spectroscopy. This large back catalogue of research can
 employed into building out their utility as an ideal building block for membrane bound
 molecular machines.
 
-The design of the DNA nanopiston is centred around the biological nanopore Cytolysin
+The design of the DNA nanopiston is centered around the biological nanopore Cytolysin
 A (ClyA). A modified variant ClyA-AS is used, which has been specially engineered for
 use in ionic current spectroscopy.\cite{Soskine2012} By virtue of the large inner lumen
 of ClyA,
 translocation of dsDNA through the pore is possible. The molecular machine utilises this
 property by capturing a DNA rotaxane structure inside of the pore, anchoring it to the
 lipid membrane. The rotaxane is composed of a DNA complex connected to two neutravidin
-protein stoppers via biotin, which serves to keep the structure captured in the pore. The
-DNA complex consists of three ssDNA strands: ssDNA $1$, ssDNA $2$, and ssDNA $3$, shown
-in Figure ....
+protein stoppers via biotin, which serves to keep the structure captured in the pore.
+The bioton vitamin strongly binds to avidin proteins, resulting in a very stable
+connections often used tool in biotechnology. The DNA complex consists of three single
+stranded DNA's:  ssDNA $1$, ssDNA $2$, and ssDNA $3$, shown in Figure
+\ref{fig:formation}a.
 
 Formation of the DNA nanopiston takes place in a saline filled reservoir, where a
 ClyA nanopore is embedded into a membrane partitioning the reservoir into a cis- and
@@ -60,63 +61,56 @@ trans-side. To start the formation process Neutravidin ($0.5\ \mu M$), ssDNA $1$
 \mu M$) are added to the cis-compartment. Since the first $70$ nucleotides of ssDNA $1$
 are complementary to the last $70$ nucleotides of ssDNA $2$, the two strands will
 partially hybridise. This results in a DNA duplex structure, on one side connected to a
-neutravidin stopper and on the other two ssDNA overhangs.
+neutravidin stopper and on the other two ssDNA overhangs, shown in (ii) of Figure
+\ref{fig:formation}b.
 
 Applying a voltage of $+100\ mV$ over the reservoir results in a net force guiding the
 DNA complex from the cis towards the trans-side. The applied potential drives the
-capturing of the DNA inside the nanopore, observed as a drop in the current through the
-pore (Fig ..). The complex remains indefinitely captured inside until the
+capturing of the DNA inside the nanopore, observed as a drop in the pore current, see
+Figure \ref{fig:formation}c. The complex remains indefinitely captured inside until the
 applied potential is reversed, restoring the open-pore current.
 
 Finally, neutravidin ($1\ \mu M$) and ssDNA $3$ ($3\text{′-biotinylated, }20\text{ nt, }2
 \mu\ M$) are brought into the solution at the trans-side, while keeping the potential at
 $+ 100\ mV$. The longest overhang of the captured DNA thread is formed by the 30 free
 nucleotides of ssDNA $1$. The added strand, ssDNA $3$, is fully complementary with the
-last $20$ nucleotides of this overhang, resulting in the hybridisation of both strands.
+last $20$ nucleotides of this overhang, resulting in the hybridisation of both strands,
+shown in (iii) of Figure \ref{fig:formation}b.
+
 To verify if the hybridisation has successfully taken place, the voltage over the
 reservoir is reversed. If no difference is measured in the pore-current, we conclude that
 the stable structure is formed, capturing the rotaxane inside the pore by the two protein
-stoppers.
-
-After the hybridisation we find the final structure, which is referred to as the
-rotaxane-ds. Here the suffix 'ds' alludes to the predominantly dsDNA composition of
-this rotaxane configuration.
-
-\newpage
+stoppers. After the hybridisation we find the final structure, which is referred to as
+the rotaxane-ds.
 
 \begin{figure}[h!]
   \begin{centering}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.78\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr0.93\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=\linewidth,valign=t]{Figures/RConstruction1.png}
   \end{subfigure}%
   \vspace{0.2cm}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.78\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr0.93\linewidth-1.3em\relax}
   \centering
-  \includegraphics[width=\linewidth,valign=t]{Figures/RConstruction2.png}
+  \includegraphics[width=\linewidth,valign=t]{Figures/RConstruction4.png}
   \end{subfigure}%
   \vspace{0.2cm}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testb}}%
-  \begin{subfigure}[t]{\dimexpr.78\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr0.93\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=\linewidth,valign=t]{Figures/RConstruction3.png}
   \end{subfigure}
-  \caption[Figure showing the formation of the DNA nanopiston]{\linespread{0.1}{\small
-  DNA nanopiston formation.  (a)
-  Molecular components of rotaxane-ds: ssDNA and neutravidin molecules are used to form
-  the rotaxane. (b) Atomistic representation and (c) current trace of rotaxane assembly
-  inside ClyA. From the open pore (i) at positive voltage, the ssDNA 1/ssDNA 2/NA complex
-  remains trapped in pore (ii). By reversing the voltage, the system returns to the
-  open-pore state (i). WhenNAand ssDNA3 are added to the trans side at positive voltage,
-  hybridization with the ssDNA 1 overhang leads to the formation of rotaxane-ds (iii).
-  This is permanently trapped in the nanopore, as revealed by inverting the voltage (iv).
-  The horizontal gray and red lines underneath the current traces correspond to the
-  open-pore and blocked currents, respectively, measured at +100 mV and −100 mV, proving
-  the formation of the rotaxane. Images taken from reference \cite{Bayoumi21}}}
+  \caption[Illustrations of the DNA nanopiston formation.]{\linespread{0.1}{\small
+  Illustrations of the DNA nanopiston formation process. (a) The individual components
+  making up the rotaxane-ds are presented. The different DNA strands with
+  their complementary regions are shown alongside the neutravidin molecule. (b) Snapshots
+  of the assembly process of rotaxane-ds. The arrows on the right indicate the direction
+  of the induced force by an applied potential. (c) The corresponding current traces
+  measured during the assembly process are plotted. Labels in (a) and (b) relate the
+  measured current with a specific intermediate state of the assembly process. Images
+  adapted from reference \cite{Bayoumi21}.}}
   \label{fig:formation}
   \end{centering}
 \end{figure}
-
-\newpage

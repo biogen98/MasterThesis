@@ -11,11 +11,12 @@ In view of these challenges, a coarse-grained model of the DNA nanopiston was de
 Bayoumi et al. The model is used to perform molecular dynamics simulations of  the
 conformational fluctuations of the rotaxane at zero bias. Performing the simulations was
 done by using the Large-scale Atomic/Molecular Massively Parallel Simulator (LAMMPS) and
-its implementation of a Langevin intergrator. \cite{PLIMPTON19951}
+its implementation of a Langevin integrator. \cite{PLIMPTON19951}
 
 The coarse-grained model is composed of four types of interacting pseudo-atoms, all
 taking into account excluded volume interactions via repulsive Lennard-Jones
-potentials. First of all, the ClyA nanopore is represented by three vertically stacked
+potentials, shown in Figure \ref{fig:CG-piston}. First of all, the ClyA nanopore is
+represented by three vertically stacked
 open cylinders, with diameters 6 nm, 5.5 nm and 2.9 nm from the cis- to the trans-side.
 To take into account the electrostatic DNA-nanopore interactions, the cylinder radii
 are appropriately adjusted from the pore's geometry reported in. \cite{Franceschini2016}
@@ -47,7 +48,8 @@ of ssDNA.
 
 The last components of the coarse-grained model are the neutravidin protein stoppers,
 which capture the rotaxane inside of the nanopore. During experiments it was observed
-that the neutravidin proteins can enter the lumen of ClyA. Using this information, the
+that the neutravidin proteins can enter the lumen of ClyA. \cite[Lu2018] Using this
+information, the
 size of the spherical stoppers was fitted to reproduce this behaviour in simulations.
 The fitted value is a diameter of $7\ nm$. The lipid bilayer in which the pore is
 embedded also interacts with these proteins, which is implemented by a reflective
@@ -77,23 +79,24 @@ chapters of the thesis.\\
 \begin{figure}[ht]
   \begin{centering}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.41\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=0.9\linewidth,valign=t]{Figures/Stefanos1.png}
   \end{subfigure}%
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testb}}%
-  \begin{subfigure}[t]{\dimexpr.44\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.5\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=0.9\linewidth,valign=t]{Figures/Stefanos2.png}
   \end{subfigure}
-  \caption[]{\linespread{0.1}{\small The bead-and-spring coarse-grained model used for
-  simulating the DNA nanopiston. (a) The piston consists of the ClyA nanopore, dsDNA,
-  ssDNA and neutravidin, all modeled using Lennard-Jones beads. ClyA is comprised of
-  three open cylinders for which the cross-section is shown regarding visualization
-  purposes.  (b) Typical configurations of the rotaxane-ds and -ss in absence of an
-  applied bias. The ssDNA overhang of rotaxane-ds is indicated
-  with “ss”  and the interface between ssDNA and dsDNA in rotaxane-ss is indicated with
-  an arrow. Images taken from reference \cite{Bayoumi21}}}
+  \caption[The bead-and-spring coarse-grained model of the DNA
+  nanopiston.]{\linespread{0.1}{\small The bead-and-spring coarse-grained model
+  used for simulating the DNA nanopiston. (a) The piston consists of the ClyA nanopore,
+  dsDNA, ssDNA and neutravidin, all modeled using Lennard-Jones beads. ClyA is comprised
+  of three open cylinders for which the cross-section is shown regarding visualization
+  purposes. (b) Typical configurations of the rotaxane-ds and -ss in absence of an
+  applied bias. The ssDNA overhang of rotaxane-ds is indicated with the label “ss”  and
+  the interface between ssDNA and dsDNA in rotaxane-ss is indicated with an arrow.
+  Images taken from reference \cite{Bayoumi21}}}
   \label{fig:CG-piston}
   \end{centering}
 \end{figure}

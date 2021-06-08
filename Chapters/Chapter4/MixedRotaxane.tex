@@ -1,13 +1,15 @@
 \vspace{2cm}
 \noindent In this chapter the results of various simulations utilising the OxDNA based
-rotaxane model are presented. The aim of this computational analysis is to shed light on
+rotaxane model, discussed in chapter 3, are presented. The aim of this computational
+analysis is to shed light on
 the entropic effects which play a central role in the nanopiston's operating cycle. By
 extension, the thermodynamic transitions providing the free energy governing its
-operation are studied.\\\\
+operation are studied.
+
 To better understand the entropic interactions between the DNA rotaxane and the nanopore
-a specially engineered rotaxane variant is studied. This other class of rotaxane is
-called the mixed rotaxane, composing of different ds- and ssDNA fractions in an attempt
-to isolate the influence of entropic interactions. Having explored the effects of the
+a specially engineered rotaxane variant is studied. This other class of rotaxanes will be
+called the mixed rotaxanes, as they are composed of different ds- and ssDNA fractions to
+study the change in entropic interactions. Having explored the effects of the
 entropic contributions, next the conformational fluctuations of the nanopiston are
 simulated and analysed. Lastly, an attempt is made to simulate the thermodynamic
 transitions driving the piston cycle. These particular simulations are made possible
@@ -17,15 +19,24 @@ by the use of a forward flux sampling algorithm.
 
 \section{Mixed Rotaxane}
 
+
+
 Having identified the entropic interactions as key component of the nanopiston cycle,
 studying them is an important but challenging task. The problem arises when we aim to
 specify the entropic contributions to the conformal fluctuations of the rotaxane. The
 main factor complicating this analysis is the multiplicity of the interactions acting
-upon the nanopiston.\\
+upon the nanopiston.
 
-% Studying solely the contributions of entropic interactions in the conformal
-% fluctuations  of the rotaxane is challenging task. The main factor complicating this
-% analysis is the  multiplicity of the interactions acting upon the nanopiston.\\
+\begin{wrapfigure}[22]{r}{0.5\textwidth}
+  \vspace{-0.5cm}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{Figures/mixed.png}
+    \caption[Figure of the simulated mixed rotaxanes.]{The different mixed rotaxane
+    versions that are simulated. The label above the rotaxanes refers to the number of
+    nucleotides (nt) that are present in the corresponding DNA strand.}
+  \label{fig:mixed}
+\end{center}
+\end{wrapfigure}
 
 The first category of forces is composed of the external forces arising from the
 potential difference applied over the membrane. This potential difference induces an
@@ -36,17 +47,6 @@ forces is composed of the intrinsic forces. These forces do not arise from the
 electric field, but rather originate from the direct interactions between the rotaxane
 and the nanopore itself. Under this category fall the electrostatic, steric and entropic
 forces, limiting the conformational freedom of the piston.
-
-
-
-% Since both the DNA polymer and the ClyA nanopore have a net negative
-% charge, the first intrinsic force can be identified as the electrostatic interaction
-% between these two components of the piston. At short distances however this electrostatic
-% force is dominated by the repulsive component of van der Waals forces arising from
-% overlapping of the atoms' electron clouds. This contribution is referred to as the steric
-% force. Lastly the entropic force is also categorised as a intrinsic force, arising from
-% the reduction in available configurational micro states of the rotaxane upon confinement
-% in the pore. [.]
 
 In order to study the role of entropy in the conformational fluctuations of
 the nanopiston, these effects need to be isolated from the other contributions present in
@@ -60,7 +60,8 @@ steps of $10nt$. The effects of these changes in composition were first studied 
 measurements in the range of $[-100mV, +100mV]$. During an I-V measurement a range of
 voltages is applied over the lipid membrane and at each step in this voltage sweep the
 current through the pore is measured. A detailed explanation of this method is described
-in. \cite{MAGLIA2010591} The results from these experiments are presented in Figure....
+in.\cite{MAGLIA2010591} The results from these experiments are presented in Figure
+\ref{fig:mixedrotaxane}.
 
 The mixed rotaxane composed entirely of dsDNA yields an almost linear I-V trace in the
 measured voltage range. This result indicates a constant obstruction of the nanopore over
@@ -180,7 +181,7 @@ linear I-V trace is recovered.
   \vspace{-0.6cm}
   \includegraphics[width=.35\linewidth,valign=t]{Figures/Rotaxane-70.png}
   \end{subfigure}
-  \label{fig:test}
+  \label{fig:mixedrotaxane}
   \end{centering}
   \caption[short lof/lot caption]{\linespread{0.5}{\small(a) Experimental I-V curves for
 the mixed rotaxane, with varying ssDNA lengths (0−40 nt, from top to bottom). The
@@ -211,7 +212,8 @@ Here the z-axis is aligned with the symmetry axis of the nanopore, placing the o
 the coordinate system at center of the pore's trans-entrance. With respect to this
 coordinate system, the center of pore's cis-entrance is located at $r_{cis} = (0,0,z_0)$.
 
-In Figure ... the measured time trace of the $X$-coordinate is presented for each mixed
+In Figure \ref{fig:mixedrotaxane}a, the measured time trace of the $X$-coordinate is
+presented for each mixed
 rotaxane type.  The horizontal line indicates the origin of the reaction coordinate,
 representing the trans-entrance of the pore. On the right side of these graphs the $X$
 histograms of the time traces are presented, indicating the positional distribution of
@@ -241,23 +243,27 @@ of the pore. These combined effects shift the peak of the distribution further a
 the pore entrance as the number of nucleotides is increased. An ever larger
 electrophoretic force is required to sustain full pore blockage, which is why no blockage
 is observed in the experiment's voltage range. The results found in these simulations are
-in accordance with the corresponding simulations performed by Bayoumi et al.[.], using
+in accordance with the corresponding simulations performed by Bayoumi et al., using
 the bead-and-spring model.
+
+\subsection{Rotaxane and 1d Diffusion}
 
 As the final part in our analysis of the mixed rotaxanes, the confined diffusion of the
 $0nt$ mixed rotaxane is studied. The uniform distribution of the $X$ histogram suggests
 that the rotaxane vertically fluctuates inside of the pore like a rigid rod. To study
 this diffusive behaviour, the mean square displacements(MSD) of the
-trans-stopper is determined within a range of time intervals.\footnote{reference
-tidynamics by Pierre de Buyl} Calculating the MSD is done by utilising a rolling-window
+trans-stopper is determined within a range of time intervals.\footnote{The Tidynamics
+  package was used for an efficient calculation of the MSE. \cite{deBuyl2018}}
+  Calculating the MSD is done by utilising
+a rolling-window
 analysis on the measured time trace. The MSD is an important quantity used to
 characterise diffusive processes, since it allows us to verify whether an external force
 influences the motion. From analytical calculations, presented in appendix A, we find
 that one dimensional confined diffusion can be described up to the second order as,
-\begin{equation*}
-\langle \Delta x \rangle = \frac{L^2}{6} - \frac{96}{\pi^4} e^{-\frac{D \pi^2t
+\begin{equation}
+\langle \Delta X^2 \rangle = \frac{L^2}{6} - \frac{96}{\pi^4} e^{-\frac{D \pi^2t
 }{L^2}},
-\end{equation*}
+\end{equation}
 here $L$ is the length of the confined region, i.e. the hight of the pore, and $D$ the
 diffusion constant of the particle. This model was fitted to our simulations, for which
 the result is presented in Figure... From this we can conclude the $0nt$ mixed rotaxane
@@ -270,5 +276,6 @@ rotaxane dynamics.
 \begin{center}
   \includegraphics[width=\textwidth]{Figures/MR-100-diff.png}
   \caption[short lof/lot caption]{write caption}
+  \label{fig:diff}
 \end{center}
 \end{figure}
