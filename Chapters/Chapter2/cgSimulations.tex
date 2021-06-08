@@ -27,8 +27,9 @@ model.
 A semiflexible bead-and-spring model is used to simulate the rotaxane. Each spherical
 bead represents one ssDNA nucleotide or five dsDNA base pairs, respectively having a
 diameter of $1\ nm$ and  $2.2\ nm$. The bond connecting each consecutive pair of beads is
-represented by a harmonic spring. Determining the bond stiffness is done by means of the
-equipartition theorem, from which we find
+represented by a FENE\footnote{Finitely-Extensible Non-linear
+Elastic (FENE) potential} bond.  Determining the bond stiffness is done by
+means of the equipartition theorem, from which we find
   \begin{equation}
     k_{bond} = \frac{3 k_b T }{ \langle a \rangle},
   \end{equation}
@@ -36,7 +37,7 @@ here $\langle a \rangle$ is the equilibrium bond length taken to be $0.68\ nm$ o
 nm$ for ssDNA and dsDNA respectively. In this model the bending rigidity of the DNA
 polymer is taken into account. This effect is modelled as previously seen in the discrete
 worm like chain, where the angle between consecutive bond vectors is assigned a harmonic
-potential. Using equation .., the bending rigidity is determined by
+potential. Using equation \ref{eq:persistance}, the bending rigidity is determined by
   \begin{equation}
     \kappa_{bend} = \frac{l_{p} \kappa_b T}{\langle a \rangle},
   \end{equation}
@@ -71,23 +72,29 @@ DNA rotaxane and the nanopore during the piston's operation cycle. However, the 
 used by Bayoumi et al.\cite{Bayoumi21} imposes limitations on the possible research that
 can be
 performed. More advanced methods are needed, which are discussed in the following
-chapters of the thesis.\\\\
-
+chapters of the thesis.\\
 
 \begin{figure}[ht]
   \begin{centering}
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testa}}%
-  \begin{subfigure}[t]{\dimexpr.4\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.35\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=0.9\linewidth,valign=t]{Figures/Stefanos1.png}
   \end{subfigure}%
   \adjustbox{minipage=1.3em,valign=t}{\subcaption{}\label{sfig:testb}}%
-  \begin{subfigure}[t]{\dimexpr.5\linewidth-1.3em\relax}
+  \begin{subfigure}[t]{\dimexpr.44\linewidth-1.3em\relax}
   \centering
   \includegraphics[width=0.9\linewidth,valign=t]{Figures/Stefanos2.png}
   \end{subfigure}
-  \caption{This is a figure}
-  \label{fig:test}
+  \caption[]{\linespread{0.1}{\small The bead-and-spring coarse-grained model used for
+  simulating the DNA nanopiston. (a) The piston consists of the ClyA nanopore, dsDNA,
+  ssDNA and neutravidin, all modeled using Lennard-Jones beads. ClyA is comprised of
+  three open cylinders for which the cross-section is shown regarding visualization
+  purposes.  (b) Typical configurations of the rotaxane-ds and -ss in absence of an
+  applied bias. The ssDNA overhang of rotaxane-ds is indicated
+  with “ss”  and the interface between ssDNA and dsDNA in rotaxane-ss is indicated with
+  an arrow. Images taken from reference \cite{Bayoumi21}}}
+  \label{fig:CG-piston}
   \end{centering}
 \end{figure}
 

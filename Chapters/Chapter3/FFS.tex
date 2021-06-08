@@ -23,24 +23,21 @@ Hamiltonian of the system in such a way, that rare parts of its configurational 
 explored. Notable examples of these methods are the adaptive biasing force algorithm
 \cite{Comer2015}, basis function sampling\cite{Whitmer2014} and umbrella sampling
 \cite{Kästner2011}.
-%(SSAGES)
 
 The second class of methods, known as path sampling methods, do not influence the
 systems Hamiltonian, but rather interface directly with the simulated trajectories. The
 transition path ensemble is usually sampled by perturbing an initial transition path or
 partitioning the phase space in subregions. Examples of these methods are transition
 path sampling \cite{Dellago2002} and forward flux sampling \cite{Allen2006}
-\cite{Allen2009}.  The latter
-will be used in our
-hybridisation simulations, motivated by its relative simplicity.
+\cite{Allen2009}.  The latter will be used in our hybridisation simulations, motivated by
+its relative simplicity.
 
 Forward Flux Sampling (FFS) starts with identifying two local minima, $A$ and $B$, in the
 energy landscape of our system, for which we want to sample the transition path ensemble.
 Next an order parameter, $\lambda(x)$, is defined with the aim of partitioning the
 phase space, $\Omega$, using a set of nonintersecting hypersurfaces. By design, we
 choose this order parameter to be a function, $\lambda(.):\ $\Omega$\ \rightarrow
-\mathcal{R}$, monotonically increasing from the initial state $A$ to the final
-state $B$.
+\mathcal{R}$, monotonically increasing from the initial state $A$ to the final state $B$.
 
 Using this function the two local minima can
 now be specified as $A := \{x: \lambda(x) < \lambda_A\} $ and $B := \{x: \lambda(x) \geq
@@ -87,34 +84,45 @@ Non-equilibrium systems are ubiquitous in soft matter physics, illustrating anot
 strength of the method.
 \begin{figure}[ht]
 \begin{center}
-  \includegraphics[width=0.53\textwidth]{Figures/FFS.png}
-  \caption{write caption[.]}
+  \includegraphics[width=0.58\textwidth]{Figures/FFS.png}
+  \caption[Schematic illustration of the “Rosenbluth-like” (RB) method]{Schematic
+illustration of the FFS algorithm, called the “Rosenbluth-like” (RB) method. Unbranched
+transition paths are generated, traversing from state $A$ to state $B$. At each order
+interface $\lambda_i$, $k_i$ trials are fired from a random end point of the previous
+interace $\lambda_{i-1}$. Figure taken from reference \cite{Allen2009}}
 \end{center}
 \end{figure}
 
 Different variants on the FFS method have been devised, differing in the approach by
 which they calculate the probability $P(\lambda_n|\lambda_0)$. During this thesis I
-chose to use the “Rosenbluth-like” (RB) method \cite{Allen2006}. The choice
-is motivated
-by its resemblance with well known Monte Carlo Simulations and recursive nature, making
-it easy to implement.  This method generates unbranched transition paths from state $A$
-to state $B$, making them easy to analyse. The algorithm is described in six steps:
+chose to use the “Rosenbluth-like” (RB) method \cite{Allen2009}. The choice
+is motivated by its resemblance with well known Monte Carlo Simulations and recursive
+nature, making it easy to implement.  This method generates unbranched transition paths
+from state $A$ to state $B$, making them easy to analyse. The algorithm is described in
+six steps:
+
 \begin{enumerate}[label=\textbf{(\roman*)}]
    \item Generate configurations on the $\lambda_0$ interface by running
       simulations in the $A$ basin. Keeping track of the fraction of successful runs,
       $\langle\Phi_{A,0} \rangle/\langle h_{\mathcal{A}}\rangle$ is evaluated.
+   \vspace{0.05cm}
    \item Fire $k_0$ trial runs from generated configurations on $\lambda_0$ until they
       cross $\lambda_1$ or cross back to $\lambda_0$. Store the final configurations of
       the successful simulations.
+   \vspace{0.05cm}
    \item Sample one of the saved configuration on the $\lambda_1$ interface and use it to
       shoot $k_1$ runs to the next interface $\lambda_2$.
+   \vspace{0.05cm}
    \item Iterate the previous steps until the trajectories reach $\lambda_n$ or no more
      configurations are available.
+   \vspace{0.05cm}
    \item If not successful, sample a stored configuration on $\lambda_0$ and repeat the
       steps $\textbf{(i)}$ to $\textbf{(iv)}$.
+   \vspace{0.05cm}
    \item Finally compute $P(\lambda_n|\lambda_0)$ using a weighted average of individual
      transition probabilities as described below.
 \end{enumerate}
+\newpage
 Calculating the transition probabilities is done by taking a weighted average of the
 attempted trial runs. The path $b$ starting at the initial basin and reaching
 interface $\lambda_i$ is assigned a weight $w_{i,b}$ as

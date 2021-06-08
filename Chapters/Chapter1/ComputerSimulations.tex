@@ -75,7 +75,8 @@ The motion of the particles are governed by the forces $f_i$ acting upon them, w
 usually derived from the interaction potential $\mathcal{U}$.
 Solving these differential equations is achieved by employing a discretized time
 integration scheme. The discretization resolution is conventionally called the time step
-of the simulations denoted by $\Delta t$.
+of the simulations denoted by $\Delta t$. A typical molecular dynamics scheme is shown in
+Algorithm 1.
 
 There are a large number of different integrations schemes that one can choose
 from, in which the choice depends entirely on the system at hand.
@@ -106,29 +107,38 @@ where $\gamma_i$ is known  as the friction coefficient and $\xi_i(t)$ a stochast
 acting upon the particles. The combination of the last two terms fully capture the
 statistical consequences of the solvent interacting with the system.
 
-% \begin{algorithm}
-%     \SetKwFunction{isOddNumber}{isOddNumber}
-%     \SetKwInOut{KwIn}{Input}
-%
-%     \KwIn{Configuration of the system at $t=0$}
-%     $call init$
-%     $newList = [\ ]$
-%
-%     \tcc{For odd elements in the list, we add 1, and for even elements, we add 2.}
-%
-%     \For{$i \leftarrow 0$ \KwTo $n-1$}{
-%         \eIf{$\isOddNumber(a_i)$}{
-%
-%             $newList.append(a_i + 1)$ \tcp*[f]{Some thought-provoking comment.}
-%          }{
-%             \tcp{Another comment}
-%             $newList.append(a_i + 2)$
-%          }
-%     }
-%
-%     \KwRet{$newList$}
-%     \caption{The Velocity Verlet algorithm: \textbf{Nog maken}}
-% \end{algorithm}
+\begin{algorithm}
+    \SetKwFunction{isOddNumber}{isOddNumber}
+    \SetKwInOut{KwIn}{Input}
+
+    \KwIn{Initial configuration of all atoms ($\boldsymbol{r}$, $\boldsymbol{v}$,
+    $\boldsymbol{a}$) and choose short  $\Delta t$ }
+    % $call\ init \gets [\boldsymbol{r}$, $\boldsymbol{v}$,
+    % $\boldsymbol{a}]$\\
+    % $t \gets 0$\\
+    \tcc{Initialising the simulation}
+    \textbf{setup} initial conditions\\
+    \textbf{set} $t \gets 0$\\
+    \tcp{}
+    \tcc{Running the MD loop}
+
+    \While{$t\ \leq\ t_{max}$}
+    {
+      % f \get $call\ force(state)$ \tcp*[f]{compute forces on all particles}\\
+      % state \gets $call\ integrate(state, f)$ \tcp*[f]{integrate equations of motion}\\
+      \textbf{compute} the forces on all particles\\
+      \For {each particle}{
+        \textbf{compute} new positions and momenta using an \textbf{integration scheme
+      }}
+       % $t \gets t+\Delta\ t$
+      \textbf{update} $t \gets t+\Delta t$
+    }
+    \tcp{}
+    \tcc{Output}
+    \KwRet{final configuration of all atoms}
+    \caption{Simple Molecular Dynamics Program}
+\end{algorithm}
+
 %
 % \begin{center}
 % 	\begin{tikzpicture}[
@@ -156,6 +166,8 @@ statistical consequences of the solvent interacting with the system.
 % 	\end{tikzpicture}
 % \end{center}
 
+
+
 \subsection{Coarse Grained modelling}
 As most things do, molecular dynamics simulations have their pitfalls. A commonly
 encountered problem is the rapidly increasing computational cost when the number of
@@ -163,8 +175,9 @@ particles in the system increase. If not addressed, this would limit the scope o
 simulations to systems of a few particles over short time-scales.
 
 During these simulations the most costly calculations involve the non-bonded
-interactions\footnote{referring to the } in the system. These interatomic interactions
-make the computational
+interactions\footnote{Interactions acting between non-covalently bonded atoms. These
+forces act both inter- and intramolecular, giving rise a large multiplicity in
+interactions.} in the system. These interatomic interactions make the computational
 complexity for rudimentary MD simulations scale as $O(N^2t)$, where $N$ is the number of
 particles in the system and $t$ the simulation time. This bad scaling behaviour comes
 arises from the fact that for each individual particle all the other particles are
@@ -172,7 +185,7 @@ contributing to its energy potential. To improve this scaling behaviour, the non
 interactions in a MD simulation are almost always truncated. This localization of the
 interatomic interactions has the favourable effect that not all atoms are involved in
 every calculation. Efficient algorithms, like the multigrid method, have been derived
-to improve the scaling complexity of MD simulations up to $O(Nt)$. \cite{Celeste2001}
+to improve the complexity of MD simulations to $O(Nt)$. \cite{Celeste2001}
 
 From the scaling complexity we conclude that decreasing the total number of particles in
 the system drastically improves the computational cost of an MD simulation. To reduce the
