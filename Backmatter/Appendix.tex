@@ -9,10 +9,10 @@ be evaluated. Here we will discuss the mean square displacement (MSD) as it is u
 analyse the motion of the fully double stranded mixed rotaxane.\\
 A central result in statistical mechanism is that the evolution of
 $\phi$ is  described by the diffusion equation, given by
-\begin{align}
+\begin{equation}
   \frac{\partial \psi}{\partial t} =  D \frac{\partial^2 \psi}{\partial x^2}, \quad
   \label{eq:diff}
-\end{align}
+\end{equation}
 here D is the diffusion coefficient of our particle.
 The confinement is imposed through reflecting boundary conditions, equivalent to a
 vanishing particle current at the boundaries of our domain, $j = - D \frac{\partial
@@ -34,19 +34,24 @@ t:\quad \dot{g} = - \alpha g(t) \Rightarrow g(t) = e^{-\alpha t},
   x:\quad D \ddot{f} = - \alpha f(x) \Rightarrow f(x) &= A \sin(K x) + B \cos(Kx)\\
   &= B \cos(\frac{\pi n x}{L}).
 \end{align}
-In the latter expression the boundary conditions impose $A=0$ and the following relation,
+In the latter expression the boundary conditions impose $A=0$ and a constraint on the
+parameters given by the relation,
 \begin{align}
   \frac{\alpha}{D} = \frac{\pi^2 n^2}{L^2}.
 \end{align}
-By substituting the found results into the assumed form of the solution we find the
-general solution by the linear combination,
+By substituting the found results into the assumed form of the solution, we find the
+general solution to the confined diffusion equation as the linear combination,
 \begin{align}
   \psi(x,t) &= \sum_{n=0}^{+\infty} C_n \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2
-  n^2}{L^2}t}
+  n^2}{L^2}t}.
 \end{align}
+
+At time $t=0$ the particle is found at set at $x_0$ resulting in the initial condition,
 \begin{align}
-  \psi(x, 0) = \delta(x-x_0) = \sum_{n=0}^{+ \infty} C_n \cos(\frac{\pi n x}{L})
+  \psi(x, 0) = \delta(x-x_0) = \sum_{n=0}^{+ \infty} C_n \cos(\frac{\pi n x}{L}).
 \end{align}
+Imposing this initial condition on the found general solution of the confined diffusion
+equation gives,
 \begin{align}
   \psi(x, t)=\frac{1}{L} \Bigg[ 1 + \sum_{n=1}^{+\infty} \cos\Big(\frac{\pi n
   x_0}{L}\Big) \cos\Big(\frac{\pi n x}{L}\Big) e^{- \frac{D\pi^2  n^2}{L^2}t}\Bigg].

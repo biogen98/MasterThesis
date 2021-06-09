@@ -1,15 +1,15 @@
-\section{Computational setup}
+\section{Computational Setup}
 
-The model used to study the DNA nanopiston, is largely based on the model
+The model used to study the DNA nanopiston in this thesis, is largely based on the model
 previously devised by Bayoumi et al. The main variation between the two models lays in
 the different coarse-grained models, used to simulate the DNA strands. As discussed in
 Chapter 2, the Bayoumi model uses a bead-spring approach to simulate DNA strands, where
-we use the more sophisticated model oxDNA. This DNA model gives a better
+we use the more sophisticated oxDNA model. This DNA model gives a better
 representation of the dynamics of DNA strands, at the same time allowing for accurate
 simulations of the thermodynamic transitions in the DNA nanopiston.
 
-The simulations are performed using the popular molecular dynamics simulator,
-LAMMPS.\cite{PLIMPTON19951} Employing the Lammps implementation of oxDNA developed by
+Our simulations are performed using the popular molecular dynamics simulator,
+LAMMPS.\cite{PLIMPTON19951} Employing the LAMMPS implementation of oxDNA developed by
 Henri et al.,
 it becomes possible to study the interactions between oxDNA strands and externally
 defined particles.\cite{Henrich18} The initial configurations of the simulations are
@@ -17,7 +17,7 @@ generated using the
 Moltemplate package, a general purpose molecule builder for LAMMPS.\cite{JEWETT2021}
 
 The molecular dynamics simulations performed in this thesis utilises a Langevin
-thermostat, more precisely the Dot-C Langevin integrator also implemented by Henri et
+thermostat, more precisely the Dot-C Langevin integrator, also implemented by Henri et
 al. This is a LAMMPS implementation of the “Langevin C” integrator developed by
 Davidchack et al., falling in the class of rigid-body Langevin-type
 integrators.\cite{Davidchack2015}
@@ -29,7 +29,7 @@ value of physical DNA. This is done to speed up the simulations, while ensuring 
 physical accuracy.
 
 The model is used to more accurately study the conformational fluctuations of
-the DNA Rotaxane and develop understanding of the entropic interactions between the DNA
+the DNA rotaxanes and develop understanding of the entropic interactions between the DNA
 and the nanopore. Next the thermodynamic transitions in the operation cycle of the piston
 are simulated using a forward flux sampling algorithm. The FFS algorithm is implemented
 as a Python script, performing the simulations by interfacing with the Python API of

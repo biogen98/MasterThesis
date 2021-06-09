@@ -1,4 +1,4 @@
-\section{Forward Flux sampling}
+\section{Forward Flux Sampling}
 
 Computational methods are used to study a wide variety of phenomena, ranging from
 large meteorological events to chemical reactions at the atomic scale. One class of
@@ -8,7 +8,7 @@ difference in the time-scales corresponding to the duration of the events and th
 temporal spacing. The infrequency of their occurrence in combination with their short
 duration, makes them hard to study with both experimental and computational approaches.
 
-Using this definition, the hybridisation and toehold displacement reactions studied in
+Using this definition, the hybridisation and displacement reactions studied in
 this thesis can be classified as a rare event. Due to
 the large temporal spacing between these rare events, simulating them with a brute-force
 approach is inefficient. In this case, molecular dynamics simulations spend a lot of
@@ -25,7 +25,7 @@ explored. Notable examples of these methods are the adaptive biasing force algor
 \cite{Kästner2011}.
 
 The second class of methods, known as path sampling methods, do not influence the
-systems Hamiltonian, but rather interface directly with the simulated trajectories. The
+system's Hamiltonian, but rather interface directly with the simulated trajectories. The
 transition path ensemble is usually sampled by perturbing an initial transition path or
 partitioning the phase space in subregions. Examples of these methods are transition
 path sampling \cite{Dellago2002} and forward flux sampling \cite{Allen2006}
@@ -48,7 +48,7 @@ partitioning the space between $A$ and  $B$, for which we require
 \begin{equation}
 \lambda_A = \lambda_0 < \lambda_1< \dots < \lambda_{N-1} < \lambda_N = \lambda_B.
 \end{equation}
-Note that this method does not require an in depth knowledge of the systems energy
+Note that this method does not require an in-depth knowledge of the system's energy
 landscape, however the choice of order parameter will heavily influence the
 efficiency of the simulation. Analogous to the ambiguous choice of a collective variable
 in free energy methods, constructing these hypersurfaces is often more an art then a
@@ -65,10 +65,10 @@ from $A$ to  $B$, denoted as $k_{AB}$. The expression used to calculate $k_{AB}$
  where $\langle \Phi_{A,n} \rangle$ is the steady-state flux of trajectories starting in
  $A$ and reaching the final interface $\lambda_n$ (i.e. reaching B) and
 $\langle h_{\mathcal{A}}\rangle$ is the average fraction of time that  a trajectory
-spends in the basin of local minima $A$. In the above equation this steady state flux is
+spends in the basin of local minimum $A$. In the above equation this steady state flux is
 factorised into the flux of trajectories starting in $A$ and crossing $\lambda_0$ and the
 subsequent probability of reaching the final state from this
-interface. Using the previously defined interfaces, we can now factorise the events'
+interface. Using the previously defined interfaces, we can now factorise the event's
 probability into transition probabilities between the individual interfaces as
 \begin{equation}
     P(\lambda_n|\lambda_0) = \prod_{i=0}^{n-1} P(\lambda_{i+1}|\lambda_i).
@@ -76,7 +76,8 @@ probability into transition probabilities between the individual interfaces as
 Estimating these transition probabilities can be done by shooting trajectories starting
 from one interface to the next, while keeping track of the fraction of attempts
 successfully crossing the next interface. Since not the entire energy landscape between
-the minima has to be crossed, measuring these small transitions can be more easily done.
+the minima has to be crossed at once, measuring these small transitions can be more
+easily done.
 
 Note that this set-up allows for simulations of both equilibrium and out-of-equilibrium
 systems, since it does not require detailed balance like other sampling techniques.
@@ -85,17 +86,17 @@ strength of the method.
 \begin{figure}[ht]
 \begin{center}
   \includegraphics[width=0.58\textwidth]{Figures/FFS.png}
-  \caption[Schematic illustration of the “Rosenbluth-like” (RB) method]{Schematic
+  \caption[Schematic illustration of the “Rosenbluth-like” (RB) method]{{\small Schematic
 illustration of the FFS algorithm, called the “Rosenbluth-like” (RB) method. Unbranched
 transition paths are generated, traversing from state $A$ to state $B$. At each order
 interface $\lambda_i$, $k_i$ trials are fired from a random end point of the previous
-interace $\lambda_{i-1}$. Figure taken from reference \cite{Allen2009}}
+interace $\lambda_{i-1}$. Figure taken from reference \cite{Allen2009}.}}
 \end{center}
 \end{figure}
 
 Different variants on the FFS method have been devised, differing in the approach by
-which they calculate the probability $P(\lambda_n|\lambda_0)$. During this thesis I
-chose to use the “Rosenbluth-like” (RB) method \cite{Allen2009}. The choice
+which they calculate the probability $P(\lambda_n|\lambda_0)$. During this thesis we use
+the “Rosenbluth-like” (RB) method \cite{Allen2009}. The choice
 is motivated by its resemblance with well known Monte Carlo Simulations and recursive
 nature, making it easy to implement.  This method generates unbranched transition paths
 from state $A$ to state $B$, making them easy to analyse. The algorithm is described in
@@ -110,7 +111,8 @@ six steps:
       cross $\lambda_1$ or cross back to $\lambda_0$. Store the final configurations of
       the successful simulations.
    \vspace{0.05cm}
-   \item Sample one of the saved configuration on the $\lambda_1$ interface and use it to
+   \item Sample one of the saved configurations on the $\lambda_1$ interface and use it
+      to
       shoot $k_1$ runs to the next interface $\lambda_2$.
    \vspace{0.05cm}
    \item Iterate the previous steps until the trajectories reach $\lambda_n$ or no more

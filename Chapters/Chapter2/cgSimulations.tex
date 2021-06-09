@@ -1,4 +1,4 @@
-\section{Coarse-grained simulations}
+\section{Coarse-grained Simulations}
 
 During the discussion of the nanopiston's operation cycle it was hypothesised
 that entropic interactions play an important role in its functioning. Studying these
@@ -17,9 +17,11 @@ The coarse-grained model is composed of four types of interacting pseudo-atoms, 
 taking into account excluded volume interactions via repulsive Lennard-Jones
 potentials, shown in Figure \ref{fig:CG-piston}. First of all, the ClyA nanopore is
 represented by three vertically stacked
-open cylinders, with diameters 6 nm, 5.5 nm and 2.9 nm from the cis- to the trans-side.
+open cylinders, with diameters $6\ nm$, $5.5\ nm$ and $2.9\ nm$ from the cis- to the
+trans-side.
 To take into account the electrostatic DNA-nanopore interactions, the cylinder radii
-are appropriately adjusted from the pore's geometry reported in. \cite{Franceschini2016}
+are appropriately adjusted from the pore's geometry reported in Franceschini et
+al.\cite{Franceschini2016}
 These electrostatic interactions predominantly arise from an excess negative charge in
 the constriction of ClyA, resulting in a reduced effective size of the trans-cylinder.
 Note that the pore is excluded from the Langevin integration, resulting in a static pore
@@ -29,7 +31,7 @@ A semiflexible bead-and-spring model is used to simulate the rotaxane. Each sphe
 bead represents one ssDNA nucleotide or five dsDNA base pairs, respectively having a
 diameter of $1\ nm$ and  $2.2\ nm$. The bond connecting each consecutive pair of beads is
 represented by a FENE\footnote{Finitely-Extensible Non-linear
-Elastic (FENE) potential} bond.  Determining the bond stiffness is done by
+Elastic (FENE) potential.} bond.  Determining the bond stiffness is done by
 means of the equipartition theorem, from which we find
   \begin{equation}
     k_{bond} = \frac{3 k_b T }{ \langle a \rangle},
@@ -48,11 +50,11 @@ of ssDNA.
 
 The last components of the coarse-grained model are the neutravidin protein stoppers,
 which capture the rotaxane inside of the nanopore. During experiments it was observed
-that the neutravidin proteins can enter the lumen of ClyA. \cite[Lu2018] Using this
+that the neutravidin proteins can enter the lumen of ClyA. \cite{Lu2018} Using this
 information, the
 size of the spherical stoppers was fitted to reproduce this behaviour in simulations.
 The fitted value is a diameter of $7\ nm$. The lipid bilayer in which the pore is
-embedded also interacts with these proteins, which is implemented by a reflective
+embedded also interacts with these proteins, which is implemented by a repulsive
 boundary at the lower entrance of the nanopore.
 
 Having established a coarse-grained model of the DNA nanopiston, a computational analysis
@@ -74,7 +76,7 @@ DNA rotaxane and the nanopore during the piston's operation cycle. However, the 
 used by Bayoumi et al.\cite{Bayoumi21} imposes limitations on the possible research that
 can be
 performed. More advanced methods are needed, which are discussed in the following
-chapters of the thesis.\\
+chapters of this thesis.\\
 
 \begin{figure}[ht]
   \begin{centering}
@@ -91,12 +93,12 @@ chapters of the thesis.\\
   \caption[The bead-and-spring coarse-grained model of the DNA
   nanopiston.]{\linespread{0.1}{\small The bead-and-spring coarse-grained model
   used for simulating the DNA nanopiston. (a) The piston consists of the ClyA nanopore,
-  dsDNA, ssDNA and neutravidin, all modeled using Lennard-Jones beads. ClyA is comprised
-  of three open cylinders for which the cross-section is shown regarding visualization
+  dsDNA, ssDNA and neutravidin, all modeled using Lennard-Jones beads. ClyA is composed
+  of three open cylinders for which the cross-section is shown for visualization
   purposes. (b) Typical configurations of the rotaxane-ds and -ss in absence of an
   applied bias. The ssDNA overhang of rotaxane-ds is indicated with the label “ss”  and
   the interface between ssDNA and dsDNA in rotaxane-ss is indicated with an arrow.
-  Images taken from reference \cite{Bayoumi21}}}
+  Images taken from reference \cite{Bayoumi21}.}}
   \label{fig:CG-piston}
   \end{centering}
 \end{figure}

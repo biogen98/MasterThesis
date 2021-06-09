@@ -13,7 +13,7 @@ duplex structure.
 
 During the discussion of the DNA nanopiston, we stated that thermodynamic transitions of
 DNA are the driving force behind its operating cycle. The power stroke of the piston is
-induced by a toehold mediated strand displacement reaction, while a hybridisation
+induced by a strand displacement reaction, while a hybridisation
 reaction facilitates the recovery stroke.
 
 Initiating a hybridisation reaction between two strands of ssDNA incurs a thermodynamic
@@ -30,7 +30,7 @@ Another limiting factor to the rate constant of hybridisation reactions is that 
 transitions are not characterised by a single state, but rather by an ensemble of
 possible transition pathways. The number of pathways increases dramatically when the
 strand sequences are repetitive, giving rise to hybridisation pathways facilitated by
-Inchworm and pseudo-knot displacements\cite{Ouldridge2013}.
+inchworm and pseudo-knot displacements.\cite{Ouldridge2013}
 
 The combination of the unstable initialisation of hybridisation reactions together
 with its many transition pathways, complicates the analysis of the full reaction kinetics
@@ -80,38 +80,38 @@ observed in DNA hybridisation.
       (a--e) Snapshots taken from a typical hybridization
       reaction simulated with OxDNA. Underneath a schematic representation is given of
   the formed base pairs at each instance. Figure adapted from reference
-  \cite{Ouldridge2013}}}
+  \cite{Ouldridge2013}.}}
   \label{fig:hybridization}
   \end{centering}
 
 \end{figure}
 
 The other important thermodynamic transition in the operating cycle of the nanopiston
-is a toehold mediated strand displacement. Initially this reaction consists out of two
+is a strand displacement. Initially this reaction consists out of two
 components. The first is an imperfect duplex structure, formed by a substrate strand and
 an incumbent strand. The two strands are partially complementary by having either a
 mismatch in their base-pair sequence or a surplus of base-pairs on the substrate strand.
 The non-hybridised part of the substrate constitutes a flexible strand of ssDNA
-that is referred to as the toehold.
+that is referred to as the overhang.
 
 The second component is called the invasive strand, and is fully complementary with the
 substrate. It is energetically favourable for the invading
-strand to disrupt the imperfect duplex structure and form a fully Watson–Crick
+strand to disrupt the imperfect duplex structure and form a fully Watson-–Crick
 complementary dsDNA with the substrate strand. This displacement reaction results in an
 overall reduction in the free energy of the system, since the strand displacement
 increases the total number of hybridised base-pairs.
 
-The process of strand displacement starts with the hybridisation of the toehold and the
+The process of strand displacement starts with the hybridisation of the overhang and the
 invading strand. Once this initial hybridisation has occurred the invading strand can
 start to contest hybridised base-pairs of the imperfect duplex. Disrupting the
 base-pairing of the duplex is referred to as fraying, while the reverse process
 where new base-pairs are formed is called zippering. During this process the invading
 strand competes with the incumbent strand to form base-pairs with the substrate.
 
-The reaction can be modelled using an one-dimensional energy landscape, called the
-intuitive energy landscape (IEL) model\cite{Srinivas2013}, shown in Figure \ref{fig:IEL}.
+The reaction can be modelled using a one-dimensional energy landscape, called the
+intuitive energy landscape (IEL) model, shown in Figure \ref{fig:IEL}.\cite{Srinivas2013}
 In the shape of the energy landscape we recognise two distinct features. The first
-features is the initial energy barrier, also seen in DNA hybridisation. This energy
+feature is the initial energy barrier, also seen in DNA hybridisation. This energy
 barrier again arises from a reduction in configurational entropy, when the initial
 binding happens. The second feature is the plateau, representing the change in free
 energy when the strand displacement takes place. This plateau gives rise to a relatively
@@ -119,28 +119,30 @@ slow reaction, which can be explained using a simple toy model.\\
 
 \begin{figure}[ht!]
 \begin{center}
-  \includegraphics[width=0.62\textwidth]{Figures/ToeholdDiagram.png}
+  \includegraphics[width=0.65\textwidth]{Figures/ToeholdDiagram.png}
   \caption[Free energy landscape of a strand displacement reaction, predicted by the IEL
-model]{Free energy landscape of a strand
+  model]{{\small Free energy landscape of a strand
 displacement reaction, predicted by the intuitive energy landscape (IEL) model for a six
 base overhang at $25^{\circ} C$. The intermediate states (A--F) of the reaction are
 visualised on the energy landscape. We clearly observe the initial energy barrier,
-followed by the zig-zag plateau. Figure taken from reference \cite{Srinivas2013}.}
+followed by the zig-zag plateau. Figure taken from reference \cite{Srinivas2013}.}}
   \label{fig:IEL}
 \end{center}
 \end{figure}
 
-Considering a scenario, where the substrate consists of $N+1$ nucleotide, with only one
-of these nucleotides constituting the toehold. If we now assume that both the incumbent
+Next we consider a scenario where the substrate consists of $N+1$ nucleotides, with only
+one
+of these nucleotides constituting the overhang. If we now assume that both the incumbent
 and invasive strand contest each others hybridised base-pairs at the same rate, the
 displacement reaction can be modelled as a random walk. The model is reduced to a famous
 problem in probability theory, called the gamblers ruin. It can be shown that the
-reaction rate scales as $1/3N$. Combining this result with fact that there exist various
+reaction rate scales as $1/3N$. Combining this result with the existence of various
 possible branch migration pathways, it can be concluded that studying the full reaction
-kinetics of toehold displacement reaction is computationally expensive for large
+kinetics of the displacement reaction is computationally expensive for large
 strands.\cite{Srinivas2013}
 
-These two types of thermodynamic transitions, central in the operation cycle of the DNA
-nanopiston, are relatively difficult to study due to their complex reaction kinetics and
-initial energy barrier. Accurately analysing the reaction constants of these rare events,
-requires the use of advanced sampling techniques.
+The hybridisation and strand displacement reactions, central in the operation cycle of
+the DNA
+nanopiston, are thus relatively difficult to study due to their complex reaction kinetics
+and initial energy barrier. Accurately analysing the reaction constants of these rare
+events, requires the use of advanced sampling techniques.

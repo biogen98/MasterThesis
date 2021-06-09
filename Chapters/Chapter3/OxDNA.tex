@@ -14,15 +14,15 @@ OxDNA coarse-grained model for DNA.\\
 
 OxDNA is a coarse-grained model of DNA developed by Thomas E. Ouldridge et al. at the
 University of Oxford.\cite{thomas2011a}\cite{Ouldridge2010} The central aim of the
-project was to develop a coarse-grained model of DNA, that could be used in the design of
-DNA technology. For the development of these technologies a model was needed that
+project was to develop a coarse-grained model of DNA, that could be used in DNA
+technology. For the development of this technology a model was needed that
 accurately captured the structural, mechanical
 and thermodynamical properties of DNA, while keeping the computational cost low.
 
 The OxDNA model represents each nucleotide in the DNA strand as a rigid unit. Each rigid
 nucleotide has three independent interaction sites, each capturing a different aspect of
 the model. The interactions between these pseudo-atoms are compared to experimental
-data to callibrate the interactions, characterising their approach as "top down"
+data to calibrate the interactions, characterising their approach as "top down"
 coarse-graining. The interactions defined in the OxDNA model can be summarized as,
 
 \begin{equation}
@@ -38,9 +38,8 @@ coarse-graining. The interactions defined in the OxDNA model can be summarized a
   \begin{center}
     \includegraphics[width=0.45\textwidth]{Figures/oxDNA_model.png}
   \end{center}
-  \caption[Structure of the OxDNA model]{Structure of the OxDNA model with the different
-  interactions.
-  Figure was taken form. \cite{Ouldridge2010}}
+  \caption[Structure of the OxDNA model]{{\small Structure of the OxDNA model with the
+  different interactions. Figure was taken from reference \cite{Ouldridge2010}.}}
 \end{wrapfigure}
 
 The first interaction site is the hydrogen-bonding/base excluded volume site,
@@ -60,7 +59,7 @@ interactions, this structure is implicitly imposed in the OxDNA model. This is i
 contrast with the traditional approach, used in coarse grained-models like Martini
 \cite{Souza2021} en
 3SPN \cite{Freeman2011},
-where the double helix structure is explicity constructed. This
+where the double helix structure is explicitly constructed. This
 implicit structure allows for the
 unstacking of nucleotides, which especially in ssDNA is an important contribution to the
 flexibility of the strand.

@@ -9,7 +9,7 @@ formulas to a problem consisting of just more then two particles already leads t
 practically unsolvable equations.
 
 Although it is often not possible to find an exact solution to equations
-related to complex physical systems, finding reasonable approximations to their solution
+related to complex systems, finding reasonable approximations to their solution
 is achievable. One popular method to analyse the dynamics of complex systems is the use
 of computer simulations.
 
@@ -25,8 +25,8 @@ of computer simulations.
 
 Simulations have a rich history within physics and engineering, starting even before the
 invention of the computer. An example of one of these mechanical simulations is the
-'Waterloopkundig Laboratorium', a hydrological laboratory located in Delft
-\cite{Vreugdenhil2001}.  This
+'Waterloopkundig Laboratorium', a hydrological laboratory located in Delft.
+\cite{Vreugdenhil2001}  This
 laboratory houses a scale model of important Dutch waterways, where the influence of
 waves on harbours and docks was studied.  The simulation provided revolutionary insights
 into the behaviour of water and played an important part in the design of the famous
@@ -35,7 +35,7 @@ Delta Works.
 Another more topical example is the use of mechanical simulations to study the
 structure of water.  In the early 20th century Prof. J.D. Bernal and his fellow
 researchers built various ball and stick models of water to analyse the possible 3D
-configurations of water molecules in a liquid \cite{Finney_2007}. Their research
+configurations of water molecules in a liquid.\cite{Finney_2007} Their research
 eventually explained the peculiar physical properties of water from an atomistic
 perspective. Despite how useful these mechanical simulations turned out to be, the
 biggest drawback of the method was the extreme cost of labour involved with their
@@ -45,7 +45,7 @@ construct. As Prof. Bernal alluded to in his famous 1962 lecture,
 \dots I took a number of rubber balls and stuck them together with rods of a
 selection of different lengths ranging from 2.75 to 4 inch. I tried to do this in the
 first place as casually as possible, working in my own office being interrupted every
-five minutes or so and not remembering what I had done before the interruption.\dots
+five minutes or so and not remembering what I had done before the interruption\dots
 \cite{Bernal1962}
 \end{quote}
 
@@ -58,7 +58,7 @@ this thesis, computer simulations are used to study the mechanics of
 the DNA polymer. Due to the high number of atoms in a typical system it is generally
 not possible to find an analytical solution to their equations of motion. In this
 context simulations are often used to gain an insight into the complex dynamics of the
-system and guide the developments of more simple approximate theories. The simulations
+system and guide the development of more simple approximate theories. The simulations
 act as a bridge between the microscopic constituents of the systems and the macroscopic
 properties we want to understand.
 
@@ -176,24 +176,24 @@ simulations to systems of a few particles over short time-scales.
 
 During these simulations the most costly calculations involve the non-bonded
 interactions\footnote{Interactions acting between non-covalently bonded atoms. These
-forces act both inter- and intramolecular, giving rise a large multiplicity in
+forces act both inter- and intramolecular, giving rise to a large multiplicity in
 interactions.} in the system. These interatomic interactions make the computational
 complexity for rudimentary MD simulations scale as $O(N^2t)$, where $N$ is the number of
-particles in the system and $t$ the simulation time. This bad scaling behaviour comes
-arises from the fact that for each individual particle all the other particles are
+particles in the system and $t$ the simulation time. This bad scaling behaviour arises
+from the fact that for each individual particle all the other particles are
 contributing to its energy potential. To improve this scaling behaviour, the non-bonded
 interactions in a MD simulation are almost always truncated. This localization of the
 interatomic interactions has the favourable effect that not all atoms are involved in
 every calculation. Efficient algorithms, like the multigrid method, have been derived
-to improve the complexity of MD simulations to $O(Nt)$. \cite{Celeste2001}
+to improve the complexity of MD simulations to $O(Nt)$.\cite{Celeste2001}
 
 From the scaling complexity we conclude that decreasing the total number of particles in
 the system drastically improves the computational cost of an MD simulation. To reduce the
 number of particles in a MD simulation a method called coarse-graining can be used.
 In all atom simulations each atom is explicitly represented as a particle in the
 simulation. Contrarily, coarse-grained simulation group together multiple atoms to form
-generalised pseudo-atoms, with their respective pseudo-interaction. During this
-simplification some atom details are neglected, resulting in a model that only
+generalised pseudo-atoms, with their respective pseudo-interactions. During this
+simplification some atomic details are neglected, resulting in a model that only
 approximates our initial system. However, useful results can be obtained from
 these simulations if we remain aware of the made approximations during the
 simplification.
@@ -238,14 +238,14 @@ DNA are Martini \cite{Souza2021}, 3SPN \cite{Freeman2011} and oxDNA
   \vspace{-0.5cm}
   \includegraphics[width=.5\linewidth,valign=t]{Figures/beadSpring.png}
   \end{subfigure}
-  \caption[Comparing different degrees of coarse graining DNA]{\linespread{0.816}{\small
+  \caption[Comparing different coarse-grained DNA models.]{\linespread{0.816}{\small
     Comparing different coarse-grained models of DNA.  (a) The
-    most evident model is of course the All-atom model, providing an atomic description
+    most evident model is of course the all-atom model, providing an atomic description
     of the DNA strand. (b) A second model called OxDNA utilises the individual
     nucleotides as pseudo-atoms, thereby reducing the complexity while preserving much of
     the DNA structure. (c) Further increasing the level of coarse-graining leads to
 simplified polymer models, as the bead-and-spring model shown here. The double helix
-structure of DNA is not incorporated in this type of model, allowing only for the large
+structure of DNA is not incorporated in this type of model, allowing only for large
 scale behaviour to be studied.}}
     \label{fig:coare-graining}
   \end{centering}
