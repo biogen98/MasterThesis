@@ -63,10 +63,10 @@ act as a bridge between the microscopic constituents of the systems and the macr
 properties we want to understand.
 
 \subsection{Molecular Dynamics Simulations}
-Molecular Dynamics (MD) is a computer simulation technique, used to analyse
-the dynamics of a classical many-body system. The central idea of this method is to
-generate all the trajectories in a system of $N$ particles by numerically
-integrating the classical equations of motion,
+Molecular Dynamics (MD) is a computer simulation technique, used to
+analyse the dynamics of a classical many-body system.\cite{Frenkel2001} The central idea
+of this method is to generate all the trajectories in a system of $N$ particles by
+numerically integrating the classical equations of motion,
 \[
 m_i \frac{d^2 \boldsymbol{r_i}}{dt^2} = \boldsymbol{f_i}, \quad \boldsymbol{f_i} = -
     \frac{\partial}{\partial \boldsymbol{r_i}} \mathcal{U}, \quad for\ i \in N.
@@ -135,7 +135,7 @@ statistical consequences of the solvent interacting with the system.
     }
     \tcp{}
     \tcc{Output}
-    \KwRet{final configuration of all atoms}
+    \KwRet{\text{final configuration of all atoms}}
     \caption{Simple Molecular Dynamics Program}
 \end{algorithm}
 
@@ -168,7 +168,7 @@ statistical consequences of the solvent interacting with the system.
 
 
 
-\subsection{Coarse Grained modelling}
+\subsection{Coarse Grained Modelling}
 As most things do, molecular dynamics simulations have their pitfalls. A commonly
 encountered problem is the rapidly increasing computational cost when the number of
 particles in the system increase. If not addressed, this would limit the scope of MD

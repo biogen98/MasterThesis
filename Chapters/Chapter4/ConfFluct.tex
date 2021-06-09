@@ -1,14 +1,16 @@
-\section{Conformational Fluctuations of the ds- and ss-Rotaxanes}
-\vspace{-0.2cm}
+\section{Conformational Fluctuations of Rotaxanes-ds and -ss}
+% \vspace{-0.2cm}
 
 Having gained insight into the entropic interactions between the DNA and the
 nanopore in the mixed rotaxanes, now the stable intermediate states of the nanopiston's
 operation cycle are
 studied. Both the rotaxane-ss and -ds are composed of stiff dsDNA and flexible ssDNA
-parts, which characterise their conformational fluctuations by the entropic interactions.
-The two rotaxanes types are simulated in a nanopore, using the predefined coarse-grained
-model, in absence of an external bias, i.e.  $0mV$. The results are presented in Figure
-\ref{fig:conform}
+parts, which characterise the conformational fluctuations by their entropic
+interactions.
+The two rotaxanes types are simulated in a ClyA nanopore, using the predefined
+coarse-grained
+model, in absence of an external bias, i.e.  $0\ mV$. The results are presented in Figure
+\ref{fig:conform}.
 
 Analysing the conformational fluctuations of the rotaxane-ds, we observe from the blue
 histogram that the ssDNA
@@ -18,27 +20,28 @@ into account the entropic cost of capturing the flexible strand of ssDNA into th
 constriction of the pore. Since the geometry of the rotaxane prohibits the overhang from
 reaching the cis-side of the pore, the overhang can only freely fluctuate on the
 trans-side of the pore. Throughout the simulation this entropic force keeps the overhang
-in the trans-reservoir and thereby placing the cis-protein stopper close to the entrance
+in the trans-reservoir and thereby placing the cis-stopper close to the entrance
 of the pore. This entropic interaction plays an important role in the operation of the
 nanopiston. Even when an external voltage difference induces an upward electrophoretic
 force on the rotaxane, the competing entropic force keeps the overhang outside of the
 constriction and thereby exposing it for hybridisation with a fuel strand. This also
 explains the halting of the piston cycle at high voltages. In this case the entropic
-force is overcome by the induced electrophoretic force, sequestering the overhang inside
+force is overcome by the high electrophoretic force, sequestering the overhang inside
 of the pore inhibiting the binding of fuel strands.
 
 In the same figure the results for the rotaxane-ss are presented. We observe that the
-histograms are shifted upwards, indicating an upwards entropic arising from the high
+histograms are shifted upwards, indicating an upward entropic force arising from the high
 flexibility of the long ssDNA strand. This force originates from the increase in
 configurational microstates available to the rotaxane-ss, when the ssDNA strand is
 allowed to freely fluctuate in the
 cis-reservoir. The flexibility of the ssDNA strand overcomes the entropic penalty of
-confining the dsDNA into the constriction of the pore. Capturing the interface between
-the ssDNA and dsDNA parts of the rotaxane-ss inside of the pore promotes the
+confining the dsDNA into the constriction of the pore. Capturing the dsDNA fraction of
+the
+rotaxane-ss inside of the pore promotes the
 operation cycle. In this case a longer ssDNA strand is exposed to the cis-reservoir,
 better facilitating the hybridisation with cargo strands. This can be seen in the
 positional histogram of the cis-protein stopper, where the large fluctuations of the
-ssDNA strand allow it to venture far away from the nanopore.
+ssDNA strand allow the stopper to venture far away from the nanopore.
 
 These results explain the functional importance of the entropic interactions in the
 nanopiston's operating cycle. Comparing our findings with the simulation results by
@@ -54,9 +57,10 @@ consecutive bases to unstack.
   \includegraphics[width=0.95\textwidth]{Figures/image.png}
    \caption[Conformational fluctuations of the ss- and
 ds-rotaxane.]{\linespread{0.5}{\small Conformational fluctuations of the rotaxane-ds
-    (left) and -ss (right). In the center renders of the atomistic structure for both
-    rotaxane variants are shown. On the sides the $X$-histograms, see definition, for
-    selected components of the rotaxanes are presented. The mean values of the
+    (left) and -ss (right). Images of the atomistic structure for both
+    rotaxane variants are shown in the center. On both sides the $X$-histograms for
+    selected components of the rotaxanes are presented (see
+    definition). The mean values of the
     $X$-coordinates are marked by the horizontal lines. From the results we conclude that
     the flexible ssDNA strands determine the fluctuations of the rotaxanes-ds and -ss.
     Central images were rendered using Blender.\cite{blender}}}
