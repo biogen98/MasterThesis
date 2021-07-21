@@ -28,10 +28,8 @@ maxnames = 5
 
 \usepackage{emptypage}
 \usepackage[linktocpage=true]{hyperref}
-\usepackage[toc,acronym,nonumberlist]{glossaries}
 \usepackage{tocloft}
 \usepackage{wrapfig}
-\makeglossaries
 
 % Import packages for drawing diagram
 %More defined colors
@@ -66,7 +64,6 @@ maxnames = 5
 \usepackage{nag}       % Issues warnings when best practices in writing LaTeX documents are violated.
 \usepackage{todonotes} % Provides tooltip-like todo notes.
 \usepackage{hyperref}  % Enables cross linking in the electronic document version. This package has to be included second to last.
-\usepackage[acronym,toc]{glossaries} % Enables the generation of glossaries and lists fo acronyms. This package has to be included last.
 
 % Define convenience functions to use the author name and the thesis title in the PDF document properties.
 \newcommand{\authorname}{Jan Stevens} % The author name without titles.
@@ -90,11 +87,6 @@ maxnames = 5
 
 \nonzeroparskip             % Create space between paragraphs (optional).
 \setlength{\parindent}{0pt} % Remove paragraph identation (optional).
-
-\makeindex      % Use an optional index.
-\makeglossaries % Use an optional glossary.
-\glstocfalse   % Remove the glossaries from the table of contents.
-
 
 % settings for table of contents and section numbering
 \setcounter{secnumdepth}{1} % numbering to which sublevel?
@@ -122,10 +114,6 @@ maxnames = 5
 % define units for the text blocks
 \setlength{\TPHorizModule}{1mm}
 \setlength{\TPVertModule}{1mm}
-
-% Define your symbols and acronyms in here
-\input{Preamble/Symbols.tex}
-\input{Preamble/Acronyms.tex}
 
 % Remove rule and put quote on the left of page
 \renewcommand{\epigraphflush}{center}
@@ -189,12 +177,7 @@ frametitleaboveskip=\dimexpr-\ht\strutbox\relax
 
 \input{Preamble/Abstract.tex}\cleardoublepage
 \input{Preamble/Summary.tex} \cleardoublepage
-% \printglossaries \cleardoublepage
-%\addcontentsline{toc}{chapter}{List of Figures}
 \listoffigures \cleardoublepage
-%\addcontentsline{toc}{chapter}{List of Tables}
-% \listoftables \cleardoublepage
-%\addcontentsline{toc}{chapter}{Contents}
 \linespread{0.816}
 {\small \tableofcontents}
 \cleardoublepage
